@@ -1,0 +1,211 @@
+Programming and Data Structures - edX MicroBachelors Syllabus
+
+Winter 2020
+Professors: Daniel Katz-Braunschweig, Itay Tal, Aspen Olmsted
+
+
+
+Program Description
+This is a self-paced program that provides an undergraduate-level introduction to C++ programming and data structures.  The material in the program will help prepare students for careers and further course work in computer science, cybersecurity and information technology.
+
+Program Objectives
+By the end of this program students should be able to:
+    • Identify and explain a programming development lifecycle, including planning, analysis,design, development, and maintenance.
+    • Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
+    • Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
+    • Document and format code in a consistent manner.
+    • Apply basic searching and sorting algorithms in software design.
+    • Apply single-and multi-dimensional arrays in software.
+    • Use a symbolic debugger to find and fix runtime and logical errors in software.
+    • Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
+    • Describe the phases of program translation from source code to executable code
+    • Design and develop programs that utilize linked lists to store data internally.
+    • Design and develop programs that utilize stacks and queues to manage collections of data
+    • Design and develop programs that recursion to solve problems that can be expressed with recurrence.
+    • Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
+
+
+Program Structure
+This program  is conducted entirely online, which means you do not have to be on campus to complete any portion of it. You will participate in the course using edX located at https://edx.org.
+
+Students will have access to
+    • Active Modules needed to be watched, answering knowledge self-check quizzes
+    • Forum discussions, asynchronous;
+    • Auto-graded Labs
+    • Resource links
+
+
+Learning Time Rubric
+You may choose your own weekly breakdown, such as live webinar sessions.
+
+Learning Time Element
+Asynchronous* / Synchronous**
+Time on Task for Students (weekly)
+Notes
+Lecture (Active Module)
+Asynchronous
+2.00 hours
+Video format. Expect quizzes throughout the module.
+Readings
+Asynchronous
+1.00 hours
+Readings are provided throughout the learning modules
+Weekly Discussion Board
+Asynchronous
+0.5 hours
+Students can interact with TA and professor via the discussion forums.
+Labs
+Asynchronous
+4.0 hours
+Students submit their labs to gradescope
+Quizzes & Tests
+Asynchronous
+1.0 hours
+Students take quizzes open book and Final Exam proctored with webcam
+
+*Asynchronous learning is defined as any non-real time student learning, such as recorded lecture, podcast, interactive module, articles, websites, etc. This also includes any student-to-student or faculty-to-student communication that may happen with an asynchronous tool, such as discussion board, chatroom, e-mail, text, etc.
+**Synchronous learning is defined as any real-time student-to-student and/or faculty-to-student learning, such as a live webinar session or other video/audio communication service.
+
+
+Course Communication
+
+Announcements -
+
+Announcements will be posted on edX on a regular basis. You can locate all class announcements at the top of the course page.  Be sure to check the class announcements regularly as they will contain important information about class assignments and other class matters.
+
+Discussion Forums –
+
+Discussion forums are an excellent way for you to engage with the course material and with your peers. You are expected to read the discussion boards and engage in thoughtful discussions. I will read all discussion posts and provide content clarification and feedback when necessary.
+
+
+Netiquette –
+
+When participating in an online class it is important to interact with your peers in an appropriate manner. Always use professional language (no netspeak) in your discussion board posts and emails. Please be respectful of your classmates at all times even if you disagree with their ideas.
+
+
+Course requirements
+Participation is paramount to your success in this course. Be sure to log into edX multiple times a week, read all announcements, complete all Active Learning Modules, and participate in Discussion Forums.
+
+Course evaluation will consist of by-module programming assignments, quizzes and final exams.  The quizzes, providing multiple attempts, without proctoring. The final exams are closed books and utilize an online proctor.
+
+
+
+
+
+
+
+
+Introduction to Programming in C++ (2 Credits, 8 weeks).
+Unit Grading:
+    • Quizzes 30%
+    • Labs 40%
+    • Final Exam 30%
+
+Unit Outcomes:
+    • apply variables in C++ program development
+    • analyze C++ assignments and apply its components in program development
+    • apply basic C++ I/O operations with different data types
+    • design C++ expressions using arithmetic operations (including understanding their limitations, such as integer truncation, round-off error, division by zero, narrowing and widening conversions, casting, precedence, and standard math library functions)
+    • design C++ expressions using relational operators (including understanding floating point equality)
+    • design C++ expressions using logical operators (including short-circuit)
+    • design C++ selection statements (including nested selection)
+    • design C++ repetition statements (including count-controlled versus event-controlled, sentinel-controlled)
+
+Unit Outline:
+    1. Hello World
+    2. Data Types and Expressions
+    3. Data Type Labs
+    4. Branching Statements
+    5. Branching Labs
+    6. Iterative Statements
+    7. Iteration Labs
+    8. Final Exam
+
+
+
+
+
+
+
+Advanced Programming in C++ (2 Credits, 8 weeks).
+Unit Grading:
+    • Quizzes 30%
+    • Labs 40%
+    • Final Exam 30%
+
+Unit Outcomes:
+    • Apply basic searching and sorting algorithms in C++ programming.
+    • Apply single-and multi-dimensional arrays in C++ programming.
+    • Analyze a C++ function to determine it’s computational complexity.
+
+Unit Outline:
+    1. Functions
+    2. Function Labs
+    3. Algorithm Analysis
+    4. Arrays
+    5. Array Labs
+    6. Strings
+    7. String Labs
+    8. Final Exam
+
+
+
+
+
+Introduction to Data Structures (2 Credits, 11 weeks).
+Unit Grading:
+    • Quizzes 30%
+    • Labs 40%
+    • Final Exam 30%
+
+Unit Outcomes:
+    • Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
+    • Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
+    • Apply basic searching and sorting algorithms in software design.
+    • Apply single-and multi-dimensional arrays in software.
+    • Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
+    • Design and develop programs that utilize recursion to solve problems that can be expressed with recurrence.
+
+Unit Outline:
+    1. Pointers and Dynamic Storage
+    2. Pointers and Dynamic Storage Labs
+    3. Recursions
+    4. Recursion Labs
+    5. Searching
+    6. Searching Labs
+    7. Sorting
+    8. Sorting Labs
+    9.  Object Oriented Programming
+    10.  Object Oriented Programming Labs
+    11. Final Exam
+
+
+
+
+
+
+Advanced Data Structures (2 Credits, 9 weeks).
+Unit Grading:
+    • Quizzes 30%
+    • Labs 40%
+    • Final Exam 30%
+
+Unit Outcomes:
+    • Design and develop programs that utilize linked lists to store data internally.
+    • Design and develop programs that utilize stacks and queues to manage collections of data
+    • Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
+
+Unit Outline:
+    1. File Processing
+    2. File Processing Labs
+    3. Linked Lists
+    4. Linked Lists Labs
+    5. Stacks and Queues
+    6. Stacks and Queues Labs
+    7. Trees and Binary Search Trees
+    8. Trees and Binary Search Trees Labs
+    9. Final Exam
+
+
+
+
