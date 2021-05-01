@@ -10,29 +10,29 @@ This is a self-paced program that provides an undergraduate-level introduction t
 
 Program Objectives
 By the end of this program students should be able to:
-    • Identify and explain a programming development lifecycle, including planning, analysis,design, development, and maintenance.
-    • Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
-    • Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
-    • Document and format code in a consistent manner.
-    • Apply basic searching and sorting algorithms in software design.
-    • Apply single-and multi-dimensional arrays in software.
-    • Use a symbolic debugger to find and fix runtime and logical errors in software.
-    • Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
-    • Describe the phases of program translation from source code to executable code
-    • Design and develop programs that utilize linked lists to store data internally.
-    • Design and develop programs that utilize stacks and queues to manage collections of data
-    • Design and develop programs that recursion to solve problems that can be expressed with recurrence.
-    • Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
+    ï¿½ Identify and explain a programming development lifecycle, including planning, analysis,design, development, and maintenance.
+    ï¿½ Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
+    ï¿½ Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
+    ï¿½ Document and format code in a consistent manner.
+    ï¿½ Apply basic searching and sorting algorithms in software design.
+    ï¿½ Apply single-and multi-dimensional arrays in software.
+    ï¿½ Use a symbolic debugger to find and fix runtime and logical errors in software.
+    ï¿½ Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
+    ï¿½ Describe the phases of program translation from source code to executable code
+    ï¿½ Design and develop programs that utilize linked lists to store data internally.
+    ï¿½ Design and develop programs that utilize stacks and queues to manage collections of data
+    ï¿½ Design and develop programs that recursion to solve problems that can be expressed with recurrence.
+    ï¿½ Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
 
 
 Program Structure
 This program  is conducted entirely online, which means you do not have to be on campus to complete any portion of it. You will participate in the course using edX located at https://edx.org.
 
 Students will have access to
-    • Active Modules needed to be watched, answering knowledge self-check quizzes
-    • Forum discussions, asynchronous;
-    • Auto-graded Labs
-    • Resource links
+    ï¿½ Active Modules needed to be watched, answering knowledge self-check quizzes
+    ï¿½ Forum discussions, asynchronous;
+    ï¿½ Auto-graded Labs
+    ï¿½ Resource links
 
 
 Learning Time Rubric
@@ -73,12 +73,12 @@ Announcements -
 
 Announcements will be posted on edX on a regular basis. You can locate all class announcements at the top of the course page.  Be sure to check the class announcements regularly as they will contain important information about class assignments and other class matters.
 
-Discussion Forums –
+Discussion Forums ï¿½
 
 Discussion forums are an excellent way for you to engage with the course material and with your peers. You are expected to read the discussion boards and engage in thoughtful discussions. I will read all discussion posts and provide content clarification and feedback when necessary.
 
 
-Netiquette –
+Netiquette ï¿½
 
 When participating in an online class it is important to interact with your peers in an appropriate manner. Always use professional language (no netspeak) in your discussion board posts and emails. Please be respectful of your classmates at all times even if you disagree with their ideas.
 
@@ -97,19 +97,19 @@ Course evaluation will consist of by-module programming assignments, quizzes and
 
 Introduction to Programming in C++ (2 Credits, 8 weeks).
 Unit Grading:
-    • Quizzes 30%
-    • Labs 40%
-    • Final Exam 30%
+    ï¿½ Quizzes 30%
+    ï¿½ Labs 40%
+    ï¿½ Final Exam 30%
 
 Unit Outcomes:
-    • apply variables in C++ program development
-    • analyze C++ assignments and apply its components in program development
-    • apply basic C++ I/O operations with different data types
-    • design C++ expressions using arithmetic operations (including understanding their limitations, such as integer truncation, round-off error, division by zero, narrowing and widening conversions, casting, precedence, and standard math library functions)
-    • design C++ expressions using relational operators (including understanding floating point equality)
-    • design C++ expressions using logical operators (including short-circuit)
-    • design C++ selection statements (including nested selection)
-    • design C++ repetition statements (including count-controlled versus event-controlled, sentinel-controlled)
+    ï¿½ apply variables in C++ program development
+    ï¿½ analyze C++ assignments and apply its components in program development
+    ï¿½ apply basic C++ I/O operations with different data types
+    ï¿½ design C++ expressions using arithmetic operations (including understanding their limitations, such as integer truncation, round-off error, division by zero, narrowing and widening conversions, casting, precedence, and standard math library functions)
+    ï¿½ design C++ expressions using relational operators (including understanding floating point equality)
+    ï¿½ design C++ expressions using logical operators (including short-circuit)
+    ï¿½ design C++ selection statements (including nested selection)
+    ï¿½ design C++ repetition statements (including count-controlled versus event-controlled, sentinel-controlled)
 
 Unit Outline:
     1. Hello World
@@ -129,14 +129,14 @@ Unit Outline:
 
 Advanced Programming in C++ (2 Credits, 8 weeks).
 Unit Grading:
-    • Quizzes 30%
-    • Labs 40%
-    • Final Exam 30%
+    ï¿½ Quizzes 30%
+    ï¿½ Labs 40%
+    ï¿½ Final Exam 30%
 
 Unit Outcomes:
-    • Apply basic searching and sorting algorithms in C++ programming.
-    • Apply single-and multi-dimensional arrays in C++ programming.
-    • Analyze a C++ function to determine it’s computational complexity.
+    ï¿½ Apply basic searching and sorting algorithms in C++ programming.
+    ï¿½ Apply single-and multi-dimensional arrays in C++ programming.
+    ï¿½ Analyze a C++ function to determine itï¿½s computational complexity.
 
 Unit Outline:
     1. Functions
@@ -154,17 +154,17 @@ Unit Outline:
 
 Introduction to Data Structures (2 Credits, 11 weeks).
 Unit Grading:
-    • Quizzes 30%
-    • Labs 40%
-    • Final Exam 30%
+    ï¿½ Quizzes 30%
+    ï¿½ Labs 40%
+    ï¿½ Final Exam 30%
 
 Unit Outcomes:
-    • Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
-    • Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
-    • Apply basic searching and sorting algorithms in software design.
-    • Apply single-and multi-dimensional arrays in software.
-    • Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
-    • Design and develop programs that utilize recursion to solve problems that can be expressed with recurrence.
+    ï¿½ Demonstrate a basic understanding of object-oriented programming by using structures and classes in software projects.
+    ï¿½ Use object-oriented programming techniques to develop executable programs that include elements such as inheritance and polymorphism.
+    ï¿½ Apply basic searching and sorting algorithms in software design.
+    ï¿½ Apply single-and multi-dimensional arrays in software.
+    ï¿½ Demonstrate a basic understanding of programming methodologies, including object oriented, structured, and procedural programming.
+    ï¿½ Design and develop programs that utilize recursion to solve problems that can be expressed with recurrence.
 
 Unit Outline:
     1. Pointers and Dynamic Storage
@@ -186,14 +186,14 @@ Unit Outline:
 
 Advanced Data Structures (2 Credits, 9 weeks).
 Unit Grading:
-    • Quizzes 30%
-    • Labs 40%
-    • Final Exam 30%
+    ï¿½ Quizzes 30%
+    ï¿½ Labs 40%
+    ï¿½ Final Exam 30%
 
 Unit Outcomes:
-    • Design and develop programs that utilize linked lists to store data internally.
-    • Design and develop programs that utilize stacks and queues to manage collections of data
-    • Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
+    ï¿½ Design and develop programs that utilize linked lists to store data internally.
+    ï¿½ Design and develop programs that utilize stacks and queues to manage collections of data
+    ï¿½ Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
 
 Unit Outline:
     1. File Processing
@@ -205,7 +205,3 @@ Unit Outline:
     7. Trees and Binary Search Trees
     8. Trees and Binary Search Trees Labs
     9. Final Exam
-
-
-
-

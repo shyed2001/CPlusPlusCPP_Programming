@@ -1,0 +1,68 @@
+Order of Operations
+Do things in Parentheses First
+
+yes	 	4 × (5 + 3)	=	4 × 8	=	
+32
+ 
+not	 	4 × (5 + 3)	=	20 + 3	=	
+23
+(wrong)
+
+Exponents (Powers, Roots) before Multiply, Divide, Add or Subtract
+
+yes	 	5 × 22	=	5 × 4	=	
+20
+ 
+not	 	5 × 22	=	102	=	
+100
+(wrong)
+
+Multiply or Divide before you Add or Subtract
+
+yes	 	2 + 5 × 3	=	2 + 15	=	
+17
+ 
+not	 	2 + 5 × 3	=	7 × 3	=	
+21
+(wrong)
+
+Otherwise just go left to right
+
+yes	 	30 ÷ 5 × 3	=	6 × 3	=	
+18
+ 
+not	 	30 ÷ 5 × 3	=	30 ÷ 15	=	
+2
+(wrong)
+
+How Do I Remember It All ... ? PEMDAS !
+P
+Parentheses first
+E
+Exponents (ie Powers and Square Roots, etc.)
+MD
+Multiplication and Division (left-to-right)
+AS
+Addition and Subtraction (left-to-right)
+
+Divide and Multiply rank equally (and go left to right).
+
+Add and Subtract rank equally (and go left to right)
+
+So do it this way:
+
+pemdas
+After you have done "P" and "E", just go from left to right doing any "M" or "D" as you find them.
+
+Then go from left to right doing any "A" or "S" as you find them.
+
+
+ 
+
+thought bubble	You can remember by saying "Please Excuse My Dear Aunt Sally".
+Or ...	Pudgy Elves May Demand A Snack
+Popcorn Every Monday Donuts Always Sunday
+Please Eat Mom's Delicious Apple Strudels
+People Everywhere Made Decisions About Sums
+Note: in the UK they say BODMAS (Brackets,Orders,Divide,Multiply,Add,Subtract), and in Canada they say BEDMAS (Brackets,Exponents,Divide,Multiply,Add,Subtract). It all means the same thing! It doesn't matter how you remember it, just so long as you get it right.
+

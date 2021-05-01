@@ -3,33 +3,71 @@ License :== MIT + terms and conditions of author/owner
 Copyright :== author/owner*/
 
 #include <iostream>
+#include <string>
+#include <iomanip>
 
 using namespace std;
+
 
 int main(void)
 
 {
 
-    int num1, num2, num3;
-    int sum;
+cout<<"\n  Computing Absolute Values   "<<endl;
 
-    cout<<"Please enter three numbers for sum."; /// Line not ended.
 
-    cout<<"Please enter three numbers separated by space:"<<endl; /// Line ends.
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
 
-    cin>>num1>>num2;
-    cin>>num3;
-    sum = num1 + num2 + num3;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
 
-    cout<<"num1 + num2 + num3 = sum"<<endl;
 
-    cout<<num1<<" + "<<num2<<" + " << num3<< " = "<<sum<<endl;
+
+
+
+
+
+
+
+
+
+
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+
 
     return 0;
 
 }
-/// Shortcut in Code::Blocks
+
+/*
+Shortcuts in Vs code
+Ctrl+p for search file
+Ctrl+Tab for switch to different tab
+Ctrl+w for closing current tab
+Ctrl+shift+p for command palette
+
+*/
+
+/* Shortcut in Code::Blocks
 /// SourceCode Formatter -  Ctrl+Alt+i
 /// line comment  Ctrl+Shift+C
 /// Abbreviations Ctrl+j
 /// open new file  Ctrl+Shift+n
+
+*/
