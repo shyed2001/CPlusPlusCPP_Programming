@@ -59,7 +59,7 @@ cout << greeting<<endl;
 
     cout<<"Please enter three numbers for sum.\n"; /// Line not ended.
 
-    cout<<"Please enter three numbers separated by space:\n"<<endl; /// Line ends.
+    cout<<"Please enter three numbers separated by space :\n"<<endl; /// Line ends.
 
     cin>>num1>>num2;
     cin>>num3;
@@ -245,6 +245,18 @@ cout<<"\n string s, s = 'Hello' so s = s + world = "<< s <<endl;
 cout<<"\n    String concatening with + is possible   \n"<<endl;
 
 
+cout<<"\n string s, s = 'Hello' so s = s + world = "<< s <<endl;
+
+cout<<"\n    String concatening with + is possible   \n"<<endl;
+
+cout<<"\n    C++ Booleans; Very often, in programming, you will need a data type that can only have one of two values, like:YES / NO, ON / OFF, TRUE / FALSE ; For this, C++ has a bool data type, which can take the values true (1) or false (0). Boolean Values A boolean variable is declared with the bool keyword and can only take the values true or false: Example, bool isCodingFun = true; bool isFishTasty = false;  cout << isCodingFun;  // Outputs 1 (true) cout << isFishTasty;  // Outputs 0 (false) From the example above, you can read that a true value returns 1, and false returns 0. However, it is more common to return boolean values from boolean expressions (see next page).\n"<<endl;
+
+cout<<"\n C++ Boolean Expressions : - A Boolean expression is a C++ expression that returns a boolean value: 1 (true) or 0 (false). You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:   Example , int x = 10; int y = 9; cout << (x > y); // returns 1 (true), because 10 is higher than 9  Or even easier: Example cout << (10 > 9); // returns 1 (true), because 10 is higher than 9   In the examples below, we use the equal to (==) operator to evaluate an expression: Example , int x = 10; cout << (x == 10);  // returns 1 (true), because the value of x is equal to 10; Example cout << (10 == 15);  // returns 0 (false), because 10 is not equal to 15
+Booleans are the basis for all C++ comparisons and conditions. "<< s <<endl;
+
+
+
+
 
 
 cout<<"\n  bool or boolean is True or False values , data is one byte or 8 bit, butsingle bit is enough   \n"<<endl;
@@ -326,6 +338,189 @@ cout<<"\n // You have to set the 'float mode' to fixed."<<endl;
     //    integer formatting example
     cout << fixed << setprecision(2) << double(122) << endl;
     //    Output:  122.00
+
+cout<<"\n  Branching Statements, if, if else, if if if, if else if else  "<<endl;
+cout<<"\n  one way if statement   "<<endl;
+
+cout<<"\n  Computing Absolute Values   "<<endl;
+
+cout<<"\n Please enter a value  to get its absolute value  "<<endl;
+
+int UI11;
+cin>> UI11;
+
+if ( UI11 < 0)
+     UI11 *= (-1); //UI11 *= UI11 * (-1);
+
+cout<<"\n Absolute value is "<< UI11<<endl;
+
+
+cout<<"\n Determine Even or Odd   "<<endl;
+
+cout<<"\n Please enter a positive integer  Value  "<<endl;
+
+int UI12 ;
+cin>> UI12 ;
+if (UI12 % 2 == 0) 
+    cout<< UI12 << " is a even number "<<endl;
+    
+if  (UI12 % 2 == 1) 
+    cout<< UI12 << " is a odd number "<<endl;
+
+
+
+
+cout<<"\n Determine Even or Odd   "<<endl;
+cout<<"\n Please enter a integer  Value  "<<endl;
+
+
+int UI1 ;
+cin>> UI1 ;
+
+int UI2 = UI1;
+
+if ( UI1 < 0)
+{
+     UI2 = UI1 * (-1);
+     cout<< UI1<< " is a negative number "<<endl;
+     cout<< " Absolute value of  "<< UI1<< " is |"<< UI1<< "| ="<< UI2 <<endl;
+}   // compound if () multi instruction need {}
+
+
+else 
+    cout<< UI1<< " is a positive number "<<endl;  
+    // simple one instruction else does not need {}
+
+if (UI2 % 2 == 0) 
+    cout<< UI1<< " is a even number "<<endl;  // simple one instruction does not need {}
+    
+else 
+    cout<< UI1<< " is a odd number "<<endl;  // simple one instruction does not need {}
+
+cout<< "\nMod or Modulo operator % (1 % 2) = " << 1 % 2<< " and 0 % 2 = "<< 0 % 2 <<endl;
+
+/// output  1 % 2 = 1 and  0 % 2 = 0
+
+cout<<"\n  There should be a boolean statement inside () of if ( ..boolean..);    "<<endl;
+cout<<"\n  Arithmetic Operators inside of  if ( ..arithmetic..) will give error. "<<endl;
+
+
+cout<<"\n Check_Alphabate_Letter_Upper_Lower_Numeric_Digit with if() else if "<<endl;
+
+cout<<"\n Please enter a Alphabate or Letter or Upper or Lower or Numeric or Digit "<<endl;
+
+char UserInputChar;
+cin>> UserInputChar ;
+
+if (UserInputChar >= 'a' && UserInputChar <= 'z')  // 'a', 'A', .... are C++ character or char literals.
+    cout<<"\n Your input "<< UserInputChar<<" is a lower case letter "<<endl;
+else if (UserInputChar >= 'A' && UserInputChar <= 'Z')
+    cout<<"\n Your input "<< UserInputChar<<" is a Upper case letter "<<endl;
+else if (UserInputChar >= '0' && UserInputChar <= '9') // '0', '9', .... are C++ character or char literals.
+// else if (UserInputChar >= 0 && UserInputChar <= 9) will not work.
+    cout<<"\n Your input "<< UserInputChar<<" is a Numeric digit "<<endl;
+else 
+    cout<<"\n Your input "<< UserInputChar<<" is not alpha-numeric character "<<endl;
+
+cout<<"\n Time conversion-- 24 hour format to 12 hour format-- Time conversion    "<<endl;
+
+cout<<"\n Please enter time in 24 hour format Hh:Mm to convert to 12 hour format "<<endl;
+
+int hour24, hour12, min24, min12;
+char colon;
+string period ;
+cin>>hour24>>colon>>min24;
+
+if ( min24 >= 60 || min24 < 0 )  // Minutes can not be greater than 60
+    {
+        cout<<"\n wrong time input, exitting\n"<<endl;
+        return 1; /// Exit with error.
+    }
+
+else if (hour24 >24 ||  hour24 < 0 )  // Hours can not be greater than 24 hours
+    {
+        cout<<"\n Wrong time input, exitting\n"<<endl;
+        return(1) ; /// or exit (1) means Exit with error. exit () , may cause memory leak. 
+    }
+
+else 
+   min12 = min24 ;   /// min24 = min12 ;  will not work.
+
+if (hour24 >= 0 && hour24 <= 11)
+{
+    period = " am ";
+        if (hour24 == 0 )
+            hour12 = 12;
+        else 
+            hour12 = hour24; // hour24 = hour12;
+
+}
+
+else 
+{
+    period = " pm " ;
+        if ( hour24 == 12 )
+            hour12 = 12 ;
+        else
+            hour12 = hour24 -12;
+
+}
+
+cout<< hour24<< " : " << min24 <<" is "<< hour12<< " : "<< min12 << period << endl;
+
+
+
+cout<<"\n  Switch statements   Switch statements   "<<endl;
+
+double number14 , number15 , Result14 ;
+char operator14;
+
+cout<<"\n Please enter two number digits in Digit operator Digit format "<<endl;
+
+cin>> number14 >> operator14 >> number15;
+
+switch(operator14)  // Switch condition,  Numeric or operator conditions , int, char or bool.
+
+ {
+    case '+':  // Must be constants, C++ literals, or named Constants. No Variables.
+        Result14 = number14 + number15;
+        cout<<"\n Addsion Answer is =  " << Result14<<endl;
+        break;  // Not mandatory. 
+
+    case '-':
+        Result14 = number14 - number15;
+        cout<<"\n Subtracting Answer is =  " << Result14<<endl;
+        break; // Takes out of the switch statement
+
+    case '*':
+        Result14 = number14 * number15;
+        cout<<"\n Multiply Answer is =  " << Result14<<endl;
+        break; // Takes out of the switch statement
+
+    case '/': // Must be constants, C++ literals, or named Constants. No Variables.
+        Result14 = number14 / number15;
+        cout<<"\n Div/Division Answer is =  " << Result14<<endl;
+            if (number15 == 0)
+                cout<<"\n Division with Zero , does not give satisfactory Answer, inf is infinity =  " <<Result14<<endl;
+        break;  // Not mandatory.
+
+ /*   case '%':
+        Result14 = number14 % number15;
+        cout<<"\n Mod or remainder Answer is =  " << Result14<<endl;
+        break;
+TestCpp.cpp:96:29: error: invalid operands of types 'double' and 'double' to binary 'operator%'
+   96 |         Result14 = number14 % number15;
+      |                    ~~~~~~~~ ^ ~~~~~~~~
+      |                    |          |
+      |                    double     double
+% can not be used between two doubles
+*/
+    default:  // If ther is no default, then nothing will be executed in here
+        cout<<"\n"<< number14 << operator14 << number15 << "\n Wrong Input " << endl;
+        break; // Not mandatory.
+ }
+
+cout<<"\n  Answer is =  " << Result14<<endl;
 
 
 cout<<"\n      "<<endl;
@@ -591,3 +786,4 @@ Ctrl+shift+p for command palette
 /// open new file  Ctrl+Shift+n
 
 */
+
