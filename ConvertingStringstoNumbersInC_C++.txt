@@ -1,0 +1,374 @@
+https://www.geeksforgeeks.org/converting-strings-numbers-cc/
+Skip to content
+Tutorials
+Student
+Jobs
+Courses
+Write
+Write
+Come write articles for us and get featured
+Practice
+Practice
+Learn and code with the best industry experts
+Premium
+Premium
+Get access to ad-free content, doubt assistance and more!
+Jobs
+Jobs
+Come and find your dream job with us
+Geeks Digest
+Quizzes
+Geeks Campus
+Gblog Articles
+IDE
+Campus Mantri
+sewerdiv2 Avatar
+sewerdiv2 Avatar
+ My Profile	 Edit Profile
+ My Courses	 Go Premium
+ Logout
+Home
+Courses
+Algorithms
+Data Structures
+Languages
+Interview Corner
+GATE
+CS Subjects
+Web Technologies
+School Learning
+Student
+Jobs
+GBlog
+Puzzles
+What's New ?
+Change Language
+Related Articles
+Related Articles
+static_cast in C++ | Type Casting operators
+const_cast in C++ | Type Casting operators
+reinterpret_cast in C++ | Type Casting operators
+Type Conversion in C++
+Converting Strings to Numbers in C/C++
+Converting string to number and vice-versa in C++
+How to find size of array in C/C++ without using sizeof ?
+array::size() in C++ STL
+What are the default values of static variables in C?
+Understanding “volatile” qualifier in C | Set 2 (Examples)
+Const Qualifier in C
+Initialization of static variables in C
+Understanding “register” keyword in C
+Understanding “extern” keyword in C
+Storage Classes in C
+Static Variables in C
+Memory Layout of C Programs
+How to deallocate memory without using free() in C?
+Difference Between malloc() and calloc() with Examples
+Dynamic Memory Allocation in C using malloc(), calloc(), free() and realloc()
+How to dynamically allocate a 2D array in C?
+How to pass a 2D array as a parameter in C?
+Multidimensional Arrays in C / C++
+2D Vector In C++ With User Defined Size
+Vector of Vectors in C++ STL with Examples
+What is Memory Leak? How can we avoid?
+std::sort() in C++ STL
+Arrays in C/C++
+For Versus While
+Bitwise Operators in C/C++
+Converting Strings to Numbers in C/C++
+Difficulty Level : Medium
+Last Updated : 20 Apr, 2021
+There are two common methods to convert strings to numbers: 
+ 
+
+Using stringstream class or sscanf() 
+stringstream() : This is an easy way to convert strings of digits into ints, floats or doubles. Following is a sample program using a stringstream to convert string to int.
+ 
+
+
+// A program to demonstrate the use of stringstream
+#include <iostream>
+#include <sstream>
+using namespace std;
+ 
+int main()
+{
+    string s = "12345";
+ 
+    // object from the class stringstream
+    stringstream geek(s);
+ 
+    // The object has the value 12345 and stream
+    // it to the integer x
+    int x = 0;
+    geek >> x;
+ 
+    // Now the variable x holds the value 12345
+    cout << "Value of x : " << x;
+ 
+    return 0;
+}
+Output:
+
+Value of x : 12345
+// A stringstream is similar to input/output
+// file stream. We need to declare a stringstream
+// just like an fstream, for example: 
+stringstream ss;
+
+// and, like an fstream or cout, 
+// we can write to it:
+ss << myString; or 
+ss << myCstring; or
+ss << myInt;, or float, or double, etc.
+
+// and we can read from it:
+ss >> myChar; or
+ss >> myCstring; or
+ss >> myInt;  
+To summarize, stringstream is a convenient way to manipulate strings.
+sscanf() is a C style function similar to scanf(). It reads input from a string rather that standard input. 
+ 
+
+
+#include<stdio.h>
+int main()
+{
+    const char *str = "12345";
+    int x;
+    sscanf(str, "%d", &x);
+    printf("\nThe value of x : %d", x);
+    return 0;
+}
+Output:
+
+
+
+Value of x : 12345
+Similarly we can read float and double using %f and %lf respectively.
+
+String conversion using stoi() or atoi() 
+stoi() : The stoi() function takes a string as an argument and returns its value. Following is a simple implementation:
+ 
+
+
+// C++ program to demonstrate working of stoi()
+// Work only if compiler supports C++11 or above.
+#include <iostream>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+    string str1 = "45";
+    string str2 = "3.14159";
+    string str3 = "31337 geek";
+ 
+    int myint1 = stoi(str1);
+    int myint2 = stoi(str2);
+    int myint3 = stoi(str3);
+ 
+    cout << "stoi(\"" << str1 << "\") is "
+         << myint1 << '\n';
+    cout << "stoi(\"" << str2 << "\") is "
+         << myint2 << '\n';
+    cout << "stoi(\"" << str3 << "\") is "
+         << myint3 << '\n';
+ 
+    return 0;
+}
+Output:
+
+stoi("45") is 45
+stoi("3.14159") is 3
+stoi("31337 geek") is 31337 
+atoi() : The atoi() function takes a character array or string literal as an argument and returns its value. Following is a simple implementation:
+ 
+
+
+// For C++11 above
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+  
+int main()
+{
+    const char *str1 = "42";
+    const char *str2 = "3.14159";
+    const char *str3 = "31337 geek";
+    
+    int num1 = atoi(str1);
+    int num2 = atoi(str2);
+    int num3 = atoi(str3);
+   
+    cout << "atoi(\"" << str1
+              << "\") is " << num1 << '\n';
+    cout << "atoi(\"" << str2
+              << "\") is " << num2 << '\n';
+    cout << "atoi(\"" << str3
+              << "\") is " << num3 << '\n';
+    
+   return 0;
+}
+Output:
+
+atoi("42") is 42
+atoi("3.14159") is 3
+atoi("31337 geek") is 31337 
+stoi() vs atoi()
+
+atoi() is a legacy C-style function. stoi() is added in C++ 11. 
+ 
+atoi() works only for C-style strings (character array and string literal), stoi() works for both C++ strings and C style strings
+atoi() takes only one parameter and returns integer value.
+int atoi (const char * str); 
+stoi() can take upto three parameters, the second parameter is for starting index and third parameter is for base of input number.
+int stoi (const string&  str, size_t* index = 0, int base = 10); 
+ 
+
+Exercise 
+Write your own atof() that takes a string (which represents a floating-point value) as an argument and returns its value as double.
+Reference: 
+http://www.cplusplus.com/reference/string/stoi/ 
+http://www.cplusplus.com/reference/sstream/stringstream/ 
+http://www.cplusplus.com/reference/cstdlib/atoi/
+This article is contributed by Siffi Singh. If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to contribute@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.
+Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.
+ 
+
+Want to learn from the best curated videos and practice problems, check out the C++ Foundation Course for Basic to Advanced C++ and C++ STL Course for foundation plus STL.  To complete your preparation from learning a language to DS Algo and many more,  please refer Complete Interview Preparation Course.
+
+Like
+84
+Previous
+Type Conversion in C++
+Next
+Converting string to number and vice-versa in C++
+RECOMMENDED ARTICLES
+Page :
+1
+2
+3
+Converting string to number and vice-versa in C++
+09, Jul 16
+Number of common base strings for two strings
+15, Apr 18
+Search strings with the help of given pattern in an Array of strings
+18, Aug 20
+C function to Swap strings
+06, Mar 10
+How to write long strings in Multi-lines C/C++?
+09, May 15
+C++ Program to concatenate two strings using Operator Overloading
+12, Nov 18
+<strings> library in C++ STL
+26, Feb 18
+Print all distinct circular strings of length M in lexicographical order
+03, Jul 18
+Program to check if two strings are same or not
+10, Jan 19
+Generate all the binary strings of N bits
+12, Mar 19
+C++ program to compare two Strings using Operator Overloading
+02, Aug 19
+Strings in C++ and How to Create them?
+09, Sep 19
+Processing strings using std::istringstream
+06, May 20
+Arrays and Strings in C++
+05, May 20
+Storage for Strings in C
+03, Mar 10
+Comparing two strings in C++
+31, Jan 18
+How to insert data in the map of strings?
+11, Dec 20
+How to convert C style strings to std::string and vice versa?
+22, Jul 16
+Array of Strings in C++ (5 Different Ways to Create)
+20, Jan 17
+Why "&" is not used for strings in scanf() function?
+05, May 17
+Output of C++ programs | Set 29 (Strings)
+15, Jun 17
+Strings in C
+01, Aug 17
+Write a one line C function to round floating point numbers
+28, May 09
+Modulus on Negative Numbers
+27, Nov 10
+Article Contributed By :
+https://media.geeksforgeeks.org/auth/avatar.png
+GeeksforGeeks
+Vote for difficulty
+Current difficulty : Medium
+Easy
+Normal
+Medium
+Hard
+Expert
+Improved By :
+milindbajaj
+Article Tags :
+CPP-Library
+cpp-string
+cpp-stringstream
+C Language
+C++
+Practice Tags :
+CPP
+Improve Article
+Report Issue
+WHAT’S NEW
+DSA Self Paced Course
+DSA Self Paced Course
+View Details
+Ad free experience with GeeksforGeeks Premium
+Ad free experience with GeeksforGeeks Premium
+View Details
+MOST POPULAR IN C LANGUAGE
+Core Dump (Segmentation fault) in C/C++
+fork() in C
+Left Shift and Right Shift Operators in C/C++
+rand() and srand() in C/C++
+Command line arguments in C/C++
+MOST VISITED IN C++
+Vector in C++ STL
+Initialize a vector in C++ (6 different ways)
+The C++ Standard Template Library (STL)
+Map in C++ Standard Template Library (STL)
+Inheritance in C++
+Writing code in comment? Please use ide.geeksforgeeks.org, generate link and share the link here.
+
+
+Load Comments
+GeeksforGeeks
+5th Floor, A-118,
+Sector-136, Noida, Uttar Pradesh - 201305
+feedback@geeksforgeeks.org
+Company
+About Us
+Careers
+Privacy Policy
+Contact Us
+Copyright Policy
+Learn
+Algorithms
+Data Structures
+Languages
+CS Subjects
+Video Tutorials
+Practice
+Courses
+Company-wise
+Topic-wise
+How to begin?
+Contribute
+Write an Article
+Write Interview Experience
+Internships
+Videos
+@geeksforgeeks , Some rights reserved
+We use cookies to ensure you have the best browsing experience on our website. By using our site, you acknowledge that you have read and understood our Cookie Policy & Privacy Policy
+Got It !
+Lightbox

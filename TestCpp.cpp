@@ -5,112 +5,62 @@ Copyright :== author/owner*/
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <stdio.h>
+#include <cstdlib>  
+#include <stdlib.h> 
+#include<math.h>
 
 using namespace std;
 
 
-int main(void)
+int main(int argc, char* argv[])
 
 {
 
-
-
-
-
-
-cout<<"\n--------   Grade Classification Lab  ---------------  "<<endl;
-cout<<"\n Write a program that inputs two grades separated by a space. If both grades are below a score of sixty then the program should output the message:Student Failed:( If both grades are greater than or equal to ninety five then the program should output the message:  Student Graduated with Honors:)  Otherwise the program should output the message:  Student Graduated! For example, an execution could look like this: Please enter 2 grades,separated by a space: 59 95  Student Graduated!"<<endl;
-
-cout<<"\nPlease enter 2 grades, separated by a space:";
-
-double gr1, gr2;
-
-cin>>gr1>>gr2;
-cout<<"\n"<< gr1 << "\n"<< gr2 <<endl;
-if ( gr1 < 60 && gr2 < 60)  // ( ( gr1 && gr2 ) < 60 ) does not work
-    cout<<"\n  Student Failed:(   "<<endl;
-
-else if ( gr1 >= 95 && gr2 >= 95 )  // ( ( gr1 && gr2 ) >= 95 ) causes error 
-    cout<<"\n  Student Graduated with Honors:)   "<<endl;
-
-else 
-    cout<<"\n  Student Graduated!   "<<endl;
-
-cout<<"\n _+_+_+_+_+_+_+_+_+=====================_+_+_+_+_+_+_+_+_+_+  "<<endl;
-
-cout<<"\n  Counting Even and Odd Numbers Lab   "<<endl;
-cout<<"\n  Write a program that inputs four numbers separated by spaces.  The program should count how many odd and even numbers there are. The program should then output one of three possibilities depending on how many even and odd numbers are entered: more evens, more odds, same number of evens and odds For example, an execution could look like this: Please enter 4 positive integers, separated by a space: 2 3 5 7 more odds "<<endl;
-
-cout<<"\n Please enter 4 positive integers, separated by a space:"<<endl;
-
-int a1a, a1b, a1c, a1d, numofodds, numofeven;
-numofodds = numofeven= 0 ;
-cin>>a1a>>a1b>>a1c>>a1d;
-
-
-/* if ( a1a % 2 == 0)
-    numofeven++;
-
-if ( a1a % 2 == 1)
-    numofodds++;
- */
-int reslt1a = ( a1a % 2 == 0) ? numofeven++ : numofodds++ ;
-cout << reslt1a<<endl;  
-cout<< numofeven<< numofodds<<endl;
-switch(a1b % 2)
-{
-    case 0:
-        numofeven++;
-        break;
-
-    case 1:
-        numofodds++;
-        break;
-
-}
-cout<< numofeven<< numofodds<<endl;;
-/*
-if ( a1b % 2 == 0)
-    numofeven++;
-if ( a1b % 2 == 1)
-    numofodds++;
-*/
-if ( a1c % 2 == 0)
-    numofeven++;
-if ( a1c % 2 == 1)
-    numofodds++;
-cout<< numofeven<< numofodds<<endl;;
-if ( a1d % 2 == 0)
-    numofeven++;
-else
-    numofodds++;
-cout<< numofeven<< numofodds<<endl;;
-if (numofeven == numofodds)
-    cout<<"\n  same number of evens and odds   "<<endl;
-else if (numofeven < numofodds)
-    cout<<"\n  more odds  "<<endl;
-else
-    cout<<"\n  more evens "<<endl;
-cout<< numofeven<< numofodds<<endl;;
-
-
-
-cout<<"\n     "<<endl;
 cout<<"\n     "<<endl;
 
+    int i,no, first=0, second=1, next;
+
+    first=0;
+    second=1;
+
+    cout<<"How many terms u want to Display :: ";
+    cin>>no;
+
+    cout<<"\nThe Fibonacci series for [ "<<no<<" ] terms are :: \n\n";
+    for(i=0; i<no; i++)
+    {
+        cout<<" "<<first<<" ";
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    cout<<"\n";
 
 cout<<"\n     "<<endl;
 cout<<"\n     "<<endl;
 cout<<"\n     "<<endl;
-cout<<"\n     "<<endl;
 
-/* 
-shorthand if else-----
-int time = 20;
-string result = (time < 18) ? "Good day." : "Good evening.";
-cout << result;
 
- */
+
+
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+cout<<"\n      "<<endl;
+
+
+
+
+
+
 
 return 0 ; 
 // For exiting within main function return is better for memory. 

@@ -6,6 +6,10 @@ Copyright :== author/owner*/
 #include <cmath>
 #include <string>
 #include <iomanip>
+#include <stdio.h>
+#include <cstdlib>  
+#include <stdlib.h> 
+
 
 using namespace std;
 
@@ -39,17 +43,14 @@ cout<<"\n double	8 bytes	Stores fractional numbers, containing one or more decim
 cout<<"\n boolean	1 byte	Stores true or false values \n"<<endl;
 cout<<"\n char	1 byte	Stores a single character/letter/number, or ASCII values     \n"<<endl;
 
-cout<<"\n  String Types:-The string type is used to store a sequence of characters (text). This is not a built-in type, but it behaves like one in its most basic usage. String values must be surrounded by double quotes: Example - string greeting = "Hello";cout << greeting;   \n"<<endl;
+cout<<"\n  String Types:-The string type is used to store a sequence of characters (text). This is not a built-in type, but it behaves like one in its most basic usage. String values must be surrounded by double quotes: Example - string greeting = 'Hello';cout << greeting;   \n"<<endl;
 cout<<"\n  To use strings, you must include an additional header file in the source code, the <string> library:   \n"<<endl;
-cout<<"\n  // Include the string library #include <string> // Create a string variable
-string greeting = "Hello";// Output string value cout << greeting;    \n"<<endl;
+cout<<"\n  // Include the string library #include <string> // Create a string variable string greeting = 'Hello';// Output string value cout << greeting; \n"<<endl;
 string greeting = "Hello";
 cout << greeting<<endl;
-// Include the string library
-#include <string>
+// Include the string library #include <string>
 
-// Create a string variable
-string greeting = "Hello";
+// Create a string variable greeting = "Hello";
 
 // Output string value
 cout << greeting<<endl;
@@ -251,8 +252,7 @@ cout<<"\n    String concatening with + is possible   \n"<<endl;
 
 cout<<"\n    C++ Booleans; Very often, in programming, you will need a data type that can only have one of two values, like:YES / NO, ON / OFF, TRUE / FALSE ; For this, C++ has a bool data type, which can take the values true (1) or false (0). Boolean Values A boolean variable is declared with the bool keyword and can only take the values true or false: Example, bool isCodingFun = true; bool isFishTasty = false;  cout << isCodingFun;  // Outputs 1 (true) cout << isFishTasty;  // Outputs 0 (false) From the example above, you can read that a true value returns 1, and false returns 0. However, it is more common to return boolean values from boolean expressions (see next page).\n"<<endl;
 
-cout<<"\n C++ Boolean Expressions : - A Boolean expression is a C++ expression that returns a boolean value: 1 (true) or 0 (false). You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:   Example , int x = 10; int y = 9; cout << (x > y); // returns 1 (true), because 10 is higher than 9  Or even easier: Example cout << (10 > 9); // returns 1 (true), because 10 is higher than 9   In the examples below, we use the equal to (==) operator to evaluate an expression: Example , int x = 10; cout << (x == 10);  // returns 1 (true), because the value of x is equal to 10; Example cout << (10 == 15);  // returns 0 (false), because 10 is not equal to 15
-Booleans are the basis for all C++ comparisons and conditions. "<< s <<endl;
+cout<<"\n C++ Boolean Expressions : - A Boolean expression is a C++ expression that returns a boolean value: 1 (true) or 0 (false). You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:   Example , int x = 10; int y = 9; cout << (x > y); // returns 1 (true), because 10 is higher than 9  Or even easier: Example cout << (10 > 9); // returns 1 (true), because 10 is higher than 9   In the examples below, we use the equal to (==) operator to evaluate an expression: Example , int x = 10; cout << (x == 10);  // returns 1 (true), because the value of x is equal to 10; Example cout << (10 == 15);  // returns 0 (false), because 10 is not equal to 15 Booleans are the basis for all C++ comparisons and conditions. "<< s <<endl;
 
 
 
@@ -295,8 +295,8 @@ cout <<"\n double d1 = 12E4; so d1 = " << d1;
  
   cout <<"float f1 = 35e3; double d1 = 12E4; cout << f1 << \n; cout << d1;\n";
   
-  float f1 = 35e3;
-  double d1 = 12E4;
+f1 = 35e3;
+d1 = 12E4;
   cout<< "\n" << f1 << "\n";
   cout << "\n"<< d1;
 
@@ -522,8 +522,287 @@ TestCpp.cpp:96:29: error: invalid operands of types 'double' and 'double' to bin
 
 cout<<"\n  Answer is =  " << Result14<<endl;
 
+puts(" This is C code printed by puts() ");
 
-cout<<"\n      "<<endl;
+cout<<"\n--------   Grade Classification Lab  ---------------  "<<endl;
+cout<<"\n Write a program that inputs two grades separated by a space. If both grades are below a score of sixty then the program should output the message:Student Failed:( If both grades are greater than or equal to ninety five then the program should output the message:  Student Graduated with Honors:)  Otherwise the program should output the message:  Student Graduated! For example, an execution could look like this: Please enter 2 grades,separated by a space: 59 95  Student Graduated!"<<endl;
+
+cout<<"\nPlease enter 2 grades, separated by a space:";
+
+double gr1, gr2;
+
+cin>>gr1>>gr2;
+cout<<"\n"<< gr1 << "\n"<< gr2 <<endl;
+if ( gr1 < 60 && gr2 < 60)  // ( ( gr1 && gr2 ) < 60 ) does not work
+    cout<<"\n  Student Failed:(   "<<endl;
+
+else if ( gr1 >= 95 && gr2 >= 95 )  // ( ( gr1 && gr2 ) >= 95 ) causes error 
+    cout<<"\n  Student Graduated with Honors:)   "<<endl;
+
+else 
+    cout<<"\n  Student Graduated!   "<<endl;
+
+cout<<"\n _+_+_+_+_+_+_+_+_+=====================_+_+_+_+_+_+_+_+_+_+  "<<endl;
+
+cout<<"\n  Counting Even and Odd Numbers Lab   "<<endl;
+cout<<"\n  Write a program that inputs four numbers separated by spaces.  The program should count how many odd and even numbers there are. The program should then output one of three possibilities depending on how many even and odd numbers are entered: more evens, more odds, same number of evens and odds For example, an execution could look like this: Please enter 4 positive integers, separated by a space: 2 3 5 7 more odds "<<endl;
+
+cout<<"\n Please enter 4 positive integers, separated by a space:"<<endl;
+
+int a1a, a1b, a1c, a1d, numofodds, numofeven;
+numofodds = numofeven= 0 ;
+cin>>a1a>>a1b>>a1c>>a1d;
+
+
+/* if ( a1a % 2 == 0)
+    numofeven++;
+
+if ( a1a % 2 == 1)
+    numofodds++;
+ */
+int reslt1a = ( a1a % 2 == 0) ? numofeven++ : numofodds++ ;
+cout << reslt1a<<endl;  
+cout<< "numofeven = "<< numofeven<<" numofodds = "<< numofodds<<endl;
+switch(a1b % 2)
+{
+    case 0:
+        numofeven++;
+        break;
+
+    case 1:
+        numofodds++;
+        break;
+
+}
+cout<< "numofeven = "<< numofeven<<" numofodds = "<< numofodds<<endl;
+/*
+if ( a1b % 2 == 0)
+    numofeven++;
+if ( a1b % 2 == 1)
+    numofodds++;
+*/
+if ( a1c % 2 == 0)
+    numofeven++;
+if ( a1c % 2 == 1)
+    numofodds++;
+cout<< "numofeven = "<< numofeven<<" numofodds = "<< numofodds<<endl;
+if ( a1d % 2 == 0)
+    numofeven++;
+else
+    numofodds++;
+cout<< "numofeven = "<< numofeven<<" numofodds = "<< numofodds<<endl;
+if (numofeven == numofodds)
+    cout<<"\n  same number of evens and odds   "<<endl;
+else if (numofeven < numofodds)
+    cout<<"\n  more odds  "<<endl;
+else
+    cout<<"\n  more evens "<<endl;
+cout<< "numofeven = "<< numofeven<<" numofodds = "<< numofodds<<endl;
+
+
+
+
+
+
+
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n     "<<endl;
+cout<<"\n shorthand if else-----int time = 20; string result = (time < 18) ? 'Good day.' : 'Good evening.';cout << result; The code produces output = "<<endl;
+
+/* 
+shorthand if else-----
+int time = 20;
+string result = (time < 18) ? "Good day." : "Good evening.";
+cout << result;
+
+ */
+int time = 20;
+string result = (time < 18) ? "Good day." : "Good evening.";
+cout << result;
+
+
+cout<<"\n  Iterative statements   "<<endl;
+cout<<"\n  WHILE statement   "<<endl;
+
+    int i, n;
+
+    /* Input upper limit from user */
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    printf("C for loop Natural numbers from 1 to %d : \n", n);
+
+    /*
+     * Start loop counter from 1 (i=1) and go till n (i<=n)
+     * increment the loop count by 1 to get the next value. 
+     * For each repetition print the value of i.
+     */
+    for(i=1; i<=n; i++)
+    {
+        printf("%d\n", i);
+    }
+
+
+
+
+   int UInpN, StartCounterIIT;
+
+
+printf("\nEnter any number to start from:  ");
+scanf("%d", &StartCounterIIT);
+
+puts("\nEnter any number to end with:  ");
+cin>>UInpN;
+
+while ( StartCounterIIT <= UInpN)
+
+  {
+      cout << StartCounterIIT <<endl;
+      StartCounterIIT += 1;  // or  StartCounterIIt++
+
+  } 
+
+
+  cout << "Enter the number for counting and summing : ";
+   int x;
+   int s = 0; int count = 0;
+   cout << "Enter the number for counting and summing : ";
+   cin >> x;
+   while (x != 0) {   // (x > 0)
+      s = s + x % 10;
+      x = x / 10;
+      count++;
+   }
+   cout << "\n There are " << count << " number of digits in the number "<< " The sum of the digits : "<< s<<endl;
+
+/* I hope you got the idea about the difference between Printf and cout and when and how to use them. While both of them are used to print/display things, but it is a matter of what programming language you’re using. C++ allows printf as well as Cout, but C language does not allow Cout. */
+
+
+    int iz,nz,xz,sumz=0;
+    float avgz;
+
+    cout<<"How many numbers u want to enter :: ";
+    cin>>nz;
+
+    for(iz=1;iz<=nz;++iz)
+    {
+        cout<<"\nEnter number "<<iz<<" :: ";
+        cin>>xz;
+
+        sumz+=xz;
+    }
+
+    avgz=(float)sumz/(float)nz;
+
+    cout<<"\n\nSum of "<<nz<<" Numbers :: "<<sumz;
+
+    cout<<"\n\nAverage of "<<nz<<" Numbers :: "<<avgz;
+
+    cout<<"\n";
+
+cout<<"\n  Use of For loop  When we know the range of the iteration/loop "<<endl;
+
+cout<<"\n Use while loop when the end range of loop/iteration is not known    "<<endl;
+cout<<"\n  Use of For loop  When we know the range of the iteration/loop "<<endl;
+
+cout<<"\n Use while loop when the end range of loop/iteration is not known    "<<endl;
+
+cout<<"\n  Calculation of average grades from user inputs, where the number of inputs are not known, determined by user input "<<endl;
+
+cout<<"\n With Exit condition preset to  "<<endl;
+
+
+bool seenEndofInput;
+int sum, numofStudents;
+int curr;
+double average;
+cout<<"Enter the grades separated by a space"<<endl;
+cout<<"End the sequence by typing -1:"<<endl;
+sum = 0;
+numofStudents = 0;
+seenEndofInput = false;
+while (seenEndofInput == false) {
+cin>>curr;
+if (curr == -1) {
+seenEndofInput = true;
+}
+else {
+sum += curr;
+numofStudents++;
+}
+}
+average = (double)sum / (double) numofStudents;
+cout<<"The class average is "<<average<<endl;
+
+cout<<"\n With while loop ++++++==========  Write a program that reads a positive integer n, and prints the first n even numbers. For example, one execution would look like this: Please enter a positive integer: 3 ; output 2 4 6    ++++++========== With while loop "<<endl;
+
+cout<<"\n  Write a positive integer number n, to print the first n number  even numeric digits after 0 / zero :>__";
+
+int starteven = 2;
+int numberofEvenDigits, digitCounter;
+
+digitCounter = numberofEvenDigits = 0;
+cin>> numberofEvenDigits;
+cout<<"\n Even Numbers are \n "<<endl;
+do {
+
+cout<< starteven<<endl;
+digitCounter++;
+starteven += 2;
+} 
+while(digitCounter < numberofEvenDigits );
+
+
+
+
+cout<<"\n With for loop  ++++++==========  Write a program that reads a positive integer n, and prints the first n even numbers. For example, one execution would look like this: Please enter a positive integer: 3 ; output 2 4 6   ++++++========== With for loop "<<endl; 
+
+cout << "\n  Write a positive integer number n, to print the first n number  even numeric digits after 0 / zero :>__";
+
+
+starteven = 2;
+
+numberofEvenDigits = 0;
+cin>> numberofEvenDigits;
+cout<<"\n Even Numbers are \n "<<endl;
+
+
+for (digitCounter = 0 ; digitCounter < numberofEvenDigits ; digitCounter++)  
+
+{
+cout<< starteven<<endl;
+starteven += 2;
+} 
+
+
+cout<<"\n  The Do/While Loop, The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true. Syntax do {   // code block to be executed } while (condition); The example below uses a do/while loop. The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested: Do not forget to increase the variable used in the condition, otherwise the loop will never end!  "<<endl;
+cout<<"\n  C++ While Loop, The while loop loops through a block of code as long as a specified condition is true: Syntax while (condition) { // code block to be executed } "<<endl;
+
+puts ("\n  C++ For Loop, When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:Syntax for (statement 1; statement 2; statement 3) {   // code block to be executed } Statement 1 is executed (one time) before the execution of the code block. Statement 2 defines the condition for executing the code block. Statement 3 is executed (every time) after the code block has been executed. The example below will print the numbers 0 to 4: Example for (int i = 0; i < 5; i++) {   cout << i << '\\n'; } Example explained Statement 1 sets a variable before the loop starts (int i = 0). Statement 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end. Statement 3 increases a value (i++) each time the code block in the loop has been executed. Another Example This example will only print even values between 0 and 10: Example for (int i = 0; i <= 10; i = i + 2) {   cout << i << '\\n'; } ");
+
+
+puts ("\n  C++ For Loop, When you know exactly how many times you want to loop through a block of code, use the for loop instead of a while loop:Syntax for (statement 1; statement 2; statement 3) {   // code block to be executed } Statement 1 is executed (one time) before the execution of the code block. Statement 2 defines the condition for executing the code block. Statement 3 is executed (every time) after the code block has been executed. The example below will print the numbers 0 to 4: Example for (int i = 0; i < 5; i++) {   cout << i << '\\n'; } Example explained Statement 1 sets a variable before the loop starts (int i = 0). Statement 2 defines the condition for the loop to run (i must be less than 5). If the condition is true, the loop will start over again, if it is false, the loop will end. Statement 3 increases a value (i++) each time the code block in the loop has been executed. Another Example This example will only print even values between 0 and 10: Example for (int i = 0; i <= 10; i = i + 2) {   cout << i << '\\n'; } ");
+
+
+cout<<"\n ____+++++++======C++ Break and Continue-----_____++++++====    "<<endl;
+cout<<"\n ____+++++++======C++ Break-----_____++++++====      "<<endl;
+
+
+
+cout<<"\n  C++ Break, You have already seen the break statement used in an earlier chapter of this tutorial. It was used to 'jump out' of a switch statement.The break statement can also be used to jump out of a loop. This example jumps out of the loop when i is equal to 4:Example for (int i = 0; i < 10; i++) {  if (i == 4) {break;}cout << i << '\\n'; }   "<<endl;
+cout<<"\n C++ Continue, The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop. This example skips the value of 4:Example for (int i = 0; i < 10; i++) {   if (i == 4) { continue; } cout << i << '\\n'; } "<<endl; 
+
+cout<<"\n /*  C++ Program to find Square  Root of a number using sqrt() function, need #include<math.h>  */    "<<endl;
+    float sq,n;
+
+    cout<<"Enter any positive number :: ";
+    cin>>n;
+
+    sq = sqrt(n);
+
+    cout<<"\nSquare  root of Entered Number [ "<<n<<" ] is :: "<<sq<<"\n";
+
 cout<<"\n      "<<endl;
 cout<<"\n      "<<endl;
 cout<<"\n      "<<endl;
