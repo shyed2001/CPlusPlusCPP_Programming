@@ -6,8 +6,8 @@ Copyright :== author/owner*/
 #include <string>
 #include <iomanip>
 #include <stdio.h>
-#include <cstdlib>  
-#include <stdlib.h> 
+#include <cstdlib>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -25,7 +25,7 @@ cout<<"\n ____+++++++======C++ Break-----_____++++++====      "<<endl;
 
 
 cout<<"\n  C++ Break, You have already seen the break statement used in an earlier chapter of this tutorial. It was used to 'jump out' of a switch statement.The break statement can also be used to jump out of a loop. This example jumps out of the loop when i is equal to 4:Example for (int i = 0; i < 10; i++) {  if (i == 4) {break;}cout << i << '\\n'; }   "<<endl;
-cout<<"\n C++ Continue, The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop. This example skips the value of 4:Example for (int i = 0; i < 10; i++) {   if (i == 4) { continue; } cout << i << '\\n'; } "<<endl; 
+cout<<"\n C++ Continue, The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop. This example skips the value of 4:Example for (int i = 0; i < 10; i++) {   if (i == 4) { continue; } cout << i << '\\n'; } "<<endl;
 
 cout<<"\n     "<<endl;
 
@@ -42,9 +42,25 @@ cout<<"\n      "<<endl;
 cout<<"\n      "<<endl;
 cout<<"\n      "<<endl;
 cout<<"\n      "<<endl;
+int height, width;
+    cout << "Height: ";
+    cin >> height;
+    cout << "Width: ";
+    cin >> width;
+    char symbol;
+    cout << "Symbol: ";
+    cin >> symbol;
 
-return 0 ; 
-// For exiting within main function return is better for memory. 
-   /// or exit(0) for Exit with success , may cause memory leak. 
+    for (int h = 0; h < height; h++) {
+        for (int w = 0; w < width; w++) {
+            cout << setw(3) << symbol;
+        }
+        cout << endl;
+    }
+
+    system("pause>0");
+return 0 ;
+// For exiting within main function return is better for memory.
+   /// or exit(0) for Exit with success , may cause memory leak.
 
 }
