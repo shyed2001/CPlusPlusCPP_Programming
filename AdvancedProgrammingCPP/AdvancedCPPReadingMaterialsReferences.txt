@@ -105,3 +105,18 @@ Function Signature
 
 float bmimetricf(int weight, float height);
 
+
+Course
+/
+Week 11 - Algorithm Analysis
+/
+Readings and Resources
+
+Readings and Resources
+
+https://drive.google.com/file/d/1Cj0TEnMNGN4XpgXJcAa_5oM3-6rJUH-q/view
+
+https://en.wikipedia.org/wiki/Analysis_of_algorithms
+
+
+
