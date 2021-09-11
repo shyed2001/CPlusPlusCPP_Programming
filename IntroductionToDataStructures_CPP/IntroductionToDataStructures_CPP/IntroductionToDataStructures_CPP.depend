@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1631385351 source:d:\github\cpluspluscpp_programming\introductiontodatastructures_cpp\introductiontodatastructures_cpp\main.cpp
+	<iostream>
+	<stdio.h>
+

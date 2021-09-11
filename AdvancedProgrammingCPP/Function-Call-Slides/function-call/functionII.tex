@@ -1,0 +1,115 @@
+\documentclass[17pt]{beamer} 
+\usepackage{beamerthemesplit}
+\definecolor{White}{RGB}{255,255,255}
+\definecolor{Blue}{RGB}{102,51,123}
+\setbeamercolor{structure}{fg=Blue}
+\setbeamercolor{alerted text}{fg=Blue}
+\beamertemplateshadingbackground{Blue!20}{White!20} 
+\logo{\includegraphics[height=1cm]{3t-logo.pdf}}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\begin{document}
+\sffamily \bfseries
+\title
+[Function Calls in C and C++ \hspace{0.75cm}]
+%\insertframenumber/\inserttotalframenumber]
+{Function Calls in C and C++}
+\author
+[Ashwini R Patil]
+{\small Talk to a Teacher \\http://spoken-tutorial.org \\ National Mission on Education
+  through ICT \\ http://sakshat.ac.in \\ [0.6cm]
+   Ashwini R Patil \\IIT Bombay \\[0.6cm]
+{\small 4 May 2012}
+}
+\begin{frame}
+   \titlepage
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Learning Objectives}\pause
+  \begin{itemize}[<+-|alert@+>]
+  \item call by value
+\item call by reference
+\item We will do this through an example
+  \end{itemize}
+\end{frame}
+					%%Operating Systems Used
+\begin{frame}
+  \frametitle {System Requirements} \pause
+  \begin{itemize}[<+-|alert@+>]
+  \item Ubuntu OS v. 11.10
+  \item gcc and g++ Compiler v. 4.6.1
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Functions call by value}\pause
+  \begin{itemize}[<+-|alert@+>]
+  \item It is a method of passing arguments to the function
+\item A copy of the variable is made before passing it to the function  
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Functions call by value}\pause
+  \begin{itemize}[<+-|alert@+>]
+\item Changes made to the arguments inside the function will remain in the function
+\item It will not be affected outside the function
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Function call by reference}\pause
+  %\vspace{-0.1in}
+  \begin{itemize}[<+-|alert@+>]
+\item It is another method of passing arguments to the function
+\item This method copies the address of the argument instead of the value
+\item Changes made to the arguments inside a function can affect them outside
+\item In this we need to declare the arguments as pointer type
+ \end{itemize}
+  \end{frame}
+
+
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item Function call by value
+\item Function call by reference
+\end{itemize}
+\end{frame}
+
+		%Assignment
+\begin{frame} 
+\frametitle{Assignment}
+\begin{itemize}
+\item Write a similar program to calculate the cube of a number
+\item Using call by value in C++
+\end{itemize}
+\end{frame}
+	% About the Spoken Tutorial project
+
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue} http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial} 
+\item It summarises the Spoken Tutorial project 
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\ \hspace{0.2cm}{\color{blue} http://spoken-tutorial.org \\ \hspace{0.2cm}/NMEICT-Intro}
+\end{itemize}
+\end{frame}
+\end{document}
