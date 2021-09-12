@@ -2,30 +2,72 @@
 License :== MIT + terms and conditions of author/owner
 Copyright :== author/owner*/
 
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
 #include <time.h>
 #include <unistd.h>
-#include <windows.h>
-///#include <threads.h>
+/// #include <windows.h>
+/// #include <threads.h>
 #include <conio.h>
 #include <dos.h>
 #include <direct.h>
 #include <math.h>
 #include<ctype.h>
 #include <cstdlib>
-#include <iostream>
 #include <cmath>
 #include <string>
 #include <iomanip>
 #include <string.h>
 
+
+
+#define SHOW_SOURCE_CODE
+#define SHOW_SOURCE_FILE_PATH
+
 using namespace std;
 
 int main(int argc, char* argv[])
 
-{ ///  puts("Use gcc -save-temps testC.c -o testC.exe for getting all the preprossed and object and assembly source files saved with chosen name");
+{
+
+#ifdef SHOW_SOURCE_CODE
+        // We can append this code to any C program
+    // such that it prints its source code.
+
+unsigned long ln = 0;
+/// The location of a C programming file is contained inside a predefined macro __FILE__ ;
+///  because __FILE__ contains the location of this C file in a string.
+
+ FILE *fp = fopen(__FILE__, "r");
+int prev = '\n';
+int c;  // Use int here, not char
+while((c=getc(fp))!=EOF) {
+  if (prev == '\n'){
+    printf("%05lu ", ++ln);  /// ++ln increases the line number by 1 before printing it.
+  }
+  putchar(c);
+  prev = c;
+}
+if (prev != '\n') {
+  putchar('\n');  // print a \n for input that lacks a final \n
+}
+printf("lines num: %lu\n", ln);
+
+    fclose(fp);
+          // We can append this code to any C program
+    // such that it prints its source code.
+
+#endif
+
+#ifdef SHOW_SOURCE_FILE_PATH
+
+       // Prints location of C this C code.
+   printf("%s \n",__FILE__);
+
+#endif
+    ///  puts("Use gcc -save-temps testC.c -o testC.exe for getting all the preprossed and object and assembly source files saved with chosen name");
    clock_t tStart = clock();
    puts(" int a = 5 ; \n int &p = a; int *ptr = &a; \n int *&pointer = ptr; \n ");
 

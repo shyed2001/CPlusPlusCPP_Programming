@@ -1,5 +1,9 @@
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
+
+
+using namespace std;
 
 #define SHOW_SOURCE_CODE
 #define SHOW_SOURCE_FILE_PATH
@@ -10,15 +14,21 @@ int main(void) {
         // We can append this code to any C program
     // such that it prints its source code.
 
-    char c;
-    FILE *fp = fopen(__FILE__, "r");
-
-    do
-    {
-        c = fgetc(fp);
-        putchar(c);
-    }
-    while (c != EOF);
+unsigned long ln = 0;
+ FILE *fp = fopen(__FILE__, "r");
+int prev = '\n';
+int c;  // Use int here, not char
+while((c=getc(fp))!=EOF) {
+  if (prev == '\n'){
+    printf("%05lu ", ++ln);
+  }
+  putchar(c);
+  prev = c;
+}
+if (prev != '\n') {
+  putchar('\n');  // print a \n for input that lacks a final \n
+}
+printf("lines num: %lu\n", ln);
 
     fclose(fp);
           // We can append this code to any C program
@@ -55,3 +65,4 @@ int main(void) {
 
     return 0;
 }
+
