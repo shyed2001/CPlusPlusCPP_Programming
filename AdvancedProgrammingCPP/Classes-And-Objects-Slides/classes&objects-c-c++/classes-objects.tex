@@ -1,0 +1,202 @@
+\documentclass[17pt]{beamer} 
+\usepackage{beamerthemesplit}
+\usepackage[T1]{fontenc}
+\definecolor{White}{RGB}{255,255,255}
+\definecolor{Blue}{RGB}{102,51,123}
+\setbeamercolor{structure}{fg=Blue}
+\setbeamercolor{alerted text}{fg=Blue}
+\beamertemplateshadingbackground{Blue!20}{White!20} 
+\logo{\includegraphics[height=1cm]{3t-logo.pdf}}
+\setbeamersize{text margin left=0cm, text margin right=0cm}
+\begin{document}
+\sffamily \bfseries
+\title
+[Classes and Objects in C++ \hspace{0.75cm}]
+%\insertframenumber/\inserttotalframenumber]
+{Classes and Objects in C++}
+\author
+[Ashwini R Patil]
+{\small Talk to a Teacher \\http://spoken-tutorial.org \\ National Mission on Education
+  through ICT \\ http://sakshat.ac.in \\ [0.6cm]
+   Ashwini R Patil \\IIT Bombay \\[0.6cm]
+{\small 8 August 2012}
+}
+\begin{frame}
+   \titlepage
+\end{frame}
+\begin{frame}[fragile]
+  \frametitle{Learning Objectives}\pause
+  \begin{itemize}[<+-|alert@+>]
+  \item Classes
+  \item Objects
+  \item Encapsulation
+  \item Data Abstraction
+  \item We will do this with the help of an example
+  \end{itemize}
+\end{frame}
+					%%Operating Systems Used
+\begin{frame}
+  \frametitle {System Requirements} \pause
+  \begin{itemize}[<+-|alert@+>]
+  \item Ubuntu OS v. 11.10
+  \item g++ Compiler v. 4.6.1
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Introduction}\pause
+\begin{itemize}[<+-|alert@+>]
+  \item Class is created using a keyword class
+  \item It holds data and functions 
+  \item Class links the code and data
+  \item The data and functions of the class are called as members of the class
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}\pause
+\begin{itemize}[<+-|alert@+>]
+  \item Objects are variables
+\item They are the copy of a class
+\item Each of them has Properties and Behavior
+\item Properties are defined through data elements
+\item Behavior is defined through member functions called methods
+\end{itemize}
+\end{frame}
+
+ 
+  \begin{frame}
+  \frametitle{Syntax}\pause
+    \begin{itemize}
+    \item  class class-name \vspace{.20cm}
+  \\ \{ \vspace{.20cm}
+  \\  public/private/protected: \vspace{.20cm}
+  \\  Data members  \vspace{.20cm} 
+  \\ Member functions \vspace{.20cm} 
+  \\  \};
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Access Specifiers}
+\begin{itemize}[<+-|alert@+>]
+\item Public specifier \vspace{.30cm}
+\begin{itemize}
+\item The public specifier allows the data to be accessed outside the class \vspace{.30cm}
+\item A public member can be used anywhere in the program 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Access specifiers}
+\begin{itemize}[<+-|alert@+>]
+\item Private specifier \vspace{.30cm}
+\begin{itemize}
+\item The members declared as private cannot be accessed outside the class \vspace{.30cm}
+\item Private members can be used only by the members of the class \vspace{.30cm}
+
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Access Specifiers}
+\begin{itemize}[<+-|alert@+>]
+\item Protected specifier \vspace{.30cm}
+\begin{itemize}
+\item Protected members cannot be accessed from outside the class \vspace{.30cm}
+\item They can be accessed by a derived class
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Scope Resolution Operator} \pause
+\begin{itemize}[<+-|alert@+>]
+\item It is used to access hidden data
+\item To access the variable or function with the same name we use :: operator
+\item Suppose the local variable and the global variable have the same name
+\item The local variable gets the priority
+\item We can access the global variable using :: operator
+\end{itemize}
+\end{frame}
+
+
+				
+\begin{frame}	
+\frametitle{Summary}
+\begin{itemize}
+\item Encapsulation \vspace{.15cm}
+\item Data Abstraction \vspace{.15cm}
+\item Private members \vspace{.15cm}
+\begin{itemize}
+\item eg. int x; \vspace{.15cm}
+\end{itemize}
+\item Public functions \vspace{.15cm}
+\begin{itemize}
+\item eg. int area(int); \vspace{.15cm}
+\end{itemize}
+\item Classes \vspace{.15cm}
+\begin{itemize}
+\item eg. class  square \vspace{.15cm}
+\end{itemize}
+\end{itemize}
+\end{frame}		
+	
+	
+\begin{frame}	
+\frametitle{Summary}
+\begin{itemize}
+\item To create object \vspace{.20cm}
+\begin{itemize}
+\item eg. square sqr; \vspace{.20cm}
+\end{itemize}
+\item To call a function using object \vspace{.20cm}
+\begin{itemize}
+\item eg. sqr.area();\vspace{.20cm}
+\end{itemize}
+\end{itemize}
+\end{frame}
+	
+	
+		%Assignment
+\begin{frame} 
+\frametitle{Assignment}
+\begin{itemize}
+\item Write a program to find the perimeter of a given circle
+\end{itemize}
+\end{frame}
+	% About the Spoken Tutorial project
+
+\begin{frame}
+\frametitle{About the Spoken Tutorial Project}
+\begin{itemize}
+\item Watch the video available at {\color{blue} http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial} 
+\item It summarises the Spoken Tutorial project  \pause
+\item If you do not have good bandwidth, you can download and watch it
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Spoken Tutorial Workshops}The Spoken Tutorial Project Team 
+\begin{itemize}
+\item Conducts workshops using spoken tutorials 
+\item Gives certificates to those who pass an online test 
+\item For more details, please write to \\ \hspace {0.5cm}{\color{blue}contact@spoken-tutorial.org}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Acknowledgements}
+\begin{itemize}
+\item Spoken Tutorial Project is a part of the Talk to a Teacher  project 
+\item It is supported by the National Mission on Education through  ICT, MHRD, Government of India 
+\item More information on this Mission is available at: \\ \hspace{0.2cm}{\color{blue} http://spoken-tutorial.org \\ \hspace{0.2cm}/NMEICT-Intro}
+\end{itemize}
+\end{frame}
+\end{document}
