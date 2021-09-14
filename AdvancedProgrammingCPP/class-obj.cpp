@@ -5,11 +5,11 @@ using namespace std;
 class square
 {
     int x;  /// this is private data, as nothing about access specifier is mentioned.
-    public:  /// this means area will be available globally.
+    public:  /// This is access specifier , this means area will be available globally.
     int area (int); /// member function or method
 };
 
-int square :: area (int a) /// :: means area function is a member of class square only
+int square :: area (int a) /// :: is scope resolution operator, means area function is a member of class square only
 {
   x = a;
  return x*x;
