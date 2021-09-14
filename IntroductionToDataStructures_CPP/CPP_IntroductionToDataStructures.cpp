@@ -1,6 +1,34 @@
+/*author/owner :== Shyed Shahriar Housaini
+License :== MIT + terms and conditions of author/owner
+Copyright :== author/owner*/
+
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+//#include <stdbool.h>
+#include <time.h>
+#include <unistd.h>
+//#include <windows.h>
+///#include <threads.h>
+//#include <conio.h>
+//#include <dos.h>
+//#include <direct.h>
+//#include <math.h>
+//#include<ctype.h>
+//#include <cstdlib>
 #include <iostream>
+//#include <cmath>
+//#include <string>
+//#include <iomanip>
+
+void clear(){
+    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+        system("clear");
+    #endif
+
+    #if defined(_WIN32) || defined(_WIN64)
+        system("cls");
+    #endif
+}
 
 
 using namespace std;
