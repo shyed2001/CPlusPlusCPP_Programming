@@ -9,6 +9,7 @@ int main() {
    #else
 
       cout<<"NOT Windows"<< endl; system("ls");
+      cout<< " Windows"<< endl; system("dir");
 
    #endif
 

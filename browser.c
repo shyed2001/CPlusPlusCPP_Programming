@@ -5,6 +5,16 @@
 #include <shellapi.h>
 int main(void)
 {
+
+
+   #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
+
+      cout<< " Windows"<< endl; system("dir");
+   #endif
+
+
+      cout<<"NOT Windows"<< endl; system("ls");
+      cout<< " Windows"<< endl; system("dir");
 //system("start https://digitalbd.org");
 ShellExecute(NULL, "open", "http://www.microsoft.com", NULL, NULL, SW_SHOWNORMAL);
 /// reference link https://www.betaarchive.com/wiki/index.php/Microsoft_KB_Archive/224816
