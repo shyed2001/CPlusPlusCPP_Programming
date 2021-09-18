@@ -9,3 +9,4 @@ v. push_back(i * 100) ;
 
 for (int i: v)
 cout << i << endl ;
+}
