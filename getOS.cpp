@@ -2,11 +2,15 @@
 using namespace std;
 int main() {
 
-   #if defined(__MINGW32__) || defined(__CYGWIN__)
+   #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
+
       cout<< " Windows"<< endl; system("dir");
+
    #else
+
       cout<<"NOT Windows"<< endl; system("ls");
 
    #endif
+
       return 0;
 }
