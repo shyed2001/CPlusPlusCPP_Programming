@@ -13,5 +13,6 @@ int main() {
 
    #endif
 
+   system("systeminfo");
       return 0;
 }
