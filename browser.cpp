@@ -8,31 +8,45 @@ using namespace std;
 
 void SearchWeb( string word );
 
-//void browser(string word){
-//
-//    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
-//        SearchWeb(word);
-//        printf("Not Windows\n");
-//    #endif
-//
-//    #if defined(_WIN32) || defined(_WIN64)
-//        system("open https://digitalbd.org");
-//        printf("Windows\n");
-//    #endif
-//
-//}
+void browser(string word){
+
+    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+
+        printf("Not Windows\n");
+        system("open https://digitalbd.org");
+    #endif
+
+    #if defined(_WIN32) || defined(_WIN64)
+
+        printf("Windows\n");
+        SearchWeb(word);
+    #endif
+
+}
 
 
 int main(void)
 {
+    // How to determine the version of the C++ standard used by the compiler?
+     if (__cplusplus == 201703L)
+      std::cout << "C++17" << endl;
+   else if (__cplusplus == 201402L)
+      std::cout << "C++14" << endl;
+   else if (__cplusplus == 201103L)
+      std::cout << "C++11" << endl;
+   else if (__cplusplus == 199711L)
+      std::cout << "C++98" << endl;
+   else
+      std::cout << "pre-standard C++" << endl;
+
 //system("start https://digitalbd.org");
 /// ShellExecute(NULL, "open", "http://www.microsoft.com", NULL, NULL, SW_SHOWNORMAL);
 /// reference link https://www.betaarchive.com/wiki/index.php/Microsoft_KB_Archive/224816
 string word;
 cout<<"Enter a word to search\n";
 cin>>word;
-
-SearchWeb(word);
+browser(word);
+///SearchWeb(word);
 
 return 0;
 }
