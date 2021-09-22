@@ -1,0 +1,52 @@
+Advanced Data Structures
+Learn the advanced programming topics in the C++ programming language, including file processing, linked lists, stacks, queues, trees, binary search trees and tree balancing algorithms.
+
+What you'll learn
+Skip What you'll learn
+Design and develop programs that utilize linked lists to store data internally.
+Design and develop programs that utilize stacks and queues to manage collections of data
+Utilize binary search trees and balanced trees to implement fast retrieval of data from a collection of data stored in memory.
+Show less
+Syllabus
+Skip Syllabus
+Wk 1 - File Processing
+
+Locks
+Objects
+Creating
+Passing to a Function
+Cin and Cout
+Output
+Input
+Getline
+Seeking
+Reading and Writing
+Appending
+Wk 2 - File Processing Labs
+
+Wk 3 - Linked Lists
+
+Linked Lists
+Templated Classes
+Wk 4 - Link List Labs
+
+Wk 5 - Stacks and Queues
+
+Stacks
+Queues
+Wk 6 - Stack and Queue Labs
+
+Wk 7 - Trees and Binary Search Trees
+
+Tree Storage
+Binary Search Tree
+Tree Traversals
+Balanced Trees
+AVL Trees
+Rotation
+Red-Black Trees
+Wk 8 - Tree Labs
+
+Wk 9 - Final Exam
+
+
