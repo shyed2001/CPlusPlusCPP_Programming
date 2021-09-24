@@ -1,6 +1,7 @@
 // C/C++ program to create an Soft Link
 // to the existing file
-
+/// Only command line arguments work
+/// Only command line arguments work
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -56,6 +57,8 @@ int main(int argc, char* argv[])
 
 /// C:/Users/User/Desktop/ExistingSymSoftlink
 
-/// C:\Users\User\Desktop\ExistingSymSoftlink\222.txt
+/// "C:\Users\User\Desktop\ExistingSymSoftlink\222.txt"
 
-/// C:\Users\User\Desktop\ExistingSymSoftlink22\333.txt
+/// "C:\Users\User\Desktop\ExistingSymSoftlink22\333222.txt"
+/// Only command line arguments work
+/// Only command line arguments work
