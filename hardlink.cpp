@@ -8,6 +8,8 @@
 #include <unistd.h>
 #include <iostream>
 #include <string>
+#include <windows.h>
+#include <cstdio>
 using namespace std;
 // Driver Code
 int main(int argc, char* argv[])
