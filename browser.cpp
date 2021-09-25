@@ -16,7 +16,8 @@ void browser(string word){
         system("open https://digitalbd.org");
     #endif
 
-    #if defined(_WIN32) || defined(_WIN64)
+    #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
+
 
         printf("Windows\n");
         SearchWeb(word);

@@ -12,14 +12,14 @@ using namespace std;
 // Driver Code
 int main(int argc, char* argv[])
 {
-       char str[1000];
+   char str[1000];
    char str2[1000];
    char* pstr = str;
    char* pstr2 = str2;
    const char* target = pstr;
    const char* linked = pstr2;
    int sl2;
-    // Symlink function
+    // Hard link function
     int sl = link(argv[1], argv[2]);
 
     // argv[1] is existing file name
@@ -40,8 +40,11 @@ int main(int argc, char* argv[])
 
    puts("Please Enter an Existing file name with absolute path  file to be linked");
    fgets( pstr,1000, stdin );
+   cout<<pstr<<endl;
    puts("Please Enter an file name with absolute path to be created as soft link");
    fgets( pstr2,1000, stdin );
+   cout<<pstr2<<endl;
+
     int sl2 = link(target, linked);
 
     }
@@ -64,3 +67,8 @@ int main(int argc, char* argv[])
 
 /// Only command line arguments work
 /// Only command line arguments work
+
+/// C:\Users\shyed\OneDrive\Desktop\SoftLink\111.txt
+
+/// C:\Users\shyed\OneDrive\Desktop\SymLink
+
