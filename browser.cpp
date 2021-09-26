@@ -25,7 +25,6 @@ void browser(string word){
 
 }
 
-
 int main(void)
 {
     // How to determine the version of the C++ standard used by the compiler?
