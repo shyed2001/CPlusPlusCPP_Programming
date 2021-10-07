@@ -36,7 +36,7 @@ If you don’t want to the buffer to synchronize with the underlying C-library�
  you can use std::ios_base::sync_with_stdio. [2] According to the documentation:\n\
 Sets whether the standard C++ streams are synchronized to the standard C streams after each input/output operation.\n\
 …If the synchronization is turned off, the C++ standard streams are allowed to buffer their I/O independently,\n\
- which may be considerably faster in some cases.   " );
+ which may be considerably faster in some cases. " );
 
     cout<<"\n  A C++ program is a collection of commands or statements.    \n"<<endl;
     \
@@ -344,7 +344,7 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
       #include <iomanip>."<<endl;
 
 
-    double x = 2.3654789d;
+    double x = 2.3654789;
     cout << "Print up to 3 decimal places: " << setprecision(3) << x << endl;
     cout << "Print up to 2 decimal places: " << setprecision(2) << x << endl;
     cout << "Print up to 7 decimal places: " << setprecision(7) << x << endl;
