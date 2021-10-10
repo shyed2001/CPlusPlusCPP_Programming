@@ -382,6 +382,11 @@ doko3.getMobileData();
 
 
 
+PauseExitORContinue();
+
+
+
+
 
                     puts(" Please press a button to continue");
                     cin.get();/// all system /// C++ all system // platform
