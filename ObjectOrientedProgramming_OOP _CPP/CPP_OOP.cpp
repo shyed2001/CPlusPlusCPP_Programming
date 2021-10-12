@@ -2,7 +2,9 @@
 #include<iostream>
 #include<string>
 #include<cstdlib> /// exit()
+
 /// for linux #include <curses.h> ///erase();
+
 using namespace std;
 
 
@@ -309,10 +311,30 @@ int getData()  //printData()
 
 
 
+class rectangle
+{
+
+public:
+int length;
+int breadth;
+
+void show( )
+{ cout<< "Length = " << length<< endl;
+cout << "Breadth = " << breadth<< endl;  }
+
+};
 
 
 
+class cuboid : public rectangle
+{
 
+public:
+int height;
+
+void display ( )
+{ cout<< "Heitht ="  << height<< endl; }
+};
 
 
 
@@ -320,7 +342,9 @@ int getData()  //printData()
 
 int main( )
 {
-getOS();
+short OS = getOS(); /// OS==1 is windows.
+
+cout << OS <<endl;
 
 
 #ifdef SHOW_SOURCE_FILE_PATH
@@ -481,13 +505,23 @@ AOO Jon(77);
 
 Jon.getData();
 
-
 Jon++;
 
 Jon.getData();
 
 
+PausedExitORContinue(" Inheritance Inheritance Parent  Child Classes Base Derive Classes ");
 
+
+rectangle r;
+r.length =10; r.breadth = 20;
+r.show();
+
+cuboid cube;
+cube.length =10; cube.breadth = 20; cube.height = 30;
+
+cube.show();
+cube.display();
 
                     puts(" Please press a button to continue");
                     cin.get();/// all system /// C++ all system // platform
@@ -570,10 +604,12 @@ short getOS()
 {
        #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
       char windows = 1;
+      return windows;
       cout<< " Windows"<< endl; system("dir");
 
    #else
       windows = 0;
+      return windows;
       cout<<"NOT Windows"<< endl;
    #endif
 
