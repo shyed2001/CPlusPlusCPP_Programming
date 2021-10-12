@@ -318,6 +318,13 @@ public:
 int length;
 int breadth;
 
+void area()
+{
+   cout<< "Area Of Rectangle " << length * breadth<<endl;
+}
+
+
+
 void show( )
 { cout<< "Length = " << length<< endl;
 cout << "Breadth = " << breadth<< endl;  }
@@ -331,6 +338,11 @@ class cuboid : public rectangle
 
 public:
 int height;
+
+void volume()
+{
+cout << "Volume Of Cuboid " << length*breadth*height;
+}
 
 void display ( )
 { cout<< "Heitht ="  << height<< endl; }
@@ -523,7 +535,9 @@ cube.length =10; cube.breadth = 20; cube.height = 30;
 cube.show();
 cube.display();
 
-                    puts(" Please press a button to continue");
+cube.area();
+cube.volume();
+                    puts("\n Please press a button to continue");
                     cin.get();/// all system /// C++ all system // platform
 return 0;
 }
