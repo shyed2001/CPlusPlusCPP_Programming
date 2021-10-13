@@ -354,10 +354,10 @@ class base
 {
 public:
 base( )
-{ cout << "Default Of Base Class"; }
+{ cout << "Default Of Base Class \n"; }
 
 base( int b )
-{ cout << "Paramaterized Of Base Class" << b << endl;}
+{ cout << "Parameterized Of Base Class \n" << b << endl;}
 
 };
 
@@ -372,9 +372,9 @@ class derived2: public base
 {
 public:
 derived2()
-{ cout << "Default Of Derived Class"<<endl; }
+{ cout << "Default Of Derived Class \n"<<endl; }
 derived2(int d)
-{ cout << "Parameterized Of Derived Class" << d<< endl; }
+{ cout << "Parameterized Of Derived Class \n" << d<< endl; }
 };
 
 
@@ -569,17 +569,17 @@ cube.volume();
 
 
 
-PausedExitORContinue(" Inheritance Constructors ");
+PausedExitORContinue(" Inheritance & Constructors ");
 
-cout<< "NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
+cout<< "\n NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
 ( Applicable only to Default Constructor )"<< endl;
 
 
 derived d1;
 
 /// derived d2(9); this will give errors
-cout<< "NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
-( Applicable only to Default Constructor )"<< endl;
+puts("\n NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from base class. \n \
+( Applicable only to Default Constructor )");
 
 
 
@@ -588,8 +588,8 @@ derived2 d11;
 derived2 d111(9);
 
 
-
-
+puts(" NOTE:- 1st Default Constructor Of base class , then Default Constructor of derived class is called.");
+puts(" NOTE:- 2nd Parametrized Constructor of base class is not called when Parametrized  Constructor is present in derived class..");
 
 
 
