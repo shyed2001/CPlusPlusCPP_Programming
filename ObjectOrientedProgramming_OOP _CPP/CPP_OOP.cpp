@@ -350,6 +350,35 @@ void display ( )
 
 
 
+class base
+{
+public:
+base( )
+{ cout << "Default Of Base Class"; }
+
+base( int b )
+{ cout << "Paramaterized Of Base Class" << b << endl;}
+
+};
+
+
+class derived: public base
+{
+    // Empty
+};
+
+
+class derived2: public base
+{
+public:
+derived2()
+{ cout << "Default Of Derived Class"<<endl; }
+derived2(int d)
+{ cout << "Parameterized Of Derived Class" << d<< endl; }
+};
+
+
+
 
 
 int main( )
@@ -537,8 +566,37 @@ cube.display();
 
 cube.area();
 cube.volume();
-                    puts("\n Please press a button to continue");
-                    cin.get();/// all system /// C++ all system // platform
+
+
+
+PausedExitORContinue(" Inheritance Constructors ");
+
+cout<< "NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
+( Applicable only to Default Constructor )"<< endl;
+
+
+derived d1;
+
+/// derived d2(9); this will give errors
+cout<< "NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
+( Applicable only to Default Constructor )"<< endl;
+
+
+
+derived2 d11;
+
+derived2 d111(9);
+
+
+
+
+
+
+
+ puts("\n Please press a button to continue");
+ cin.get();/// all system /// C++ all system // platform
+
+
 return 0;
 }
 
