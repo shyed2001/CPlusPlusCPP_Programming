@@ -1,5 +1,6 @@
 
 #include<iostream>
+#include <string.h>
 #include<string>
 #include<cstdlib> /// exit()
 
@@ -17,9 +18,12 @@ using namespace std;
 
 short getOS();
 
+///int PausedExitORContinue(string message)
 int PausedExitORContinue(string message)
 {
+
 cout<< '\n'<< message << endl;
+
     char D;
     int C = 1;
 
@@ -27,9 +31,9 @@ cout<< '\n'<< message << endl;
     {
         puts("\n Please enter y or Y to continue, or n or N to stop the program ");
 
-    cin>> D;
+    scanf("%c",&D);
     puts("You Entered ");
-    cout<< D <<endl;
+    printf("%c",D);
         if ((D == 'y') || (D == 'Y'))
             {
                     C = 0;
@@ -378,6 +382,193 @@ derived2(int d)
 };
 
 
+class base3
+{
+
+public:
+base3()
+
+{ cout << "Default of Base Class \n"; }
+base3( int b_arg )
+{ cout << "Para of Base Class \n" << b_arg;}
+};
+
+class derived3: public base3
+{
+    public:
+derived3(): base3() /// derived class default constructor is calling base class default constructor
+
+{ cout << "Default of derived Class \n"; }
+
+derived3(int d_arg ): base3(d_arg ) /// derived class parameterized constructor is calling base class parameterized constructor
+{ cout << "Para of derived Class \n"; }
+
+};
+
+
+/// Overriding Member Function
+class base4
+{
+public:
+void Msg()
+{
+    cout << "Base Class \n" ;
+}
+
+void Message()
+{
+    cout << "Base Class Message\n" ;
+}
+
+
+
+
+};
+
+
+
+/// Overriding Member Function
+class derived4: public base4
+{
+public:
+void Msg()
+{
+    cout << "Derived Class \n";
+}
+
+void Message()
+{
+    cout << "Derived Class Message\n";
+
+    base4::Message(); /// calling
+}
+
+
+};
+
+
+class basePoly
+{
+    public:
+void show()
+{
+    cout << "Base show";
+}
+virtual ~basePoly()  /// Virtual destructor
+{
+    puts( " Base Class Destroyed" );
+}
+virtual void Show()
+{
+    cout << "Base Show";
+}
+
+};
+
+class Derv1: public basePoly
+{
+   public:
+void show()
+{
+    cout << "Derived1";
+}
+
+void Show()
+{
+    cout << "Derived1Show";
+}
+
+};
+
+
+class Derv2: public basePoly
+{
+    public:
+void show()
+{
+    cout << "Derived2";
+}
+
+void Show()
+{
+    cout << "Derived2Show";
+}
+~Derv2()    /// /// destructors
+{
+    puts( " Derv2 Class Destroyed" );
+}
+};
+
+
+class Derv3: public basePoly
+{
+   public:
+void show()
+{
+    cout << "Derived3";
+}
+~Derv3() // /// destructors
+{
+    puts( " Derv3 Class Destroyed" );
+}
+void Show()
+{
+    cout << "Derived3Show";
+}
+
+};
+
+
+/// Object Oriented Programming 0OP in C+±
+
+class personVF
+{
+public:
+virtual void give()
+{cout << "Bun";}
+};
+
+class boy:public personVF
+{
+public:
+void give()
+{ cout << "Brown Bun"; }
+};
+
+class girl: public personVF
+{
+public:
+void give( )
+{
+    cout << "Pink Bun";
+}
+
+};
+
+///Abstract Class
+
+class personAC /// Abstract class without any object
+{
+    public:
+virtual void give( ) = 0;
+/// Pure Virtual Function
+};
+
+
+class boy2: public personAC
+{
+public:
+void give( )
+{cout << "Brown Bun";}
+};
+
+class girl2: public personAC
+{
+public:
+void give( )
+{ cout << "Pink Bun";}
+
+};
 
 
 
@@ -583,14 +774,380 @@ puts("\n NOTE:- If we don't specify a constructor, then derived class will use a
 
 
 
-derived2 d11;
+derived2 d11;  /// calling default constructor
 
-derived2 d111(9);
+puts(" NOTE:- Default constructor of base class is always called. 1st Default Constructor Of base class , then Default Constructor of derived class is called.");
+
+derived2 d111(19); /// calling parameterized constructor
 
 
-puts(" NOTE:- 1st Default Constructor Of base class , then Default Constructor of derived class is called.");
-puts(" NOTE:- 2nd Parametrized Constructor of base class is not called when Parametrized  Constructor is present in derived class..");
+puts(" NOTE:- 2nd Parametrized Constructor of base class is not called when Parametrized Constructor is present in derived class. \n \
+     Default constructor of base class is always called. ");
 
+
+
+derived3 d13;
+derived3 d23( 9 );
+
+
+
+puts( "Overriding Member Function" );
+
+/// Overriding Member Function
+puts( " NOTE:- \n \
+b.Msg( ) -- > Base Class \n \
+c.Msg( ) -> Derived Class" );
+
+base4 b4;
+b4.Msg();
+derived4 c4;
+c4.Msg();
+
+puts( " NOTE:- \n \
+Redefining functionality of BASE \n \
+class into DERIVED class, then if we \n \
+create OBJECT of DERIVED class" );
+
+
+puts( " NOTE:- Derived class object would call, function in derived class, \n \
+     if same function exists in both classes." );
+
+
+
+     derived4 c44;
+     c44.Message();
+
+/*
+isA relationship
+
+class Suzuki
+{
+public:
+void chechis( )
+{.............}
+void engine( )
+{.............}
+void suspension ( )
+{.............}
+void transmission( )
+{.............}
+void doors( )
+{.............}
+};
+
+class DODO: public Suzuki
+{
+void chechis( )
+{ ....... modify..............}
+
+void doors( )
+{.............modify..............}
+void ABS ( ) // added new feature
+{ ...... modify. ...... ..}
+};
+
+DODO isA Car
+Car ---> myCar
+
+isA = Inheritance
+
+isA
+isA relationship is based on
+Inheritance.
+
+isA relationship expose all
+public data of base classes.
+isA relationship is static
+binding ( compile time ).
+
+isA relationship used when
+can actually inherit .
+( person
+teacher )
+(person --------
+dress )
+
+*/
+
+/*
+hasA Relationship
+
+class Suzuki
+{
+public:
+void chechis( )
+{.............}
+void suspension ( )
+{.............}
+void transmission( )
+{.............}
+void doors( )
+{.............}
+};
+
+
+class Antoinette
+{
+public:
+void V8_Engine( )
+{.............}
+};
+
+class DODO
+{
+private:
+Suzuki design_obj;
+Antoinette anto_obj;
+
+public:
+void addChechis()
+{ design_obj.chechis( ); }
+void addEngine( )
+{ anto_obj.V8_Engine( ); }
+};
+
+
+hasA = Object
+
+hasA
+
+hasA relationship is based on
+Objects.
+
+hasA relationship, use public
+data of derived class.
+hasA relationship is dynamic
+binding ( run time ).
+
+hasA relationship use when
+
+you can't inherit something.
+
+*/
+
+puts("ways of inheritance ");
+
+
+/*
+
+Ways Of Inheritance
+
+class Parent
+
+class child : public Parent
+
+class grandchild : public child
+
+Child AND grandchild would not be
+
+able to access both Private.
+
+Child AND grandchild would be able
+
+to access both Protected AND public
+
+Protected would be inherited as Protected
+AND
+Public would be inherited as Public in
+Child AND Grandchild
+
+
+
+class Parent
+class child : protected Parent
+class grandchild : protected child
+
+Protected Inheritance:-
+Protected AND Public in Parent class
+would be inherited as Protected
+in Child And GrandChild classes.
+
+
+*/
+
+puts("Polymorphism C++ Programming");
+
+
+/*
+
+Polymorphism
+1. Base Class Pointer And Derived class object
+
+2. Abstract Class
+
+3. Virtual Function
+
+
+*/
+puts("Base Class Pointer can only point to A Derived class object");
+puts("Base Class Pointer (can only access the base class features) And Derived class object can not be used by base class pointers");
+
+/*
+class basicCar
+{
+public:
+
+void body( );
+void door( );
+void windows( );
+void tyres( );
+};
+
+
+class advCar: public basicCar
+
+{
+public:
+void ABS( );
+void PS( );
+void EngineV8( );
+void AT( );
+};
+
+
+basicCar *ptr;
+ptr = new advCar( );
+
+ptr->body( );
+ptr->doors( );
+ptr->windows( );
+ptr->types( );
+*/
+
+puts( "Virtual function" );
+
+/*
+Virtual Function
+Virtual Function means fun.
+existing in class but can't be
+used.
+
+Virtual means existing in
+appearance but not in
+reality
+
+Program that appears to be calling a
+function of one class may in reality be
+calling a function of different class .
+
+
+
+
+*/
+
+/*
+
+*/
+
+
+/*
+
+*/
+
+basePoly *ptr;
+
+Derv1 dv1;
+//Derv2 dv2;
+
+
+ptr = &dv1;
+ptr->show();
+ptr->Show();
+puts( " " );
+
+ptr =new Derv2;  /// dynamic memory pointer
+ptr->show();
+ptr->Show();
+puts( " " );
+delete ptr;
+
+ptr =new Derv3; /// dynamic memory pointer
+ptr->show();
+ptr->Show();
+
+delete ptr; /// calling destructors
+
+
+puts( " Why Virtual Function " );
+
+puts(" Binding:- Compiler deferr the decision untill, the program is running. \n \
+And at runtime when it come to know which class is pointed by PTR, then appropriate function would be called. \n \
+This is called Dynamic Binding / Late Binding ");
+
+
+
+boy b1;
+girl g1;
+
+personVF *ptrs = NULL;
+ptrs = &b1;
+ptrs->give();
+
+ptrs = &g1;
+ptrs->give();
+
+/*
+Virtual function is hidden
+
+Virtual means existing
+in appearance but not
+in reality
+
+Virtual Function
+
+virtual void function ( )
+
+we have made, base
+class function virtual,
+so that only derived
+class functionality gets
+called
+
+Why virtual function
+When we want to
+ensure only the latest
+functionality get called
+
+Why virtual function
+
+Late binding, compiler
+
+defter the decision
+
+*/
+
+
+puts( " Define:- Abstract class is used when we never want to instantiate / created object of BASE class. \n \
+Define:- Abstract class exists only to act as parent of DERIVED CLASS, it has /// Pure Virtual Function PVF does not have a body." );
+
+
+/*
+
+///Object Oriented Programming OOP in C++ | C++ Tutorial Beginners
+
+*/
+
+boy2 b12;
+girl2 g12;
+personAC *ptr3 = NULL;
+ptr3 = &b12;
+ptr3->give();
+ptr3 = &g12;
+ptr3->give();
+
+
+puts( " Poly means many, Polymorphism means something existing in more than one form. " );
+
+
+
+puts( " \
+Polymorphism -->1. Compile Time --> 1.1 Operator Overloading \n \
+                             --> 1.2 Function Overloading \n \
+Polymorphism -->2. Run Time --> 2.1 Function Overriding \n \
+                            --> 2.2 Virtual Function");
+
+
+puts("\n Virtual Destructor clear all the base and derived classes ");
 
 
  puts("\n Please press a button to continue");
