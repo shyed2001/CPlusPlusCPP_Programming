@@ -572,6 +572,55 @@ void give( )
 
 
 
+/// puts(" object Oriented Programming OOP in C++, Friend Function ");
+
+class Alpha
+{
+private:
+int a1;
+public:
+Alpha( int arg = 0)
+{a1 = arg; }
+friend void Fun();
+};
+
+class Beta
+{
+    private:
+int b1;
+public:
+Beta( int arg = 0)
+{ b1 = arg; }
+friend void Fun();
+};
+
+void Fun();
+
+
+/// Friend Function using Operator Overloading in C++
+
+
+class UnaryFriend
+{
+     int a=10;
+     int b=20;
+     int c=30;
+     public:
+         void getvalues()
+         {
+              cout<<"Values of A, B & C\n";
+              cout<<a<<"\n"<<b<<"\n"<<c<<"\n"<<endl;
+         }
+         void show()
+         {
+              cout<<a<<"\n"<<b<<"\n"<<c<<"\n"<<endl;
+         }
+         void friend operator-(UnaryFriend &x);      //Pass by reference
+};
+void operator-(UnaryFriend &x);
+
+
+
 int main( )
 {
 short OS = getOS(); /// OS==1 is windows.
@@ -1150,6 +1199,52 @@ Polymorphism -->2. Run Time --> 2.1 Function Overriding \n \
 puts("\n Virtual Destructor clear all the base and derived classes ");
 
 
+puts("\n Fried Functions");
+
+puts("\n Fried Functions in CPP C++ can access all the public protected private data and functions");
+
+
+
+puts(" \n object Oriented Programming OOP in C++, Friend Function ");
+
+Fun();
+
+puts( " \n NOTE:- Friend function connecting two class or more( act as bridge )." );
+
+
+
+puts( " \n Friend Function using Operator Overloading in C++ \n  \
+Friend function using operator overloading offers better flexibility to the class. \n  \
+These functions are not a members of the class and they do not have 'this' pointer.\n  \
+When you overload a unary operator you have to pass one argument. \n  \
+When you overload a binary operator you have to pass two arguments. \n  \
+Friend function can access private members of a class directly. \n  \
+     Syntax: \n  \
+friend return-type operator operator-symbol (Variable 1, Varibale2)\n  \
+{     //Statements;}\n  \
+      " );
+
+
+
+puts( " \n  " );
+
+     UnaryFriend x1;
+     x1.getvalues();
+     cout<<"Before Overloading\n";
+     x1.show();
+     cout<<"After Overloading \n";
+     -x1;
+      x1.show();
+
+      /*
+      In the above program, operator – is overloaded using friend function.
+       The operator() function is defined as a Friend function. The statement -x1 invokes the operator() function.
+       The object x1 is created of class UnaryFriend. The object itself acts as a source and destination object.
+       This can be accomplished by sending reference of an object. The object x1 is a reference of object x.
+        The values of object x1 are replaced by itself by applying negation.
+
+      */
+
  puts("\n Please press a button to continue");
  cin.get();/// all system /// C++ all system // platform
 
@@ -1243,3 +1338,22 @@ short getOS()
    #endif
 
 }
+/// puts(" \n object Oriented Programming OOP in C++, Friend Function ");
+
+void Fun()
+{
+Alpha a(8);
+Beta b(2);
+int x = a.a1 + b.b1;
+
+cout << "Sum = " <<x<< endl;
+
+}
+
+void operator-(UnaryFriend &x)
+{
+     x.a = -x.a;     //Object name must be used as it is a friend function
+     x.b = -x.b;
+     x.c = -x.c;
+}
+
