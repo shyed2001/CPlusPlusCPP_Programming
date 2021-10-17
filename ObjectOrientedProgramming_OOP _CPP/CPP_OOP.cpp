@@ -619,6 +619,90 @@ class UnaryFriend
 };
 void operator-(UnaryFriend &x);
 
+/// Friend Function using Operator Overloading in C++
+
+class person
+{
+
+private:
+int weight;
+
+public:
+
+person(int w = 0)
+{
+    weight = w;
+}
+
+friend bool operator > (person x, person y); /// /// comparison Operator Overloading in C++
+friend bool operator < (person x, person y);/// comparison Operator Overloading in C++
+};
+
+
+bool operator > (person x, person y);
+bool operator < (person x, person y);
+
+/// friend function
+
+
+class Alphaff
+{
+    private:
+int a1;
+public:
+
+Alphaff( int arg = 0)
+{ a1 = arg; }
+friend class Betaff;
+};
+
+class Betaff
+{
+  private:
+int b1;
+public:
+
+Betaff( int arg = 0)
+{ b1 = arg; }
+
+int sum()
+{
+    Alphaff alpha_obj (3);
+int sum = alpha_obj.a1 + b1;
+return sum;
+}
+
+
+};
+
+/// static member
+
+class Alphasm
+{
+    private:
+int a;
+int b;
+public:
+
+Alphasm( )
+{
+    a = 5;
+b = 5;
+stat ++;
+}
+static int stat;
+static int stat2;
+static int getStat2( ) /// static member function
+{stat2 ++ ;
+return stat2 ; }
+
+};
+
+
+int Alphasm :: stat = 0;
+
+int Alphasm :: stat2 = 0;
+
 
 
 int main( )
@@ -1245,6 +1329,79 @@ puts( " \n  " );
 
       */
 
+
+      /// Friend Function using Operator Overloading in C++
+
+      int w1, w2;
+cout << "Enter weight of Jon " << endl;
+cin >> w1;
+
+cout << "Enter weight of Rick " << endl;
+cin >> w2;
+person jon(w1) ;
+
+person rick(w2) ;
+if (jon > rick)
+{
+cout << "Jon is heavy" << endl;
+}
+else if (jon < rick)
+{
+    cout << "Rick is heavy"<< endl;
+
+}
+
+puts( " Friend Class." );
+puts( " Friend Class Can Access and use all private protected public features and functionalities of each other." );
+
+
+Betaff beta_obj2(7);
+int sumff = beta_obj2.sum();
+
+cout << "Sum = " <<sumff<< endl;
+cout << "Sum = " <<beta_obj2.sum()<< endl;
+puts( " NOTE:-Now all member functions of Beta class can access private data of Alpha." );
+
+
+
+
+puts( "\n NOTE:- Static member ." );
+
+
+Alphasm a1;
+Alphasm a2; /// two objects
+cout << a1.stat;  puts( "  = a1.stat " );
+ cout << a2.stat; puts( "  = a2.stat " );
+cout << Alphasm::stat; puts( "  = Alpha::stat " );
+
+
+puts( " NOTE:- Static member would be allocated memory only once." );
+
+puts( " NOTE:- NOTE:- And that memory is shared by both / all the objects.." );
+
+puts( " NOTE:- NOTE:- NOTE:- Static Data members belong a class & common to all objects..." );
+
+
+puts( "\n NOTE:- Static member function ." );
+
+puts( " " );
+puts( " NOTE:- Static member can only access static members " );
+
+puts( " NOTE:- Static member can only access static members " );
+//Object Oriented Programming OOP in C++ | C++ Tutorial Beginners
+//Static Member Function
+cout << Alphasm :: getStat2( )<<endl;
+Alphasm a11;
+Alphasm a21;
+cout << Alphasm :: getStat2( )<<endl;
+cout << a11.getStat2( )<<endl;
+cout << a21.getStat2( )<<endl;
+/// Static member function
+puts( " " );
+puts( " " );
+puts( " End of Static member function " );
+
+
  puts("\n Please press a button to continue");
  cin.get();/// all system /// C++ all system // platform
 
@@ -1355,5 +1512,17 @@ void operator-(UnaryFriend &x)
      x.a = -x.a;     //Object name must be used as it is a friend function
      x.b = -x.b;
      x.c = -x.c;
+}
+/// Friend Function using Operator Overloading in C++
+
+bool operator< (person x, person y)
+{
+    return x. weight < y.weight;
+}
+
+bool operator> (person x, person y)
+{
+
+return x. weight > y. weight;
 }
 
