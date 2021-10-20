@@ -3,6 +3,7 @@ License :== MIT + terms and conditions of author/owner
 Copyright :== author/owner*/
 
 #include <iostream>
+#include <cstdio>
 #include <cmath>
 #include <string>
 #include <iomanip>
@@ -11,13 +12,56 @@ Copyright :== author/owner*/
 #include <stdlib.h>
 
 
-using namespace std;
+///using namespace std;    /// bad practice
+
+using std::cout;
+using std::cin;
+using std:: endl;
+using std::string;
+using std::setprecision;
+using std::fixed;
 
 //const float PI = 3.14f;
 int const DAYS_IN_A_WEEK = 7;
+
+
+
+namespace num1 {
+int num = 100;
+string level = "Expert";
+}
+namespace num2 {
+int num = 200;
+
+}
+
+namespace foo
+{
+int cout () {
+return 10;
+  }
+}
+
+namespace FOO
+{
+int cout (int input) {
+return input + 10;
+  }
+}
+
+#define COUT std:: cout
+#define ENDL std:: endl
+#define FOO_OUT FOO::cout
+
+
 int main(void)
 
 {
+///std::ios::sync_with_stdio(false);
+
+    std::cout << "a\n";
+    printf("b\n");
+    std::cout << "c\n";
 
     puts( "  By default, cin/cout waste time synchronizing themselves with the C library’s stdio buffers, \n\
          The idea that \"printf/scanf\" is NOT part of C++ is wrong, C++ is added over the features of C, \n\
@@ -42,15 +86,20 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
     \
 
     cout<<"\n      \n"<<endl;
-    cout<<"\n  Entry point of every C++ program is the main() function, irrespective of \n what the program does. Curly brackets { } indicate the beginning and end of a function, \n  which can also be called the function's body. The information inside the brackets \n indicates what the function does when executed.    \n"<<endl;
+    cout<<"\n  Entry point of every C++ program is the main() function, irrespective of \n what the program does. \n \
+    Curly brackets { } indicate the beginning and end of a function, \n  which can also be called the function's body. \n \
+    The information inside the brackets \n indicates what the function does when executed.    \n"<<endl;
     cout<<"\n   cout is the stream object used to perform output on the standard output device which is usually the display screen. cout is used in combination with the insertion operator <<. In C++, streams are used to perform input and output operations.   \n"<<endl;
-
+    puts( " System commands slows down the program. endl is an system command. endl does not require any memory. \n \
+          endl tells the buffer/temporary memory to be cleared and permanent memory to be used, which uses extra time \n \
+         \\n takes one bite of memory, also stops the buffer, \\n is not system command, \\n takes less time" );
     cout<<"\n #include <iostream> is a header file library that lets us work with input and output objects, such as cout ('see-out' used in line 5). Header files add functionality to C++ programs. C++ offers various headers, each of which contains information needed for programs to work properly.\n"<<endl;
     cout<<"\n      \n"<<endl;
     cout<<"\n In our code, the line using namespace std; tells the compiler to use the std (standard) namespace: using namespace std means that we can use names for objects and variables from the standard library. The std namespace includes features of the C++ Standard Library.\n "<<endl;
 
     cout<<"\n  The backslash (\\) is called an escape character, and indicates a 'special' character.    \n"<<endl;
-    cout<<"\n  The new line character \\n can be used as an alternative to endl.Using a single cout statement with as many instances of \n as your program requires will print out multiple lines of text.    \n"<<endl;
+    cout<<"\n  The new line character \\n can be used as an alternative to endl. \n \
+    Using a single cout statement with as many instances of \n as your program requires will print out multiple lines of text.    \n"<<endl;
 
     cout<<"\n  The cout object does not insert a line break at the end of the output. One way to print two lines is to use the endl manipulator, which will put in a line break.    \n"<<endl;
 
@@ -842,6 +891,31 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
     cout<<"\n      "<<endl;
     cout<<"\n      "<<endl;
     cout<<"\n      "<<endl;
+
+
+
+puts( "Standard NameSpaces " );
+puts( "using namespace std " );
+puts( "Custom NameSpaces " );
+puts( "using namespace user made defined " );
+
+cout<<num1::num<<"\n";
+cout<<num1::level<<'\n';
+cout<<num2::num<<'\n';
+
+
+
+std::cout << foo::cout() << std::endl;
+
+COUT<< FOO_OUT (10)<< ENDL;
+COUT<< FOO_OUT (20)<< ENDL;
+COUT<< FOO_OUT (30)<< ENDL;
+
+
+
+
+
+
 
 
     cin.get();

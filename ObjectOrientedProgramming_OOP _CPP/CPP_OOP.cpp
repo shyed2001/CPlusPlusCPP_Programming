@@ -704,6 +704,12 @@ int Alphasm :: stat = 0;
 int Alphasm :: stat2 = 0;
 
 
+namespace num1 {
+int num = 100;
+
+namespace num2 {
+int num = 200;
+
 
 int main( )
 {
@@ -1400,6 +1406,32 @@ cout << a21.getStat2( )<<endl;
 puts( " " );
 puts( " " );
 puts( " End of Static member function " );
+
+
+puts( "Standard NameSpaces " );
+puts( "using namespace std " );
+
+
+cout< <num1::num;
+
+cout< <num2::num;
+
+
+puts( " " );
+puts( " " );
+
+
+
+
+
+puts( " " );
+puts( " " );
+
+
+
+
+
+
 
 
  puts("\n Please press a button to continue");
