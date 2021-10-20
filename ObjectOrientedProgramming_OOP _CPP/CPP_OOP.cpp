@@ -3,7 +3,7 @@
 #include <string.h>
 #include<string>
 #include<cstdlib> /// exit()
-
+#include<conio.h>
 /// for linux #include <curses.h> ///erase();
 
 using namespace std;
@@ -704,12 +704,6 @@ int Alphasm :: stat = 0;
 int Alphasm :: stat2 = 0;
 
 
-namespace num1 {
-int num = 100;
-
-namespace num2 {
-int num = 200;
-
 
 int main( )
 {
@@ -1403,25 +1397,24 @@ cout << Alphasm :: getStat2( )<<endl;
 cout << a11.getStat2( )<<endl;
 cout << a21.getStat2( )<<endl;
 /// Static member function
-puts( " " );
+
 puts( " " );
 puts( " End of Static member function " );
 
 
-puts( "Standard NameSpaces " );
-puts( "using namespace std " );
 
 
-cout< <num1::num;
-
-cout< <num2::num;
+puts( " Mini Project ( ATM ) \n \
+Write a program showing ATM functionalities using OOP's \n \
+1. Check Balance \n \
+2. Cash WithDraw \n \
+3. User Details \n \
+4. Update Mobile No. \n \
+" );
+puts( " " );
 
 
 puts( " " );
-puts( " " );
-
-
-
 
 
 puts( " " );

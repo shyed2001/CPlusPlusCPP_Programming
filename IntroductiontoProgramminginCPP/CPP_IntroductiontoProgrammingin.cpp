@@ -53,12 +53,18 @@ return input + 10;
 #define ENDL std:: endl
 #define FOO_OUT FOO::cout
 
+namespace namespace1 {
+int age = 25;
+string name = "Saldina";
+}
+namespace namespace2 {
+
+int age = 26;
+}
 
 int main(void)
 
 {
-///std::ios::sync_with_stdio(false);
-
     std::cout << "a\n";
     printf("b\n");
     std::cout << "c\n";
@@ -914,11 +920,15 @@ COUT<< FOO_OUT (30)<< ENDL;
 
 
 
+cout << namespace2: :age << endl;
+
+cout << namespace1: :name << endl;
 
 
-
+std::
 
     cin.get();
+
 /// use cin.get() in C++ instead of system("pause") to end your programs in a very simple way using an older program. I don't get into anything too heavy or too new.
 
 /// cin.get() is far more efficient and unlike system("pause"), this should work in non-windows environment without a problem.
