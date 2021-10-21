@@ -1390,7 +1390,7 @@ puts( " NOTE:- Static member can only access static members " );
 puts( " NOTE:- Static member can only access static members " );
 //Object Oriented Programming OOP in C++ | C++ Tutorial Beginners
 //Static Member Function
-cout << Alphasm :: getStat2( )<<endl;
+cout << Alphasm::getStat2()<<endl;
 Alphasm a11;
 Alphasm a21;
 cout << Alphasm :: getStat2( )<<endl;
@@ -1402,7 +1402,7 @@ puts( " " );
 puts( " End of Static member function " );
 
 
-
+system("cls");
 
 puts( " Mini Project ( ATM ) \n \
 Write a program showing ATM functionalities using OOP's \n \
@@ -1411,7 +1411,22 @@ Write a program showing ATM functionalities using OOP's \n \
 3. User Details \n \
 4. Update Mobile No. \n \
 " );
+
+
 puts( " " );
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 puts( " " );
@@ -1477,7 +1492,7 @@ operation systems.
 You should try to use just objects from C++ standard library.
 A better solution will be to write:
 
-cin.get(); ///  cin.get();  // or getchar()
+cin.get(); ///  cin.get();  // or getchar() or _getch();
 return 0;
 But it will also cause problems if you have other cins in your code.
  Because after each cin, you'll tap an Enter or \n which is a white space character. cin ignores this character and leaves it in the buffer zone but cin.get(), gets this remained character. So the control of the program reaches the line return 0 and the console gets closed before letting you see the results.
