@@ -3,7 +3,7 @@
 #include <string.h>
 #include<string>
 #include<cstdlib> /// exit()
-#include<conio.h>
+#include<conio.h> /// C programming header _getch();
 /// for linux #include <curses.h> ///erase();
 
 using namespace std;
@@ -15,8 +15,8 @@ using namespace std;
 
 /// Above two lines are user defined Macros
 
-
-short getOS();
+short OS;
+short getOS(void);
 
 ///int PausedExitORContinue(string message)
 int PausedExitORContinue(string message)
@@ -272,10 +272,6 @@ cout << "Battery " << battery<< endl ;
 
 }
 
-
-
-
-
 class AOO
 {
     private:
@@ -310,10 +306,6 @@ int getData()  //printData()
 
 
 };
-
-
-
-
 
 class rectangle
 {
@@ -703,11 +695,20 @@ int Alphasm :: stat = 0;
 
 int Alphasm :: stat2 = 0;
 
+void clearscreen(void);
+
+
+
+
+
+
+
+
 
 
 int main( )
 {
-short OS = getOS(); /// OS==1 is windows.
+OS = getOS(); /// OS==1 is windows.
 
 cout << OS <<endl;
 
@@ -894,7 +895,7 @@ cube.volume();
 
 
 PausedExitORContinue(" Inheritance & Constructors ");
-
+clearscreen();
 cout<< "\n NOTE:- If we don't specify a constructor, then derived class will use appropriate constructor from baseclass. \n \
 ( Applicable only to Default Constructor )"<< endl;
 
@@ -1401,8 +1402,9 @@ cout << a21.getStat2( )<<endl;
 puts( " " );
 puts( " End of Static member function " );
 
+puts( " Mini Project ( ATM ) " );
 
-system("cls");
+
 
 puts( " Mini Project ( ATM ) \n \
 Write a program showing ATM functionalities using OOP's \n \
@@ -1413,10 +1415,10 @@ Write a program showing ATM functionalities using OOP's \n \
 " );
 
 
-puts( " " );
+puts( " Welcome to ATM Machine" );
 
 
-
+puts( " Please enter your account number:- " );
 
 
 
@@ -1521,7 +1523,7 @@ Similarly, in C language, getchar() can be used to pause
 
 */
 
-short getOS()
+short getOS(void)
 {
        #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
       char windows = 1;
@@ -1566,3 +1568,14 @@ bool operator> (person x, person y)
 return x. weight > y. weight;
 }
 
+void clearscreen(void) /// for linux and Windows
+{
+
+if (OS==1) /// from getOS function and short OS global variable
+{
+system("cls");   //For windows
+}
+else
+system("clear"); //For Linux
+/// or    erase();
+}

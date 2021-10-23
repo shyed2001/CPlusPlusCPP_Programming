@@ -1,5 +1,21 @@
 # depslib dependency file v1.0
-1631385351 source:d:\github\cpluspluscpp_programming\introductiontodatastructures_cpp\introductiontodatastructures_cpp\main.cpp
+1631450745 source:d:\github\cpluspluscpp_programming\introductiontodatastructures_cpp\introductiontodatastructures_cpp\main.cpp
 	<iostream>
 	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<time.h>
+	<unistd.h>
+	<conio.h>
+	<dos.h>
+	<direct.h>
+	<math.h>
+	<ctype.h>
+	<cstdlib>
+	<cmath>
+	<string>
+	<iomanip>
+	<string.h>
+	<stdlib.h>
+	<iostream>
 

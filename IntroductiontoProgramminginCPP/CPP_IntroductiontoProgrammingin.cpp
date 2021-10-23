@@ -26,38 +26,44 @@ int const DAYS_IN_A_WEEK = 7;
 
 
 
-namespace num1 {
+namespace num1
+{
 int num = 100;
 string level = "Expert";
 }
-namespace num2 {
+namespace num2
+{
 int num = 200;
 
 }
 
 namespace foo
 {
-int cout () {
-return 10;
-  }
+int cout ()
+{
+    return 10;
+}
 }
 
 namespace FOO
 {
-int cout (int input) {
-return input + 10;
-  }
+int cout (int input)
+{
+    return input + 10;
+}
 }
 
 #define COUT std:: cout
 #define ENDL std:: endl
 #define FOO_OUT FOO::cout
 
-namespace namespace1 {
+namespace namespace1
+{
 int age = 25;
 string name = "Saldina";
 }
-namespace namespace2 {
+namespace namespace2
+{
 
 int age = 26;
 }
@@ -88,17 +94,31 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
 …If the synchronization is turned off, the C++ standard streams are allowed to buffer their I/O independently,\n\
  which may be considerably faster in some cases. " );
 
+    puts( " System   commands s vlows    down      the    program. \n\
+         endl   is        an    system command. endl    does  not     require  any  memory. \n \
+         endl   fiils  the      buffer   and      moves     cursor to       the    next      line, \n \
+          endl   tells    the     buffer/temporary memory  to  be   cleared and  permanent memory to be used, \n \
+         which uses extra time \n \
+         \\n   takes  one bite of  memory, also   stops    the    buffer,   \\n   is     not system  command, \n \
+         \\n takes    less time, \\n shows the output properly \
+          \\n    only   moves    cursor   to       the       next   line,    \n     \
+         Both    endl   and      \n       serve    the       same   purpose  in     C++       –     they   insert   a       new              line.   However, the  key     difference between   them   is that \n    \
+        endl     causes a        flushing of       the       output buffer   every  time      it    is     called,  whereas \n               does    not.     \n   \
+        Anything that   is       to       be       outputted is     first    queued into      an    output buffer   and     then             written to       the  device  \n         \
+        (hard    disk,  monitor, etc.),   flushing the       queue  in       the    process." );
+
+
     cout<<"\n  A C++ program is a collection of commands or statements.    \n"<<endl;
-    \
 
     cout<<"\n      \n"<<endl;
     cout<<"\n  Entry point of every C++ program is the main() function, irrespective of \n what the program does. \n \
     Curly brackets { } indicate the beginning and end of a function, \n  which can also be called the function's body. \n \
     The information inside the brackets \n indicates what the function does when executed.    \n"<<endl;
+
     cout<<"\n   cout is the stream object used to perform output on the standard output device which is usually the display screen. cout is used in combination with the insertion operator <<. In C++, streams are used to perform input and output operations.   \n"<<endl;
-    puts( " System commands slows down the program. endl is an system command. endl does not require any memory. \n \
-          endl tells the buffer/temporary memory to be cleared and permanent memory to be used, which uses extra time \n \
-         \\n takes one bite of memory, also stops the buffer, \\n is not system command, \\n takes less time" );
+
+
+
     cout<<"\n #include <iostream> is a header file library that lets us work with input and output objects, such as cout ('see-out' used in line 5). Header files add functionality to C++ programs. C++ offers various headers, each of which contains information needed for programs to work properly.\n"<<endl;
     cout<<"\n      \n"<<endl;
     cout<<"\n In our code, the line using namespace std; tells the compiler to use the std (standard) namespace: using namespace std means that we can use names for objects and variables from the standard library. The std namespace includes features of the C++ Standard Library.\n "<<endl;
@@ -157,8 +177,6 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
 
     cout << "Both \\n and endl are used to break lines. However, \\n is used more often and is the preferred way."<<endl;
 
-
-///
 
     cout << num<<endl;
     cout << "num!"<<endl;
@@ -328,11 +346,6 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
     cout<<"\n    C++ Booleans; Very often, in programming, you will need a data type that can only have one of two values, like:YES / NO, ON / OFF, TRUE / FALSE ; For this, C++ has a bool data type, which can take the values true (1) or false (0). Boolean Values A boolean variable is declared with the bool keyword and can only take the values true or false: Example, bool isCodingFun = true; bool isFishTasty = false;  cout << isCodingFun;  // Outputs 1 (true) cout << isFishTasty;  // Outputs 0 (false) From the example above, you can read that a true value returns 1, and false returns 0. However, it is more common to return boolean values from boolean expressions (see next page).\n"<<endl;
 
     cout<<"\n C++ Boolean Expressions : - A Boolean expression is a C++ expression that returns a boolean value: 1 (true) or 0 (false). You can use a comparison operator, such as the greater than (>) operator to find out if an expression (or a variable) is true:   Example , int x = 10; int y = 9; cout << (x > y); // returns 1 (true), because 10 is higher than 9  Or even easier: Example cout << (10 > 9); // returns 1 (true), because 10 is higher than 9   In the examples below, we use the equal to (==) operator to evaluate an expression: Example , int x = 10; cout << (x == 10);  // returns 1 (true), because the value of x is equal to 10; Example cout << (10 == 15);  // returns 0 (false), because 10 is not equal to 15 Booleans are the basis for all C++ comparisons and conditions. "<< s <<endl;
-
-
-
-
-
 
     cout<<"\n  bool or boolean is True or False values , data is one byte or 8 bit, butsingle bit is enough   \n"<<endl;
     cout<<"\n False is represented by a single byte / 8 bit Zero, True is any non Zero Value  \n"<<endl;
@@ -900,34 +913,32 @@ Sets whether the standard C++ streams are synchronized to the standard C streams
 
 
 
-puts( "Standard NameSpaces " );
-puts( "using namespace std " );
-puts( "Custom NameSpaces " );
-puts( "using namespace user made defined " );
+    puts( "Standard NameSpaces " );
+    puts( "using namespace std " );
+    puts( "Custom NameSpaces " );
+    puts( "using namespace user made defined " );
 
-cout<<num1::num<<"\n";
-cout<<num1::level<<'\n';
-cout<<num2::num<<'\n';
-
-
-
-std::cout << foo::cout() << std::endl;
-
-COUT<< FOO_OUT (10)<< ENDL;
-COUT<< FOO_OUT (20)<< ENDL;
-COUT<< FOO_OUT (30)<< ENDL;
+    cout<<num1::num<<"\n";
+    cout<<num1::level<<'\n';
+    cout<<num2::num<<'\n';
 
 
 
+    std::cout << foo::cout() << std::endl;
 
-cout << namespace2: :age << endl;
+    COUT<< FOO_OUT (10)<< ENDL;
+    COUT<< FOO_OUT (20)<< ENDL;
+    COUT<< FOO_OUT (30)<< ENDL;
 
-cout << namespace1: :name << endl;
 
 
-std::
 
-    cin.get();
+cout << namespace2::age << endl;
+
+cout << namespace1::name << endl;
+
+
+    std::cin.get();
 
 /// use cin.get() in C++ instead of system("pause") to end your programs in a very simple way using an older program. I don't get into anything too heavy or too new.
 
