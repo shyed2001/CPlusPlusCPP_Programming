@@ -33,7 +33,41 @@ short OS;
 short getOS(void);
 
 ///int PausedExitORContinue(string message)
-int PausedExitORContinue(string message);
+
+int PausedExitORContinue(string message)
+{
+cout<< '\n'<< message << endl;
+
+    char D;
+    int C = 1;
+
+    while(C == 1)
+    {
+        puts("\n Please enter y or Y to continue, or n or N to stop the program ");
+
+    scanf("%c",&D);
+    puts("You Entered ");
+    printf("%c",D);
+        if ((D == 'y') || (D == 'Y'))
+            {
+                    C = 0;
+
+                    break;
+            }
+        else if((D == 'n') || (D == 'N'))
+            {
+                C = 0;
+                exit(0);
+            }
+        else
+        {
+            C = 1;
+            continue;
+        }
+
+    }
+
+}
 
 void clearscreen(void);
 
@@ -85,7 +119,7 @@ return PIN;
 }
 
 ///getBalance is returning the user's Bank Balance
-double getBalance( )
+double getBalance()
 {
     return balance;
 }
@@ -106,7 +140,7 @@ void setMobile(string mob_prev, string mob_new)
 {
     mobile_No = mob_new;
 // and Update with new, if old matches
-cout << endl << "Sucessfully Updated Mobile no.";
+cout << endl << "Successfully Updated Mobile no.";
 _getch ();
 //getch is to hold the screen ( untill user press any key)
 }
@@ -123,23 +157,24 @@ _getch ( );
 
 ///cashWithDraw function is used to withdraw money from ATM
 
-void cashWithDraw(int amount_a)
+void cashWithDraw(double amount_a)
 {
-    if (amount_a > 0 && amount_a < balance)
+    if (amount_a > 0 && amount_a <=balance)
 /// check entered amount validity
 {
 balance -= amount_a;
 puts("Please Collect YourCash: ");
 /// balance = balance - amount_a
 cout<< "Available Balance :" << balance<< endl;
-_getch( ) ;
-///getch is to hold the screen(untill user press any key )
+_getch();
+///getch is to hold the screen (until user press any key )
 }
 else
 {
-cout << endl << "Invalid Input or Insufficient Balance";
-_getch( );
+puts("Invalid Input or Insufficient Balance");
+_getch();
 //getch is to hold the screen ( until user press any key )
+system("cls");
 }
 
 
@@ -252,34 +287,134 @@ user1. setData(1234567, "Tim", 1111, 45000.90, "9087654321") ;
 
 
 
+do
+{
+system("cls");
+
+cout<< endl << "***Welcome to ATM***" << endl;
+cout<< endl << "Enter Your Account No ";
+// asking user to enter account no
+cin >> enterAccountNo;
+cout << endl << "Enter PIN ";
+// asking user to enter PIN
+cin >> enterPIN;
+
+// check whether enter values matches with user details
+
+if((enterAccountNo == user1.getAccountNo()) && (enterPIN == user1.getPIN()))
+
+   {
+       do
+        {
+                   double amount = 0;
+string oldMobileNo, newMobileNo;
+
+system("cls") ;
+///user Interface
+cout << endl << "**** Welcome to ATM *" <<endl;
+cout << endl << "Select Options ";
+cout <<endl  << "1. Check Balance";
+cout << endl << "2. Cash withdraw";
+cout<< endl<<   "3. Show User Details";
+cout<< endl <<  "4. Update Mobile no.";
+cout << endl << "5. Exit" << endl;
+cin >> choice;  // taking user choice
+
+// switch condition
+
+switch (choice)
+{
+case 1:    ///if user presses 1
+    /// getBalance is ... printing the users bank balance
+cout << endl << "Your Bank balance is :" << user1. getBalance();
+
+_getch( ) ;
+
+break;
+case 2:
+/// if user presses 2
+puts("Enter the amount");
+cin>> amount;
+/// calling cashWith
+///passing the withdraw amount
+user1.cashWithDraw(amount);
+break;
+
+case 3:
+///if user presses 3
+cout << endl << "*** User Details are :- ";
+cout << endl << "-> Account no" << user1.getAccountNo( );
+cout << endl << "-> Name " << user1.getBalance();
+cout << endl << "-> Balance " << user1.getName( ) ;
+cout << endl << "-> Mobile No. " << user1.getMobileNo( );
+// getting and printing user details
+_getch( ) ;
+break;
 
 
+case 4:
+///if user presses 4
+cout << endl << "Enter Old Mobile No.";
+cin >> oldMobileNo;
+// take old mobile no
+cout << endl << "Enter New Mobile No. ";
+
+cin >> newMobileNo;
+// take new mobile no
+user1. setMobile(oldMobileNo, newMobileNo); // now set new mobile no
+break;
 
 
+// if user presses 5
+// exit application
 
+case 5:
+exit (0);
+
+///handle invalid user inputs
+default:
+cout << endl << "Enter Valid Data !!!";
+
+
+    }
+
+   }while (1); // MENU
+// condition will always TRUE and loop is capable of running infinite times
+
+
+}
+
+else
+{
+    cout << endl << "User Details are Invalid !!!";
+_getch();
+}
+
+} while (1);
+
+//LOGIN will always TRUE and loop is be condition capable of running infinite times
+
+puts( " " );
+puts( " " );
 puts( " " );
 
 
-puts( " " );
-puts( " " );
 
 
 
 
 
 
-
-
- puts("\n Please press a button to continue");
-/// all system /// C++ all system // platform
-
-  std::cin.get();
+puts("\n Please press a button to continue");
+///// all system /// C++ all system // platform
+//
+std::cin.get();
 
 /// use cin.get() in C++ instead of system("pause") to end your programs in a very simple way using an older program. I don't get into anything too heavy or too new.
 
 /// cin.get() is far more efficient and unlike system("pause"), this should work in non-windows environment without a problem.
 
-    system("pause>0");
+    ///system("pause>0");
 
     /// system() is a library function that makes calls to OS commands/programs. system("pause") calls the "pause"
     /// command in DOS/Windows. Run the pause command in a command shell to see what it does.
@@ -365,41 +500,6 @@ Similarly, in C language, getchar() can be used to pause
  the program without printing the message “Press any key to continue…”.
 
 */
-int PausedExitORContinue(string message)
-{
-
-cout<< '\n'<< message << endl;
-
-    char D;
-    int C = 1;
-
-    while(C == 1)
-    {
-        puts("\n Please enter y or Y to continue, or n or N to stop the program ");
-
-    scanf("%c",&D);
-    puts("You Entered ");
-    printf("%c",D);
-        if ((D == 'y') || (D == 'Y'))
-            {
-                    C = 0;
-
-                    break;
-            }
-        else if((D == 'n') || (D == 'N'))
-            {
-                C = 0;
-                exit(0);
-            }
-        else
-        {
-            C = 1;
-            continue;
-        }
-
-    }
-
-}
 short getOS(void)
 {
        #if defined(_WIN32) || defined(_WIN64) || defined(__TOS_WIN__) || defined(OS_WINDOWS) || defined(__WIN32__) || defined(__WINDOWS__)
