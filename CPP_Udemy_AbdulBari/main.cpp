@@ -28,6 +28,7 @@ int main()
     int myArray[] = {1,2,3,4,5};
     int i;
 
+
     // Initialise sum to zero for starting.
 
     int sum = 0;
