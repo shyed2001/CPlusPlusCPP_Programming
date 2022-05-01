@@ -47,5 +47,31 @@ int main()
     // Output final result.
 
     printf ("Final sum is: %d\n", sum);
+
+    string str;
+    string str2;
+    cout<<"Enter your Name in one word \n"<<endl;
+    cin>>str;
+    cout<<"Welcome  \n"<< str << flush;
+    fflush(stdin);
+    fflush(stdout);
+
+/*
+fflush(stdin) − It is used to clear the input buffer memory. It is recommended to use before writing scanf statement.
+
+fflush(stdout) − It is used for clearing the output buffer memory. It is recommended to use before printf statement.
+The following should work:
+
+cin.flush();
+On some systems it's not available and then you can use:
+
+cin.ignore(INT_MAX);
+*/
+
+    cout<<"\n Enter your Name in full \n"<< flush; /// or << endl;
+    getline(cin,str2);
+
+    cout<<"\n Welcome  \n"<< str2 << endl;
+
     return 0;
 }
