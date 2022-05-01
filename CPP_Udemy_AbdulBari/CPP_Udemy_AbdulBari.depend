@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1651396611 source:f:\git_clone_files\cpluspluscpp_programming\cpp_udemy_abdulbari\main.cpp
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<time.h>
+	<unistd.h>
+	<windows.h>
+	<conio.h>
+	<dos.h>
+	<direct.h>
+	<math.h>
+	<ctype.h>
+	<cstdlib>
+	<iostream>
+	<cmath>
+	<string>
+	<iomanip>
+
