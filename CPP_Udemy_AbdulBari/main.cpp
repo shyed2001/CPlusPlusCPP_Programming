@@ -53,8 +53,9 @@ int main()
     cout<<"Enter your Name in one word \n"<<endl;
     cin>>str;
     cout<<"Welcome  \n"<< str << flush;
-    fflush(stdin);
-    fflush(stdout);
+
+//    fflush(stdin);
+//    fflush(stdout);
 
 /*
 fflush(stdin) − It is used to clear the input buffer memory. It is recommended to use before writing scanf statement.
@@ -66,9 +67,42 @@ cin.flush();
 On some systems it's not available and then you can use:
 
 cin.ignore(INT_MAX);
+Both Windows and Linux define the behaviour of fflush() on an input stream,
+ and even define it the same way (miracle of miracles).
+The POSIX, C and C++ standards for fflush() do not define the behaviour,
+but none of them prevent a system from defining it.
+If you're coding for maximum portability,  avoid fflush(stdin);
+if you're coding for platforms that define the behaviour, use it — but be aware that it is not portable
+    portable code does not use fflush(stdin). Code that is tied to Microsoft's platform may use it and
+    it may work as expected, but beware of the portability issues.
 */
+/*
+When cin.getline() reads from the input, there is a newline character left in the input stream,
+ so it doesn't read your c-string. Use cin.ignore() before calling getline().
+The extraction operations leave the trailing '\n' character in the stream. On the other hand, istream::getline() discards it. So when you call getline after an extraction operator, '\n' is the first character it encounters and it stops reading right there.
 
+Put this after before getline call extraction:
+cin.ignore()
+Since you have not posted any code. I am going to take a guess.
+
+A common problem while using getline with cin is getline does not ignore leading whitespace characters.
+
+If getline is used after cin >>, the getline() sees this newline character as leading whitespace, and it just stops reading any further.
+
+How to resolve it?
+
+Call cin.ignore() before calling getline()
+
+Or
+
+make a dummy call getline() to consume the trailing newline character from the cin >>
+after the line cin >> age ; there is still the newline character \n (because you pressed enter to input the value)
+ in the input buffer, to fix this you add a line with cin.ignore(); after reading the int.
+*/
     cout<<"\n Enter your Name in full \n"<< flush; /// or << endl;
+
+    cin.ignore();
+
     getline(cin,str2);
 
     cout<<"\n Welcome  \n"<< str2 << endl;
