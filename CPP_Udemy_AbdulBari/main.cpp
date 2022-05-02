@@ -107,5 +107,53 @@ after the line cin >> age ; there is still the newline character \n (because you
 
     cout<<"\n Welcome  \n"<< str2 << endl;
 
+    //DemoCompoundAssignment34.cpp
+    int x;
+    sum=10,x=5;
+    sum+=x;
+    cout<<sum<<endl;
+
+    int fact=10,y=5;
+    fact*=y;
+    cout<<fact<<endl;
+//DemoIncrementAndDecrementOperators36.cpp
+    i=5;
+    //int j;
+    int j=i++;
+    cout<<j<<" "<<i<<endl;
+
+    int k=5,l;
+    l=++k;
+    cout<<l<<" "<<k<<endl;
+
+    int a=5,b;
+    b=2*++a + 2*a++;
+    cout<<b<<" "<<a<<endl;;
+
+    int c=5,d;
+    d=2*c++ + 2*c++;
+    cout<<d<<" "<<c<<endl;
+
+        //Overflow38.cpp
+
+     char a=128;
+    cout<<(int)a<<endl;
+
+    char b=127;
+    b++;
+    cout<<(int)b<<endl;
+
+    char c=129;
+    cout<<(int)c<<endl;
+
+    char d=-128;
+    d--;
+    cout<<(int)d<<endl;
+
+    int e=32767; // maximum integer value.
+    e++;
+    cout<<(int)e<<endl;
+
+
     return 0;
 }
