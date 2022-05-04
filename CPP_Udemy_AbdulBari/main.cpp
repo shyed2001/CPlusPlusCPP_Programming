@@ -136,6 +136,25 @@ after the line cin >> age ; there is still the newline character \n (because you
 
         //Overflow38.cpp
 
+            char aa=128;
+    cout<<(int)aa<<endl;
+
+    char bb=127;
+    bb++;
+    cout<<(int)bb<<endl;
+
+    char cc=129;
+    cout<<(int)cc<<endl;
+
+    char dd=-128;
+    dd--;
+    cout<<(int)dd<<endl;
+
+    int ee=32767; // maximum integer value.
+    ee++;
+    cout<<(int)ee<<endl;
+
+ /* Bitwise operator
      char a=128;
     cout<<(int)a<<endl;
 
@@ -155,5 +174,87 @@ after the line cin >> age ; there is still the newline character \n (because you
     cout<<(int)e<<endl;
 
 
+
+
+    	/*
+		_ _ _ _ _ _ _ _
+	    1 6 3 1 8 4 2 1
+		2 4 2 6
+	    8
+		<< shift left
+		>> shift right
+		&  and
+		|  or
+		^  xor
+		~  not
+
+
+	char c = 9;			// 000000000 0 0 0 1 0 0 1 = 9
+						// 1 1 1 1 0 1 1 0
+/*	char d = c << 2;	// 0 0 1 0 0 1 0 0 = 36
+	cout << (int)d << endl;
+	d = c >> 1;			// 0 0 0 0 0 1 0 0 = 4
+	cout << (int)d << endl; */
+	/*
+		&
+		1 & 1 = 1
+		1 & 0 = 0
+		0 & 1 = 0
+		0 & 0 = 0
+	*/
+
+	/* d = c & 7;
+	cout << (int)d << endl; */
+
+	/*
+	  1 | 1 = 1
+	  0 | 1 = 1
+	  1 | 0 = 1
+	  0 | 0 = 0
+
+	char d = c | 7;
+	cout << (int)d << endl;
+	/*
+	  0 ^ 0 = 0
+	  1 ^ 1 = 0
+	  1 ^ 0 = 1
+	  0 ^ 1 = 1
+
+11001
+00110
+	d = c ^ 7;
+	cout << (int)d << endl;
+	/*
+	~0 = 1
+	~1 = 0
+
+	short e = ~c;
+	cout << e << endl;
+*/
+/*
+ int aaa=11,bbb=7,ccc;
+    ccc=aaa&bbb;
+    cout<<ccc<<endl;
+
+    int ddd=11,eee=7,fff;
+    fff=ddd|eee;
+    cout<<fff<<endl;
+
+    int g=11,h=7;
+    i=g^h;
+    cout<<i<<endl;
+
+    char j=5,k;
+    k=j<<1;
+    cout<<(int)k<<endl;
+
+    char l=20,m;
+    m=l>>1;
+    cout<<(int)m<<endl;
+
+    char x=5,y;
+    y= ~ x;
+    cout<<(int)y<<endl;
+*/
     return 0;
 }
