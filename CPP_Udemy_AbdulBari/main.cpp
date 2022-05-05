@@ -256,5 +256,108 @@ after the line cin >> age ; there is still the newline character \n (because you
     y= ~ x;
     cout<<(int)y<<endl;
 */
+
+/// FindingMaxOf2Nos46.cpp
+
+/*	int x,y;
+	cout<<"Enter 2 nos";
+	cin>>x>>y;
+
+	if(x>y)
+	{
+		cout<<"Maximum is"<<x;
+    }
+    else
+	{
+		cout<<"Maximum is"<<y;
+	}*/
+/// DemoConditionalStatement47.cpp
+
+/*    int roll;
+    cout<<"Enter your Roll Number."<<endl;
+    cin>>roll;
+
+    if(roll<1)
+    {
+        cout<<"Invalid Roll Number."<<endl;
+    }
+    else
+    {
+        cout<<"Valid Roll Number."<<endl;
+    }*/
+
+///Validation48.cpp
+
+/*    int a,b,c;
+    cout<<"Enter Two Numbers: "<<endl;
+    cin>>a>>b;
+
+    if(b==0)
+    {
+        cout<<"Division By Zero"<<endl;
+    }
+    else
+    {
+        c=a/b;
+        cout<<c<<endl;
+    }
+    */
+
+///FindingMaxOf3Nos54.cpp
+
+ /*       int a,b,c;
+    cout<<"Enter 3 no.s"<<endl;
+    cin>>a>>b>>c;
+
+    if(a>b && a>c)
+    {
+        cout<<a<<endl;
+    }
+    else if(b>c)
+    {
+        cout<<b<<endl;
+    }
+    else
+    {
+        cout<<c<<endl;
+    }
+       */
+
+   ///ShortCircuit60.cpp
+ /*      	int a=10,b=5,i=5;
+
+    if(a>b && ++i<=b)
+    {
+
+    }
+    cout<<i<<endl;
+    if(a<b || ++i<=b)
+    {
+
+    }
+    cout<<i<<endl;*/
+
+   /*   int a=10,b=5;
+
+    if(true)
+    {
+        int c=a+b;
+        cout<<c<<endl;
+    }
+    {
+        int d=a-b;
+
+        if(true)
+        {
+            cout<<d<<endl;
+        }
+    }
+
+        if(int e=a*b)
+        {
+            cout<<e<<endl;
+        }*/
+
+
     return 0;
 }
