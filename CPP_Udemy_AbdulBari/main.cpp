@@ -358,6 +358,28 @@ after the line cin >> age ; there is still the newline character \n (because you
             cout<<e<<endl;
         }*/
 
+int A[]={3};
+int B[3]={4};
+int C[4];
+double D[5]={0,1,-2,3.99,4};
 
+cout<<"A = "<<A<<endl;
+cout<<"A[0] = "<<A[0]<<endl;
+cout<<"A[2] = "<<A[2]<<endl;
+
+cout<<"B = "<<B<<endl;
+cout<<"B[0] = "<<B[0]<<endl;
+cout<<"B[2] = "<<B[2]<<endl;
+
+cout<<"C = "<<C<<endl;
+cout<<"C[0] = "<<C[0]<<endl;
+cout<<"C[2] = "<<C[2]<<endl;
+
+cout<<"D = "<<D<<endl;
+cout<<"D[0] = "<<D[0]<<endl;
+cout<<"D[2] = "<<D[2]<<endl;
+cout<<"D[3] = "<<D[3]<<endl;
+
+/// cout<<A<<'\n'<<B<<'\n'<<C[2]<<'\n'<<C<<'\n'<<D<<'\n'<<D[]<<'\n'<<D[3]<<endl;
     return 0;
 }
