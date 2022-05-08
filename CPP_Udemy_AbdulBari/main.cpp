@@ -16,6 +16,8 @@
 #include <cmath>
 #include <string>
 #include <iomanip>
+#include <vector>
+#include <map>
 
 using namespace std;
 
@@ -357,7 +359,23 @@ after the line cin >> age ; there is still the newline character \n (because you
         {
             cout<<e<<endl;
         }*/
-
+//Loop Through an Array
+//You can loop through the array elements with the for loop.
+//
+//The following example outputs all elements in the cars array:
+//
+//Example
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < 4; i++) {
+  cout << cars[i] << "\n";
+}
+//The following example outputs the index of each element together with its value:
+//
+//Example
+string cars2[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+for (int i = 0; i < 4; i++) {
+  cout << i << ": " << cars2[i] << "\n";
+}
 int A[]={3};
 int B[3]={4};
 int C[4];
@@ -370,7 +388,7 @@ cout<<"A[2] = "<<A[2]<<endl;
 cout<<"B = "<<B<<endl;
 cout<<"B[0] = "<<B[0]<<endl;
 cout<<"B[2] = "<<B[2]<<endl;
-
+cout<<"B[3] = "<<B[3]<<endl;
 cout<<"C = "<<C<<endl;
 cout<<"C[0] = "<<C[0]<<endl;
 cout<<"C[2] = "<<C[2]<<endl;
@@ -380,6 +398,94 @@ cout<<"D[0] = "<<D[0]<<endl;
 cout<<"D[2] = "<<D[2]<<endl;
 cout<<"D[3] = "<<D[3]<<endl;
 
+ int aaa[] = {0, 1, 2, 3, 4, 5};
+    for (int n : aaa)
+        std::cout << n << ' ';
+
+    std::cout << '\n';
+
+    // Just running a loop for every array
+    // element
+    for (int nnn : aaa)
+        std::cout << "In loop" << ' ';
+
+    std::cout << '\n';
+
+    // Printing string characters
+    std::string str123 = "Geeks";  /// String is array of char with \n at last
+    for (char cccc : str123)
+        std::cout << cccc << ' ';
+
+    std::cout << '\n';
+
+  // Iterating over whole array
+    std::vector<int> v = {0, 1, 2, 3, 4, 5};
+    for (auto i : v)  /// auto will automatically pick up the variable type.
+        std::cout << i << ' ';
+
+    std::cout << '\n';
+
+    // the initializer may be a braced-init-list
+        for (int n : {0, 1, 2, 3, 4, 5})
+        {
+            std::cout << n << ' ';
+        }
+         std::cout << '\n';
+    for (int n : {0, 1, 2, 3, 4, 5})
+        {
+            std::cout << ++n << ' '; /// changing copy value of n
+        }
+         std::cout << '\n';
+
+     for (int n : {0, 1, 2, 3, 4, 5})
+        {
+            std::cout << n++ << ' ';  /// N++ will not change the declared initialized value
+        }
+    std::cout << '\n';
+int ARRAY[] = {0, 1, 2, 3, 4, 5};
+    for (int &n : ARRAY) /// &n is reference to change value of n
+        {
+            std::cout << ++n << ' '; /// ++n will not change the declared initialized value
+        }
+         std::cout << '\n';
+              for (int n : ARRAY)
+        {
+            std::cout << n << ' ';
+        }
+    std::cout << '\n';
+
+int ARRAY2[] = {0, 1, 2, 3, 4, 5};
+     for (int &n2 : ARRAY2) /// &n is reference to change value of n
+        {
+            std::cout << n2++ << ' '; /// changing real value of n
+        }
+    std::cout << '\n';
+     for (int n2 : ARRAY2)
+        {
+            std::cout << n2 << ' ';
+        }
+    std::cout << '\n';
+      // Printing keys and values of a map
+    std::map <int, int> MAP({{1, 1}, {2, 2}, {3, 3}});
+    for (auto i : MAP)
+        std::cout << '{' << i.first << ", "
+                  << i.second << "}\n";
+
 /// cout<<A<<'\n'<<B<<'\n'<<C[2]<<'\n'<<C<<'\n'<<D<<'\n'<<D[]<<'\n'<<D[3]<<endl;
+
+int arr[7] = {25, 63, 74, 69, 81, 65, 68};
+
+   for (int i=0; i < 7; i++) {
+      cout << arr[i] << "  ";
+   }
+
+   std::cout << '\n';
+
+double arr2[7] = {25.55, 63, 74.75, -69, 81, 65, 68};
+   for (auto i=0; i < 7; i++) {
+      cout << arr2[i] << "  ";
+   }
+    getch();
+    cin.get();
     return 0;
 }

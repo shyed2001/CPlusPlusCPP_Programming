@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1651399070 source:f:\git_clone_files\cpluspluscpp_programming\cpp_udemy_abdulbari\main.cpp
+1652000418 source:f:\git_clone_files\cpluspluscpp_programming\cpp_udemy_abdulbari\main.cpp
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -17,6 +17,8 @@
 	<cmath>
 	<string>
 	<iomanip>
+	<vector>
+	<map>
 
 1651436861 source:d:\github\cpluspluscpp_programming\cpp_udemy_abdulbari\main.cpp
 	<iostream>
