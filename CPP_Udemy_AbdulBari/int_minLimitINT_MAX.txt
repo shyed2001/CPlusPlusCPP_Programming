@@ -1,0 +1,128 @@
+INT_MAX and INT_MIN in C/C++ and Applications
+Difficulty Level : Easy
+Last Updated : 03 Sep, 2021
+Most of the time, in competitive programming, there is a need to assign the variable, the maximum or minimum value that data type can hold, but remembering such a large and precise number comes out to be a difficult job. Therefore, C++ has certain macros to represent these numbers, so that these can be directly assigned to the variable without actually typing the whole number.
+
+Depending upon the compiler and C++ standard, you may be required to include the header file <limits.h> or <climits> in your C or C++ source code respectively. So it is advisable to include this header file for using the INT_MAX, INT_MIN macros. For further reading on this header file, refer to this article. 
+
+INT_MAX is a macro that specifies that an integer variable cannot store any value beyond this limit. 
+INT_MIN specifies that an integer variable cannot store any value below this limit.
+
+Values of INT_MAX and INT_MIN may vary
+from compiler to compiler. Following are
+typical values in a compiler where integers
+are stored using 32 bits.
+
+Value of INT_MAX is +2147483647.
+Value of INT_MIN is -2147483648.
+
+// C++ program to print values of INT_MAX
+// and INT_MIN
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    cout << INT_MAX << endl;
+    cout << INT_MIN;
+    return 0;
+}
+
+// C program to print values of INT_MAX
+// and INT_MIN
+// we have to include limits.h for results in C
+#include <limits.h>
+#include <stdio.h>
+int main()
+{
+    printf("%d\n", INT_MAX);
+    printf("%d", INT_MIN);
+}
+
+Output
+2147483647
+-2147483648
+Applications of INT_MAX and INT_MIN : 
+
+1. Check for Integer overflow : 
+
+
+// C++ code to check for Integer overflow while
+// adding 2 numbers
+#include <bits/stdc++.h>
+ 
+// Function to check integer overflow
+int check_overflow(int num1, int num2)
+{
+    // Checking if addition will cause overflow
+    if (num1 > INT_MAX - num2)
+        return -1;
+ 
+    // No overflow occured
+    else
+        return num1 + num2;
+}
+ 
+// Driver code
+int main()
+{
+    // The sum of these numbers will equal INT_MAX
+    // If any of them is incremented by 1, overflow
+    // will occur
+    int num1 = 2147483627;
+    int num2 = 20;
+ 
+    // Result is -1 if overflow occurred
+    // Stores the sum, otherwise
+    int result = check_overflow(num1, num2);
+ 
+    // Overflow occurred
+    if (result == -1)
+        std::cout << "Integer overflow occurred";
+ 
+    // No overflow
+    else
+        std::cout << result;
+}
+Output
+2147483647
+Similarly, we can check for overflow while subtracting 2 numbers using INT_MIN.
+
+2. Computing MIN in an array with large elements 
+We usually assign a high value to MIN to compute minimum value in an array. But if an array has large elements, we must assign the highest possible value to the array.
+
+Below is the C++ implementation : 
+
+
+// C++ code to compute MIN element
+#include <bits/stdc++.h>
+ 
+// Function to compute minimum element in array
+int compute_min(int arr[], int n)
+{
+    // Assigning highest value
+    int MIN = INT_MAX;
+ 
+    // Traversing and updating MIN
+    for (int i = 0; i < n; i++)
+        MIN = std::min(MIN, arr[i]);
+ 
+    // Printing MIN element
+    std::cout << MIN;
+}
+ 
+// Driver code
+int main()
+{
+    // array with MIN to compute
+    int arr[] = { 2019403813, 2147389580, 2145837140,
+                  2108938594, 2112076334 };
+ 
+    // size of array
+    int n = sizeof(arr) / sizeof(arr[0]);
+ 
+    // Function call to compute MIN
+    compute_min(arr, n);
+}
+Output
+2019403813
+Similarly, MAX can be found in an array of large numbers using INT_MIN.

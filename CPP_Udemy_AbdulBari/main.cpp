@@ -18,6 +18,7 @@
 #include <iomanip>
 #include <vector>
 #include <map>
+#include <climit>
 
 using namespace std;
 
@@ -485,7 +486,36 @@ double arr2[7] = {25.55, 63, 74.75, -69, 81, 65, 68};
    for (auto i=0; i < 7; i++) {
       cout << arr2[i] << "  ";
    }
+
+
+ /// Pointers,   C++ Programming -Beginner to Advance- Deep Dive in C++
+/// Pointers
+
+int x =10;
+/// integer Variable x holds value 10, address of x is 200/201 (two bites assumed)
+
+int *P;
+P= &x;
+
+declaration int *p;   /// pointer variable
+Initialization p = &x; /// address of x
+dereferencing cout << *p ; ///value of x , that is hold by p
+
+cout < x ; ///== 10
+/// Variable x holds value 10, address of x is 200/201 (two bites assumed)300/301
+cout <<&x; /// address of x ==200
+
+cout <<p; /// value of p, address of x /// == 200
+/// Variable p holds value 200 as address of x is 200/201 (two bites assumed)300/301
+cout <<&p ; /// address of pointer variable p == 300
+/// int pointer p holds the address of x at the memory address 300/301 (two bites assumed)
+cout <<* p; /// == 10 /// Value stored at address 200
+
+
     getch();
+
     cin.get();
+
     return 0;
+
 }
