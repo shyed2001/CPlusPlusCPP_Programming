@@ -12,7 +12,6 @@
 #include <math.h>
 #include<ctype.h>
 #include <cstdlib>
-#include <iostream>
 #include <cmath>
 #include <string>
 #include <iomanip>
@@ -20,10 +19,55 @@
 #include <map>
 #include <climit>
 
+/*author/owner :== Shyed Shahriar Housaini
+License :== MIT + terms and conditions of author/owner
+Copyright :== author/owner*/
+
+#include <stdio.h>
+#include <stdlib.h>
+//#include <stdbool.h>
+#include <time.h>
+#include <unistd.h>
+//#include <windows.h>
+///#include <threads.h>
+//#include <conio.h>
+//#include <dos.h>
+//#include <direct.h>
+//#include <math.h>
+//#include<ctype.h>
+//#include <cstdlib>
+#include <iostream>
+//#include <cmath>
+//#include <string>
+//#include <iomanip>
+
+void clear(){
+    #if defined(__linux__) || defined(__unix__) || defined(__APPLE__)
+        system("clear");
+    #endif
+
+    #if defined(_WIN32) || defined(_WIN64)
+        system("cls");
+    #endif
+}
+#define SHOW_SOURCE_CODE
+#define SHOW_SOURCE_FILE_PATH
+
 using namespace std;
 
-int main()
-{
+int main(int argc, char* argv[])
+
+{ ///  puts("Use gcc -save-temps testC.c -o testC.exe for getting all the preprossed and object and assembly source files saved with chosen name");
+
+clock_t tStart = clock();
+
+
+
+
+
+
+
+
     cout << "Hello world!" << endl;
 
     // Array and index into it.
@@ -509,13 +553,166 @@ cout <<p; /// value of p, address of x /// == 200
 /// Variable p holds value 200 as address of x is 200/201 (two bites assumed)300/301
 cout <<&p ; /// address of pointer variable p == 300
 /// int pointer p holds the address of x at the memory address 300/301 (two bites assumed)
-cout <<* p; /// == 10 /// Value stored at address 200
+cout <<* p; /// == 10 /// Value stored at address 200 , *p is called dereferencing
 
+
+/// DemoPointers107.cpp
+
+
+int a=10;
+	int *p=&a;
+
+/// or first int *p; only and then p = &a;
+
+	cout<<a<<endl;
+	cout<<&a<<endl;
+	cout<<p<<endl;
+	cout<<&p<<endl;
+	cout<<*p<<endl;
+
+///PointerArithmitic112.cpp
+
+ int A[5]={2,4,6,8,10};
+    int *p=A,*q=&A[4];
+    cout<<*p<<endl;
+    cout<<endl;
+
+    p++;
+    cout<<*p<<endl;
+    cout<<endl;
+
+    p--;
+    cout<<*p<<endl;
+    cout<<endl;
+    cout<<p<<endl;
+    cout<<p+2<<endl;
+    cout<<endl;
+    cout<<*p<<endl;
+    cout<<*(p+2)<<endl;
+    cout<<endl;
+    cout<<q-p<<endl;
+    cout<<p-q<<endl;
+
+cout<<p<<endl;
+    for (i=0; i<5; i++)
+    {
+        cout << << A << endl;
+        cout << A[i] << endl;
+        cout << i[A] << endl;
+        cout << (A+i) << endl;
+        cout <<  A+i << endl;
+        cout << *(A+i) << endl;
+        cout << *(p+i) << endl;
+        cout <<  *p+i << endl;
+        cout <<  *(p+i) << endl;
+        p++
+    }
+cout<<p<<endl;
+
+
+
+    ///DynamicAllocation110.cpp
+
+
+    int size;
+	cout<<"Enter Number of Elements";
+	cin>>size;
+	int A[size];
+
+	cout<<sizeof A<<endl;
+
+
+   /// int *p;   is a stack memory allocation
+   /// p = new int[5]; is a heap memory allocation
+   /// int *p = new int[5]; is a heap memory allocation
+
+   /// delete []p; to deallocate heap memory.
+   /// after delete []p; then p = NULL; to release memory
+
+   /// but p = nullptr; is best for C++
+
+  /// p = NULL; or p = nullptr; should not be done before delete []p;
+
+     A[2] = 15; ///  int A[5]={2,4,6,8,10};
+     p[2] = 71;
+     p[1] = 17;
+     p[3] = 7; /// dynamic heap memory array int *p = new int[5];
+
+    int *p = new int[5];
+     cout<< A[2] << endl;
+     cout<< p[2] << endl;
+     cout<< p[1] << endl;
+     cout<< p[3] << endl;
+
+
+    int size;
+	cout<<"Enter Number of Elements";
+	cin>>size;
+	int *p = new int[size];
+
+	cout<<sizeof p<<endl;
+
+    delete []p;   /// to prevent memory leak
+    cout<<"Enter new Number of Elements";
+	cin>>size;
+	p = new int[size];
+
+
+
+     delete []p;
+     p = nullptr;
+
+   float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
+   printf(" \n Time taken: %.5f s\n", putsTime1);
+
+
+
+#ifdef SHOW_SOURCE_CODE
+        // We can append this code to any C program
+    // such that it prints its source code with line number.
+
+unsigned long ln = 0;
+ FILE *fp = fopen(__FILE__, "r");
+int prev = '\n';
+int c;  // Use int here, not char
+while((c=getc(fp))!=EOF) {
+  if (prev == '\n'){
+    printf("%05lu ", ++ln);
+  }
+  putchar(c);
+  prev = c;
+}
+if (prev != '\n') {
+  putchar('\n');  // print a \n for input that lacks a final \n
+}
+printf("lines num: %lu\n", ln);
+
+    fclose(fp);
+          // We can append this code to any C program
+    // such that it prints its source code.
+
+#endif
+
+#ifdef SHOW_SOURCE_FILE_PATH
+
+       // Prints location of C this C code.
+   printf("%s \n",__FILE__);
+
+#endif
+
+
+
+/// clear();  /// clearing console window
+
+///system("@cls||clear"); /// or system("cls||clear");
+
+    /// cin.get()/// all system /// C++ all system // platform
 
     getch();
 
     cin.get();
-
     return 0;
+
+    /// system("pause>null"); /// for windows only  /// For debugging only.
 
 }
