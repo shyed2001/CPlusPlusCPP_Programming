@@ -23,10 +23,6 @@
 License :== MIT + terms and conditions of author/owner
 Copyright :== author/owner*/
 
-#include <stdio.h>
-#include <stdlib.h>
-//#include <stdbool.h>
-#include <time.h>
 #include <unistd.h>
 //#include <windows.h>
 ///#include <threads.h>
@@ -36,7 +32,6 @@ Copyright :== author/owner*/
 //#include <math.h>
 //#include<ctype.h>
 //#include <cstdlib>
-#include <iostream>
 //#include <cmath>
 //#include <string>
 //#include <iomanip>
@@ -570,10 +565,11 @@ int a=10;
 	cout<<&p<<endl;
 	cout<<*p<<endl;
 
-///PointerArithmitic112.cpp
+///PointerArithmitic112.cpp with arrays
 
  int A[5]={2,4,6,8,10};
-    int *p=A,*q=&A[4];
+    int *p = A; /// A is already the address of A[0], the first element of the array so &A is not needed
+    int*q=&A[4]; /// &A[4] is an address different than A
     cout<<*p<<endl;
     cout<<endl;
 
@@ -664,6 +660,9 @@ cout<<p<<endl;
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
    printf(" \n Time taken: %.5f s\n", putsTime1);
+
+
+
 
 
 
