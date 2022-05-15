@@ -654,9 +654,45 @@ cout<<p<<endl;
 	p = new int[size];
 
 
-
-     delete []p;
+	 delete []p;
      p = nullptr;
+
+
+     /// Declaring and Initializing String
+
+/// '\0' is string delimiter and or Null character to mark the end of string
+10
+
+char x ='A'; /// only a A
+
+char S[10]= "Hello"; /// Hello\0 this is called string literal , indexed 0 1 2 3 4 5 6 7 8 9
+
+char S[]="Hello"; /// Hello\0
+
+char S[]={'H','e','l','l','o',' ' ,'a', 'n', 'd', ' ', 'H', 'i', '\0'}; /// Hello and hi\0
+
+char S[]={'H','e','l','l','o', '\0' ,'a', 'n', 'd', ' ', 'H', 'i'} ; /// only Hello will be printed, '\0' indicates end of string or end of char array
+
+char S[] ={65,66,67,68,'\0'}; /// ABCD\0
+char S[] ={65,66,67,68,'\0', 69,70}; /// only ABCD\0
+char S[] ={65,66,67,68, 0, 69,70}; /// only ABCD\0, 0 also means null char '\0'
+char *S = "Hello"; /// Hello\0
+
+string s = "Hello";
+
+delete []S;
+
+
+/// Reading and Printing String
+char s[20];
+cout<<"Enter your name";
+cin<<s;
+
+char s[50];
+cout< <"Enter your name";
+cin.get(s,50);
+cin.getline(s.50):
+
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
    printf(" \n Time taken: %.5f s\n", putsTime1);

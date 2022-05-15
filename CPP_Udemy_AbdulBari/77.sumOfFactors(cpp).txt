@@ -1,0 +1,21 @@
+# include<iostream>
+using namespace std;
+    
+/*program for finding sum of the factors of a number
+
+
+*/
+int main()
+{
+	int i,n;
+	cout<<"enter the number";
+	for(i=1;i<=n;i++)
+	{
+	     if(n%i==0)
+	     {
+		sum=sum+i;
+	     }
+	}  
+	cout<<"sum of factors"<<sum<<endl;     
+	return 0;
+}
