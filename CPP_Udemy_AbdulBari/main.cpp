@@ -13,11 +13,13 @@
 #include<ctype.h>
 #include <cstdlib>
 #include <cmath>
+#include <string.h>
 #include <string>
+#include <cstring>
 #include <iomanip>
 #include <vector>
 #include <map>
-#include <climit>
+#include <climits>
 
 /*author/owner :== Shyed Shahriar Housaini
 License :== MIT + terms and conditions of author/owner
@@ -145,7 +147,7 @@ after the line cin >> age ; there is still the newline character \n (because you
 
     cin.ignore();
 
-    getline(cin,str2);
+    getline(cin,str2);   /// for string
 
     cout<<"\n Welcome  \n"<< str2 << endl;
 
@@ -530,17 +532,20 @@ double arr2[7] = {25.55, 63, 74.75, -69, 81, 65, 68};
  /// Pointers,   C++ Programming -Beginner to Advance- Deep Dive in C++
 /// Pointers
 
-int x =10;
+x =10;
 /// integer Variable x holds value 10, address of x is 200/201 (two bites assumed)
 
 int *P;
 P= &x;
 
-declaration int *p;   /// pointer variable
-Initialization p = &x; /// address of x
-dereferencing cout << *p ; ///value of x , that is hold by p
+///declaration
+int *p;   /// pointer variable
+///Initialization
+p = &x; /// address of x
+//dereferencing
+cout << *p ; ///value of x , that is hold by p
 
-cout < x ; ///== 10
+cout << x ; ///== 10
 /// Variable x holds value 10, address of x is 200/201 (two bites assumed)300/301
 cout <<&x; /// address of x ==200
 
@@ -554,56 +559,56 @@ cout <<* p; /// == 10 /// Value stored at address 200 , *p is called dereferenci
 /// DemoPointers107.cpp
 
 
-int a=10;
-	int *p=&a;
+int  AnInt =10;
+  int *pointer = &AnInt ;
 
-/// or first int *p; only and then p = &a;
+/// or first int *pointer; only  and then pointer = & AnInt ;
 
-	cout<<a<<endl;
-	cout<<&a<<endl;
-	cout<<p<<endl;
-	cout<<&p<<endl;
-	cout<<*p<<endl;
+	cout<< AnInt <<endl;
+	cout<<& AnInt <<endl;
+	cout<<pointer<<endl;
+	cout<<&pointer<<endl;
+	cout<<*pointer<<endl;
 
 ///PointerArithmitic112.cpp with arrays
 
- int A[5]={2,4,6,8,10};
-    int *p = A; /// A is already the address of A[0], the first element of the array so &A is not needed
-    int*q=&A[4]; /// &A[4] is an address different than A
-    cout<<*p<<endl;
+ int  AnIntArray[5]={2,4,6,8,10};
+    int *POINTER =  AnIntArray; ///  AnIntArray is already the address of  AnIntArray[0], the first element of the array so & AnIntArray is not needed
+    int*q=& AnIntArray[4]; /// & AnIntArray[4] is an address different than  AnIntArray
+    cout<<*POINTER<<endl;
     cout<<endl;
 
-    p++;
-    cout<<*p<<endl;
+    POINTER++;
+    cout<<*POINTER<<endl;
     cout<<endl;
 
-    p--;
-    cout<<*p<<endl;
+    POINTER--;
+    cout<<*POINTER<<endl;
     cout<<endl;
-    cout<<p<<endl;
-    cout<<p+2<<endl;
+    cout<<POINTER<<endl;
+    cout<<POINTER+2<<endl;
     cout<<endl;
-    cout<<*p<<endl;
-    cout<<*(p+2)<<endl;
+    cout<<*POINTER<<endl;
+    cout<<*(POINTER+2)<<endl;
     cout<<endl;
-    cout<<q-p<<endl;
-    cout<<p-q<<endl;
+    cout<<q-POINTER<<endl;
+    cout<<POINTER-q<<endl;
 
-cout<<p<<endl;
+cout<<POINTER<<endl;
     for (i=0; i<5; i++)
     {
-        cout << << A << endl;
-        cout << A[i] << endl;
-        cout << i[A] << endl;
-        cout << (A+i) << endl;
-        cout <<  A+i << endl;
-        cout << *(A+i) << endl;
-        cout << *(p+i) << endl;
-        cout <<  *p+i << endl;
-        cout <<  *(p+i) << endl;
-        p++
+        cout << AnIntArray << endl;
+        cout <<  AnIntArray[i] << endl;
+        cout << i[ AnIntArray] << endl;
+        cout << ( AnIntArray+i) << endl;
+        cout <<   AnIntArray+i << endl;
+        cout << *( AnIntArray+i) << endl;
+        cout << *(POINTER+i) << endl;
+        cout <<  *POINTER+i << endl;
+        cout <<  *(POINTER+i) << endl;
+        POINTER++;
     }
-cout<<p<<endl;
+cout<<POINTER<<endl;
 
 
 
@@ -613,85 +618,190 @@ cout<<p<<endl;
     int size;
 	cout<<"Enter Number of Elements";
 	cin>>size;
-	int A[size];
+	int  AnIntArray2[size];
 
-	cout<<sizeof A<<endl;
-
-
-   /// int *p;   is a stack memory allocation
-   /// p = new int[5]; is a heap memory allocation
-   /// int *p = new int[5]; is a heap memory allocation
-
-   /// delete []p; to deallocate heap memory.
-   /// after delete []p; then p = NULL; to release memory
-
-   /// but p = nullptr; is best for C++
-
-  /// p = NULL; or p = nullptr; should not be done before delete []p;
-
-     A[2] = 15; ///  int A[5]={2,4,6,8,10};
-     p[2] = 71;
-     p[1] = 17;
-     p[3] = 7; /// dynamic heap memory array int *p = new int[5];
-
-    int *p = new int[5];
-     cout<< A[2] << endl;
-     cout<< p[2] << endl;
-     cout<< p[1] << endl;
-     cout<< p[3] << endl;
+	cout<<sizeof  AnIntArray2<<endl;
 
 
-    int size;
+   /// int *POINTER;   is a stack memory allocation
+   /// POINTER = new int[5]; is a heap POINTER memory allocation
+   /// int *POINTER = new int[5]; is a heap memory allocation
+
+   /// delete []POINTER; to deallocate heap memory.
+   /// after delete []POINTER; then POINTER = NULL; to release memory
+
+   /// but POINTER = nullptr; is best for C++
+
+  /// POINTER = NULL; or POINTER = nullptr; should not be done before delete []POINTER;
+
+      AnIntArray[2] = 15; ///  int  AnIntArray[5]={2,4,6,8,10};
+     POINTER[2] = 71;
+     POINTER[1] = 17;
+     POINTER[3] = 7; /// dynamic heap memory array int *POINTER = new int[5];
+
+    int *DynamicPointer = new int[5];
+     cout<<  AnIntArray2[2] << endl;
+     cout<<  AnIntArray[2] << endl;
+     cout<< DynamicPointer[2] << endl;
+     cout<< DynamicPointer[1] << endl;
+     cout<< DynamicPointer[3] << endl;
+
+
+    int Arraysize;
 	cout<<"Enter Number of Elements";
-	cin>>size;
-	int *p = new int[size];
+	cin>>Arraysize;
+	int *DynamicPointertwo = new int[Arraysize];
 
-	cout<<sizeof p<<endl;
+	cout<<sizeof DynamicPointer<<endl;
 
-    delete []p;   /// to prevent memory leak
+    delete []DynamicPointertwo;   /// to prevent memory leak
     cout<<"Enter new Number of Elements";
-	cin>>size;
-	p = new int[size];
+	cin>>Arraysize;
+	int *DynamicArrayPointerTwo = new int[Arraysize];
 
 
-	 delete []p;
-     p = nullptr;
+	 delete []DynamicArrayPointerTwo;
+    DynamicArrayPointerTwo= nullptr;
 
 
      /// Declaring and Initializing String
-
+/// have to include string.h/cstring
 /// '\0' is string delimiter and or Null character to mark the end of string
-10
 
-char x ='A'; /// only a A
+
+char Charx ='A'; /// only a A
 
 char S[10]= "Hello"; /// Hello\0 this is called string literal , indexed 0 1 2 3 4 5 6 7 8 9
 
-char S[]="Hello"; /// Hello\0
+char Str[]="Hello"; /// Hello\0
 
-char S[]={'H','e','l','l','o',' ' ,'a', 'n', 'd', ' ', 'H', 'i', '\0'}; /// Hello and hi\0
+char S1[]= {'H','e','l','l','o',' ' ,'a', 'n', 'd', ' ', 'H', 'i', '\0'}; /// Hello and hi\0
 
-char S[]={'H','e','l','l','o', '\0' ,'a', 'n', 'd', ' ', 'H', 'i'} ; /// only Hello will be printed, '\0' indicates end of string or end of char array
+char S2[]={'H','e','l','l','o', '\0' ,'a', 'n', 'd', ' ', 'H', 'i'} ; /// only Hello will be printed, '\0' indicates end of string or end of char array
 
-char S[] ={65,66,67,68,'\0'}; /// ABCD\0
-char S[] ={65,66,67,68,'\0', 69,70}; /// only ABCD\0
-char S[] ={65,66,67,68, 0, 69,70}; /// only ABCD\0, 0 also means null char '\0'
-char *S = "Hello"; /// Hello\0
+char S3[] ={65,66,67,68,'\0'}; /// ABCD\0
+char S4[] ={65,66,67,68,'\0', 69,70}; /// only ABCD\0
+char S5[] ={65,66,67,68, 0, 69,70}; /// only ABCD\0, 0 also means null char '\0'
+char *SPointer = "Hello"; /// Hello\0
 
 string s = "Hello";
 
-delete []S;
-
+delete []SPointer;
 
 /// Reading and Printing String
-char s[20];
-cout<<"Enter your name";
-cin<<s;
+char name[20];
+cout<<"Enter your name"<< endl;
+cin >> name;
+char *StrPtr;
+char secondname[50];
+cout<<"Enter your name"<< endl;
+cin.get(name,50);
+///Put this after before getline call extraction:
+cin.ignore();
+/// or
+cout<<"Enter your name again"<< endl;
 
-char s[50];
-cout< <"Enter your name";
-cin.get(s,50);
-cin.getline(s.50):
+cin.getline(S,50);
+
+cout<< strlen(name) <<"string length == strlen(s) =  "<<endl;  //string length
+
+cout<< strlen(S) <<"string length == strlen(S) =  "<<endl;  //string length
+/*
+
+    string str;
+    string str2;
+    cout<<"Enter your Name in one word \n"<<endl;
+    cin>>str;
+    cout<<"Welcome  \n"<< str << flush;
+
+//    fflush(stdin);
+//    fflush(stdout);
+
+/*
+fflush(stdin) − It is used to clear the input buffer memory. It is recommended to use before writing scanf statement.
+
+fflush(stdout) − It is used for clearing the output buffer memory. It is recommended to use before printf statement.
+The following should work:
+
+cin.flush();
+On some systems it's not available and then you can use:
+
+cin.ignore(INT_MAX);
+Both Windows and Linux define the behaviour of fflush() on an input stream,
+ and even define it the same way (miracle of miracles).
+The POSIX, C and C++ standards for fflush() do not define the behaviour,
+but none of them prevent a system from defining it.
+If you're coding for maximum portability,  avoid fflush(stdin);
+if you're coding for platforms that define the behaviour, use it — but be aware that it is not portable
+    portable code does not use fflush(stdin). Code that is tied to Microsoft's platform may use it and
+    it may work as expected, but beware of the portability issues.
+*/
+/*
+When cin.getline() reads from the input, there is a newline character left in the input stream,
+ so it doesn't read your c-string. Use cin.ignore() before calling getline().
+The extraction operations leave the trailing '\n' character in the stream. On the other hand, istream::getline() discards it. So when you call getline after an extraction operator, '\n' is the first character it encounters and it stops reading right there.
+
+Put this after before getline call extraction:
+cin.ignore()
+Since you have not posted any code. I am going to take a guess.
+
+A common problem while using getline with cin is getline does not ignore leading whitespace characters.
+
+If getline is used after cin >>, the getline() sees this newline character as leading whitespace, and it just stops reading any further.
+
+How to resolve it?
+
+Call cin.ignore() before calling getline()
+
+Or
+
+make a dummy call getline() to consume the trailing newline character from the cin >>
+after the line cin >> age ; there is still the newline character \n (because you pressed enter to input the value)
+ in the input buffer, to fix this you add a line with cin.ignore(); after reading the int.
+
+    cout<<"\n Enter your Name in full \n"<< flush; /// or << endl;
+
+    cin.ignore();
+
+    getline(cin,str2);   /// for string
+
+    cout<<"\n Welcome  \n"<< str2 << endl;
+
+*/
+/// Strings
+/// string concatination
+
+char s1[20]="Good";
+char s2[10]="Morning";
+char s3[20]="Nice";
+char s4[10]="Day";
+
+
+strcat (s1, s2);  /// destination
+cout<< s1 <<endl;
+
+strncat (s3, s4, 3);  /// joining two letters at home
+cout<< s3 <<endl;
+
+strcpy(s1, s2);
+
+cout << s2 << endl;
+
+ strncpy(s3, s4, 3);
+
+cout << s4 << endl;
+
+
+
+char mainstring[10]="Nice Day";
+char substring[20]="Nice";
+
+/// find sub string in the main string
+
+cout<< strstr(mainstring,substring)<< endl;
+
+
+
 
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
