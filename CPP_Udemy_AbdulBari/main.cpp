@@ -174,9 +174,9 @@ after the line cin >> age ; there is still the newline character \n (because you
     b=2*++a + 2*a++;
     cout<<b<<" "<<a<<endl;;
 
-    int c=5,d;
-    d=2*c++ + 2*c++;
-    cout<<d<<" "<<c<<endl;
+    int cC=5,d;
+    d=2*cC++ + 2*cC++;
+    cout<<d<<" "<<cC<<endl;
 
         //Overflow38.cpp
 
@@ -689,6 +689,9 @@ string s = "Hello";
 delete []SPointer;
 
 /// Reading and Printing String
+/// Reading and Printing String
+
+
 char name[20];
 cout<<"Enter your name"<< endl;
 cin >> name;
@@ -696,16 +699,23 @@ char *StrPtr;
 char secondname[50];
 cout<<"Enter your name"<< endl;
 cin.get(name,50);
+/// get function will not detect the enter input, the enter will be picked up by the next get or getline function.
 ///Put this after before getline call extraction:
 cin.ignore();
 /// or
 cout<<"Enter your name again"<< endl;
 
-cin.getline(S,50);
+cin.getline(StrPtr,50);
+/// cin.getline() does not require cin.ignore(), because cin.getline() detects enter input
+cin.getline(secondname,50);
+
 
 cout<< strlen(name) <<"string length == strlen(s) =  "<<endl;  //string length
 
-cout<< strlen(S) <<"string length == strlen(S) =  "<<endl;  //string length
+cout<< strlen(StrPtr) <<"string length == strlen(StrPtr) =  "<<endl;  //string length
+
+cout<< strlen(secondname) <<"string length == strlen(secondname) =  "<<endl;  //string length
+
 /*
 
     string str;
@@ -775,42 +785,180 @@ char s1[20]="Good";
 char s2[10]="Morning";
 char s3[20]="Nice";
 char s4[10]="Day";
+char s5[10]=" ";
+char s6[10];
+/// strcat (destination, source);
+strcat (s1, s2);
+cout<< s1 <<endl; /// destination
 
+/// strncat (destination, source);
 
-strcat (s1, s2);  /// destination
-cout<< s1 <<endl;
-
-strncat (s3, s4, 3);  /// joining two letters at home
+strncat (s3, s4, 3);  /// concatenating joining two letters at home but only 3 letters
 cout<< s3 <<endl;
 
-strcpy(s1, s2);
+strcpy(s5, s2); /// copying
 
-cout << s2 << endl;
+/// strcpy(destination, source);
 
- strncpy(s3, s4, 3);
+cout << s5 << endl;
 
-cout << s4 << endl;
+ strncpy(s6, s4, 2); /// copying two letters at home but only 2 letters
+
+cout << s6 << endl;
 
 
 
 char mainstring[10]="Nice Day";
-char substring[20]="Nice";
+char substring[10]="Nice";
+char substr1[5]="Ni";
+char substr2[5]="H";
 
 /// find sub string in the main string
 
 cout<< strstr(mainstring,substring)<< endl;
 
+cout<< strstr(mainstring,substr1)<< endl;
 
+if (strstr(mainstring,substr2)!=NULL)
+    cout<< strstr(mainstring,substr1)<< endl;
+else
+    cout<< "Not Found"<< endl;
+
+char CHAR1= 'y';
+
+/// strchr(mainstr,char)
+
+cout<< strchr(mainstring,CHAR1)<< endl;
+
+cout<< strchr(mainstring,'D')<< endl;
+
+/// strrchr(mainstr,char) -- finds from right hand side
+
+cout<< strrchr(mainstring,CHAR1)<< endl;
+
+cout<< strrchr(mainstring,'D')<< endl;
+
+
+
+
+/// strcmp() https://www.bing.com/search?q=strcmp+in+C%2B%2B&form=ANNTH1&refig=d5d2dfb22c4d48269065f8b67db90c99
+
+/*
+strcmp() in C/C++
+Difficulty Level : Easy
+Last Updated : 09 Jan, 2019
+strcmp() is a built-in library function and is declared in <string.h> header file. This function takes two strings as arguments and compare these two strings lexicographically.
+
+Syntax::
+
+int strcmp(const char *leftStr, const char *rightStr );
+In the above prototype, function srtcmp takes two strings as parameters and returns an integer value based on the comparison of strings.
+
+strcmp() compares the two strings lexicographically means it starts comparison character by character starting from the first character until the characters in both strings are equal or a NULL character is encountered.
+If first character in both strings are equal, then this function will check the second character, if this is also equal then it will check the third and so on
+This process will be continued until a character in either string is NULL or the characters are unequal.
+What does strcmp() return?
+
+This function can return three different integer values based on the comparison:
+
+Zero ( 0 ): A value equal to zero when both strings are found to be identical. That is, That is, All of the characters in both strings are same.
+All characters of strings are same
+// C program to illustrate
+// strcmp() function
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+
+    char leftStr[] = "g f g";
+    char rightStr[] = "g f g";
+
+    // Using strcmp()
+    int res = strcmp(leftStr, rightStr);
+
+    if (res==0)
+        printf("Strings are equal");
+    else
+        printf("Strings are unequal");
+
+    printf("\nValue returned by strcmp() is:  %d" , res);
+    return 0;
+}
+Output:
+
+Strings are equal
+Value returned by strcmp() is:  0
+Greater than zero ( >0 ): A value greater than zero is returned when the first not matching character in leftStr have the greater ASCII value than the corresponding character in rightStr or we can also say
+If character in leftStr is lexicographically
+after the character of rightStr
+// C program to illustrate
+// strcmp() function
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    // z has greater ASCII value than g
+    char leftStr[] = "zfz";
+    char rightStr[] = "gfg";
+
+    int res = strcmp(leftStr, rightStr);
+
+    if (res==0)
+        printf("Strings are equal");
+    else
+        printf("Strings are unequal");
+
+    printf("\nValue of result: %d" , res);
+
+    return 0;
+}
+Output:
+
+Strings are unequal
+Value returned by strcmp() is:  19
+Less than Zero ( <0 ): A value less than zero is returned when the first not matching character in leftStr have lesser ASCII value than the corresponding character in rightStr.
+If character in leftStr is lexicographically
+before the character of rightStr
+// C program to illustrate
+// strcmp() function
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    // b has less ASCII value than g
+    char leftStr[] = "bfb";
+    char rightStr[] = "gfg";
+
+    int res = strcmp(leftStr, rightStr);
+
+    if (res==0)
+        printf("Strings are equal");
+    else
+        printf("Strings are unequal");
+
+    printf("\nValue returned by strcmp() is:  %d" , res);
+
+
+    return 0;
+}
+Output:
+
+Strings are unequal
+Value returned by strcmp() is:  -5
+Important point : When the strings are not same, you will find that the value returned by the strcmp() function is the difference between the ASCII values of first unmatched character in leftStr and rightStr in both the cases.
+*/
+
+
+
+/// strrol(string)   --- string to long , string to long integer
+
+/// strtof(string, NULL), string to float
 
 
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
    printf(" \n Time taken: %.5f s\n", putsTime1);
-
-
-
-
-
 
 #ifdef SHOW_SOURCE_CODE
         // We can append this code to any C program
