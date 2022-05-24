@@ -988,7 +988,7 @@ string StringTest2= "Hello"; /// string class variable object StringTest2 Array 
 
 
 cin>> StringTest; /// will take only one word
-
+/// no problem with cin
 getline(cin, StringTest1); /// will take whole lines
 
 cout<< StringTest2 << endl;
@@ -1000,6 +1000,33 @@ cout<< StringTest1 << endl;
 /// self managed capacity by string class
 
 
+/// functions of string class
+
+/*
+Class String
+s.length( )
+s.size( )
+
+s.capacity()
+s.resize(30 )
+
+s.max_size( )
+s.clear( )
+s.empty( )
+
+Class String
+s.append( "Bye")
+s.insert(3,"kk" )
+
+s.replace(3,5,"aa" )
+s.erase( )
+
+s.push_back('z' )
+s.pop_back( )
+
+s1.swap($2 )
+
+*/
 
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
