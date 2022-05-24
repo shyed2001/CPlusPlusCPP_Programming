@@ -972,13 +972,15 @@ Important point : When the strings are not same, you will find that the value re
 
 /// C++ string class & objects
 
+/// https://www.bing.com/search?q=C%2B%2B+string+class+%26objects&qs=n&form=QBRE&sp=-1&pq=c%2B%2B+string+class+%26objects&sc=0-25&sk=&cvid=66517FA03F1846D595185154A70B75EF
+
 
 string StringTest; /// string class variable object StringTest was created
-
 
 string StringTest1;
 
 string StringTest2= "Hello"; /// string class variable object StringTest2 Array was created as long as "Capacity of a string"
+
 /// Capacity of an array object will be bigger than length/size of the string.
 
 /// we can store more bigger character in the same string object ,
