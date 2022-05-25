@@ -1026,7 +1026,41 @@ s.pop_back( )
 
 s1.swap($2 )
 
+
+/// Class String
+
+
+s.copy( char des[ ])
+s.find(str) or char
+
+s.rfind(str )
+s.find_first_of( )
+
+s.find_last_of( )
+s.substr( start,number)
+s.compare(str )
+
+
+
 */
+
+
+string s ="Welcome"
+
+char str[10];
+s.copy(str,s.length());
+cout<<str<<endl;
+s.copy(str,s.length());
+str[3] ='\0'
+cout<<str<<endl;
+s.copy(str,s.length());
+
+
+cout<<str<<endl;
+
+
+
+
 
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
