@@ -1045,7 +1045,9 @@ s.compare(str )
 */
 
 
+
 string s ="Welcome"
+
 
 char str[10];
 s.copy(str,s.length());
@@ -1054,6 +1056,7 @@ s.copy(str,s.length());
 str[3] ='\0'
 cout<<str<<endl;
 s.copy(str,s.length());
+
 
 
 cout<<str<<endl;
