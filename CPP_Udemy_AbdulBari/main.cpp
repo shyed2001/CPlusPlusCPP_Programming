@@ -614,6 +614,30 @@ cout<<POINTER<<endl;
 cout<<POINTER<<endl;
 
 
+int box = 5;
+int * ptr = &box;
+int ** dPtr = &ptr;
+cout << "box holds: " << box << endl;
+cout << "box lives at: " << &box << endl;
+cout<< "ptr points to address: " << ptr << endl;
+
+cout<< "The thing that ptr points to has the value: " << *ptr << endl;
+cout <<"ptr lives at: " <<&ptr << endl;
+cout <<"dPtr points to: " << dPtr << endl;
+
+cout << "The thing that dptr points to has the value: " << *dPtr << endl;
+cout << "The ptr that dPtr points to, points to an int with the value: " << **dPtr << endl;
+cout << "dPtr lives at: " << &dPtr << endl;
+
+cout << "\n\nThing:       dPtr                    ptr                    box \n";
+
+
+cout << "Values:     " << dptr << " ------->   " << dPtr << "  ------->  " << box << endl;
+
+cout << "Addresses:   " << &dptr << "        " << &dPtr << "               " << &box << endl;
+
+
+
 
     ///DynamicAllocation110.cpp
 
@@ -1040,7 +1064,26 @@ s.find_last_of( )
 s.substr( start,number)
 s.compare(str )
 
+string class overloaded functions
 
+at() is like []
+front()
+back()
+[] string indexing
++ concatination
+= string assignment
+
+Class String
+
+string::iterator
+begin( )
+
+end( )
+
+string::reverse_iterator
+rbegin( )
+
+rend( )
 
 */
 
@@ -1062,9 +1105,38 @@ s.copy(str,s.length());
 cout<<str<<endl;
 
 
+string str="today";
+string::iterator it;
+for (it=str.begin() ; it!=str.end(); it++)
+{
+    cout<<str;
+   *it=*it-32;
+}
 
+cout<<str;
+cout<<endl;
 
+string str="Reversetoday";
+string::riterator it;
+for (it=str.rbegin(); it!=str.rend(); it++)
+{
+    cout<<str;
+   *it=*it-32;
+}
 
+cout<<str;
+cout<<endl;
+
+string str="todayloop" ;
+for(int i=0; str[i]!='\0' ; i++)
+{
+
+cout<<str[i];
+str[i] = str[i] - 32;
+cout<<str[i];
+}
+
+  cout<<endl;
 
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
    printf(" \n Time taken: %.5f s\n", putsTime1);
