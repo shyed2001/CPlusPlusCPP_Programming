@@ -1138,6 +1138,16 @@ cout<<str[i];
 
   cout<<endl;
 
+
+
+
+
+
+
+
+
+
+
    float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
    printf(" \n Time taken: %.5f s\n", putsTime1);
 
