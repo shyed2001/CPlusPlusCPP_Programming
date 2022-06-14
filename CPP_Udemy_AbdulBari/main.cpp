@@ -1225,6 +1225,11 @@ string uname=email. substr(0, i) ;
 cout<<"User Name is "< <uname<<endll;
 
 
+
+
+
+
+
 float putsTime1 = ((double)(clock() - tStart))/CLOCKS_PER_SEC;
 printf(" \n Time taken: %.5f s\n", putsTime1);
 
