@@ -53,6 +53,60 @@ void clear()
 
 using namespace std;
 
+
+/*program for function overloading sum of two integers
+
+*/
+int sum(int a,int b)
+{
+	return a+b;
+}
+float sum(float a,float b)
+{
+	return a+b;
+}
+int sum(int a,int b,int c)
+{
+	return a,b,c;
+}
+
+
+
+/*program for function templates
+
+*/
+template<class t>
+t maxim(t a,t b)
+{
+       return a>b?a:b;
+/*
+one line if statement c++
+x = condition ? expression1 : expression2
+
+// Example:
+double x = (1 > 0) ? 10 : 20; // put any value
+Short Hand if-else Methods
+There is Short Hand format to code if statements as below
+
+
+variable = (condition) ? true_expression : false_expression;
+
+for example same example above can be written as,
+
+
+int a= 5;
+string result = (a>3) ? "greater than 3" : "not greater than 3";
+std::cout << result;
+
+You can use the if-else shorthand in your program instead of the if-else statement by following the syntax given below:
+
+variable = (condition)? expressionTrue: expressionFalse;
+In the above syntax, question marks are part of the code and are used to check whether the condition is true or not. If the condition is true the program will execute the first expression right after the question mark, else the program will execute the second expression.
+*/
+}
+
+
+
 int main(int argc, char* argv[])
 
 {
@@ -1223,6 +1277,76 @@ int i=(int) email. find( '@' ) ;
 string uname=email. substr(0, i) ;
 
 cout<<"User Name is "< <uname<<endll;
+
+
+/*program for function overloading sum of two integers
+
+*/
+
+	cout<<sum(10,5)<<endl;
+	cout<<(12.5f,3.4f)<<endl;
+	cout<<sum(10,20,3)<<endl;
+
+
+
+
+
+/*program for function templates*/
+	cout<<maxim(12,14)<<endl;
+	cout<<maxim(2.3,1.4)<<endl;
+	cout<<maxim(2.3f,5.6f)<<endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
