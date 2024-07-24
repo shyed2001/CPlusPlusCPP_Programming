@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1721722036 source:f:\githubdesktop\githubclonefiles\cpluspluscpp_programming\cc4e\cc4e_oop\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
