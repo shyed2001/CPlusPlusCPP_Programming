@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1740426138 source:f:\githubdesktop\githubclonefiles\cpluspluscpp_programming\cc4e\concurrentparallelmultihyperthreading\main.cpp
+	<iostream>
+	<thread>
+	<string>
+	<cstring>
+	<windows.h>
+	<fstream>
+	<sstream>
+	<unistd.h>
+
