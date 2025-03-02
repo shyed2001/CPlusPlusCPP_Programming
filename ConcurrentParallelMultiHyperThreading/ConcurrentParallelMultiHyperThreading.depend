@@ -9,3 +9,10 @@
 	<sstream>
 	<unistd.h>
 
+1740671021 source:f:\githubclonefiles\cpluspluscpp_programming\concurrentparallelmultihyperthreading\main.cpp
+	<iostream>
+	<thread>
+	<windows.h>
+	<fstream>
+	<sstream>
+
