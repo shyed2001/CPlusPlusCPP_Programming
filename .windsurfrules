@@ -4,19 +4,12 @@
 
 ## Shyed AI Tooling Policy
 
-Canonical shared AI/tooling index:
+Local repo instructions first, then the canonical index, then tool defaults. Respect lockfiles: `pnpm` only in
+pnpm repos, `npm` in `package-lock.json` repos. Ask before global installs, MCP/hook changes, destructive actions
+or broad rewrites. Full text in its one home (block SHYED AI TOOLING POLICY):
+`F:\GitHubDesktop\GitHubCloneFiles\AI_Tools_Plan_Master_Index_Lib\027_UNIVERSAL_AGENT_CORE.md`
 
-`F:\GitHubDesktop\GitHubCloneFiles\Obsidian_Vault\8 AI_Prompt_Engineering\000 AI Tools Workflow Index.md`
-
-Use local repo instructions first, then the canonical index, then tool defaults as fallback if needed.
-
-Rules:
-
-- Do not duplicate full global policy here; reference the canonical index.
-- Respect existing lockfiles and local project conventions.
-- Use `pnpm` only for pnpm-managed repos; use `npm` for `package-lock.json` repos.
-- Prefer Windows-native Node 22+ for global tools on Shyed's current Windows/WSL 1 machine.
-- Ask before global installs, lockfile replacement, package-manager migration, MCP changes, hook changes, destructive actions, or broad rewrites.
+<!-- Pointer since 2026-10-05 (R-82 no-loss dedup): the full text that stood here is in that file, and in git history. -->
 
 <!-- END SHYED AI TOOLING POLICY -->
 
