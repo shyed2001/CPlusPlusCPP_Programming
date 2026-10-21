@@ -1,252 +1,287 @@
-# Graph Report - CPlusPlusCPP_Programming  (2026-07-31)
+# Graph Report - w.psDeji  (2026-10-21)
 
 ## Corpus Check
-- 72 files · ~215,707 words
+- 98 files · ~216,845 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 446 nodes · 649 edges · 34 communities detected
-- Extraction: 99% EXTRACTED · 1% INFERRED · 0% AMBIGUOUS · INFERRED: 4 edges (avg confidence: 0.8)
+- 723 nodes · 1207 edges · 98 communities (40 shown, 23 thin omitted)
+- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 158 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Community 0|Community 0]]
-- [[_COMMUNITY_Community 1|Community 1]]
-- [[_COMMUNITY_Community 2|Community 2]]
-- [[_COMMUNITY_Community 3|Community 3]]
-- [[_COMMUNITY_Community 4|Community 4]]
-- [[_COMMUNITY_Community 5|Community 5]]
-- [[_COMMUNITY_Community 6|Community 6]]
-- [[_COMMUNITY_Community 7|Community 7]]
-- [[_COMMUNITY_Community 8|Community 8]]
-- [[_COMMUNITY_Community 9|Community 9]]
-- [[_COMMUNITY_Community 10|Community 10]]
-- [[_COMMUNITY_Community 11|Community 11]]
-- [[_COMMUNITY_Community 12|Community 12]]
-- [[_COMMUNITY_Community 13|Community 13]]
-- [[_COMMUNITY_Community 14|Community 14]]
-- [[_COMMUNITY_Community 15|Community 15]]
-- [[_COMMUNITY_Community 16|Community 16]]
-- [[_COMMUNITY_Community 17|Community 17]]
-- [[_COMMUNITY_Community 18|Community 18]]
-- [[_COMMUNITY_Community 19|Community 19]]
-- [[_COMMUNITY_Community 20|Community 20]]
-- [[_COMMUNITY_Community 21|Community 21]]
-- [[_COMMUNITY_Community 22|Community 22]]
-- [[_COMMUNITY_Community 23|Community 23]]
-- [[_COMMUNITY_Community 25|Community 25]]
-- [[_COMMUNITY_Community 26|Community 26]]
-- [[_COMMUNITY_Community 27|Community 27]]
-- [[_COMMUNITY_Community 28|Community 28]]
-- [[_COMMUNITY_Community 29|Community 29]]
-- [[_COMMUNITY_Community 30|Community 30]]
-- [[_COMMUNITY_Community 32|Community 32]]
-- [[_COMMUNITY_Community 33|Community 33]]
-- [[_COMMUNITY_Community 35|Community 35]]
-- [[_COMMUNITY_Community 36|Community 36]]
+- ocw-media-utils-offline.js
+- jquery.js
+- Snake
+- ocw-media-utils.js
+- chart.js
+- ocw-offline.js
+- main
+- atm
+- CPP_OOP.cpp
+- multilevel.cpp
+- grade
+- arithmetic
+- CarGame.cpp
+- Vector3
+- student
+- jquery-ui.min.js
+- exam_inherit
+- set_jwplayer_options
+- Parallelogram
+- abstractinterface
+- basePoly
+- Person
+- rectangle
+- statex
+- UnaryFriend
+- highslide-with-gallery.js
+- Addition
+- Subtraction
+- frnd
+- Alphasm
+- mobile
+- personAC
+- class-obj.cpp
+- browser
+- Copilot Instructions
+- house
+- Agents
+- Universal Agent Core — pointer
+- browser.c
+- Claude
+- ConcurrentParallelMultiHyperThreading/main.cpp
+- Gemini
+- AConstructor
+- All
+- Aov
+- Betaff
+- NPC
+- callbyref.c
+- callbyref.cpp
+- callbyval.c
+- exception.cpp
+- overload.cpp
+- ANTIGRAVITY
+- C_LLVM_ClangTest/main.c
+- CC4E_OOP/main.c
+- CPP_SortedSearch.cpp
+- CPP_IntroductiontoProgrammingin.cpp
+- Alpha
+- Alphaff
+- agent-node-policy-snippet.md
+- available-tools.md
+- dev-env.md
+- README.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `c()` - 19 edges
-2. `r()` - 15 edges
-3. `b()` - 14 edges
-4. `play()` - 13 edges
-5. `o()` - 13 edges
-6. `t()` - 13 edges
-7. `d()` - 12 edges
-8. `j()` - 12 edges
-9. `k()` - 12 edges
-10. `U()` - 12 edges
+1. `d()` - 30 edges
+2. `c()` - 26 edges
+3. `j()` - 25 edges
+4. `d()` - 23 edges
+5. `b()` - 21 edges
+6. `f()` - 20 edges
+7. `o()` - 20 edges
+8. `k()` - 20 edges
+9. `l()` - 20 edges
+10. `main()` - 19 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `main()` --calls--> `clearscreen()`  [INFERRED]
-  ObjectOrientedProgramming_OOP _CPP\CPP_OOP.cpp → ObjectOrientedProgramming_OOP _CPP\CPP_OPP_ATM.cpp
-- `d()` --calls--> `w()`  [INFERRED]
-  6-s096-january-iap-2014\6-s096-january-iap-2014\common\scripts\jquery.jscrollpane.min.js → 6-s096-january-iap-2014\6-s096-january-iap-2014\common\scripts\ocw-media-utils-offline.js
-- `d()` --calls--> `g()`  [INFERRED]
-  6-s096-january-iap-2014\6-s096-january-iap-2014\common\scripts\jquery.jscrollpane.min.js → 6-s096-january-iap-2014\6-s096-january-iap-2014\common\scripts\ocw-media-utils-offline.js
-- `main()` --calls--> `getOS()`  [INFERRED]
-  ObjectOrientedProgramming_OOP _CPP\CPP_OOP.cpp → ObjectOrientedProgramming_OOP _CPP\CPP_OPP_ATM.cpp
+- `_renderAxis()` --indirect_call--> `l()`  [INFERRED]
+  6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/jquery-ui.min.js → 6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/ocw-media-utils-offline.js
+- `j()` --indirect_call--> `c()`  [INFERRED]
+  6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/jquery-ui.min.js → 6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/ocw-media-utils-offline.js
+- `aG()` --indirect_call--> `af()`  [INFERRED]
+  6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/jquery.jscrollpane.min.js → 6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/ocw-media-utils-offline.js
+- `z()` --indirect_call--> `x()`  [INFERRED]
+  6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/jquery.jscrollpane.min.js → 6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/ocw-media-utils-offline.js
+- `F()` --indirect_call--> `I()`  [INFERRED]
+  6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/jquery.jscrollpane.min.js → 6-s096-january-iap-2014/6-s096-january-iap-2014/common/scripts/ocw-media-utils-offline.js
 
-## Communities
+## Import Cycles
+- None detected.
 
-### Community 0 - "Community 0"
-Cohesion: 0.03
-Nodes (41): A, AConstructor, All, Alpha, Alphaff, Alphasm, AOO, Aov (+33 more)
+## Communities (98 total, 23 thin omitted)
 
-### Community 1 - "Community 1"
+### Community 0 - "ocw-media-utils-offline.js"
+Cohesion: 0.14
+Nodes (67): d(), ab(), aC(), ad(), aE(), aG(), ah(), ai() (+59 more)
+
+### Community 1 - "jquery.js"
 Cohesion: 0.05
-Nodes (7): ajaxConvert(), ajaxHandleResponses(), defaultDisplay(), doAnimation(), done(), findInputs(), fixDefaultChecked()
+Nodes (12): ajaxConvert(), ajaxHandleResponses(), clearFxNow(), createFxNow(), defaultDisplay(), doAnimation(), done(), findInputs() (+4 more)
 
-### Community 2 - "Community 2"
-Cohesion: 0.22
-Nodes (37): d(), a(), ae(), af(), ag(), ah(), b(), c() (+29 more)
+### Community 2 - "Snake"
+Cohesion: 0.08
+Nodes (15): DWORD, gotoxy(), main(), Point, x, y, setcursor(), Snake (+7 more)
 
-### Community 3 - "Community 3"
+### Community 3 - "ocw-media-utils.js"
 Cohesion: 0.14
 Nodes (28): change(), do_cue(), get_caption_details(), get_modified_id(), get_subtitle(), HFH_video_popup(), initialize_video_wrapper_markup(), IpadScroller() (+20 more)
 
-### Community 4 - "Community 4"
+### Community 4 - "chart.js"
+Cohesion: 0.13
+Nodes (20): animationLoop(), animateFrame(), animLoop(), calculateDrawingSizes(), calculateOffset(), calculateScale(), CapValue(), Default() (+12 more)
+
+### Community 5 - "ocw-offline.js"
 Cohesion: 0.11
 Nodes (11): checkAnswer(), checkNumericalResponse(), createThreePlayParams(), image_popup(), process_justifications(), setThreePlayTranscriptPlugin(), shuffle_sponsor_array(), shuffled_sponsors_markup() (+3 more)
 
-### Community 5 - "Community 5"
+### Community 6 - "main"
+Cohesion: 0.11
+Nodes (10): A, age, AOO, weight, base4, clearscreen(), derived4, Fun() (+2 more)
+
+### Community 7 - "atm"
+Cohesion: 0.18
+Nodes (10): atm, account_No, balance, mobile_No, name, PIN, string, getOS() (+2 more)
+
+### Community 8 - "CPP_OOP.cpp"
+Cohesion: 0.13
+Nodes (10): base, base3, Beta, b1, boy, derived, derived2, derived3 (+2 more)
+
+### Community 9 - "multilevel.cpp"
+Cohesion: 0.21
+Nodes (16): exam_inherit, display_exam, input_exam, sub1, sub2, sub3, total, grade (+8 more)
+
+### Community 10 - "grade"
+Cohesion: 0.21
+Nodes (16): exam_inherit, sub1, sub2, sub3, grade, average, avg, display (+8 more)
+
+### Community 11 - "arithmetic"
 Cohesion: 0.15
-Nodes (16): animationLoop(), calculateDrawingSizes(), calculateOffset(), calculateScale(), CapValue(), Default(), drawAllDataPoints(), drawAllSegments() (+8 more)
+Nodes (11): arithmetic, a, b, div, mul, sub, sum, Divide (+3 more)
 
-### Community 6 - "Community 6"
-Cohesion: 0.32
-Nodes (15): collision(), drawBorder(), drawCar(), drawEnemy(), eraseCar(), eraseEnemy(), gameover(), genEnemy() (+7 more)
+### Community 12 - "CarGame.cpp"
+Cohesion: 0.29
+Nodes (16): collision(), DWORD, drawBorder(), drawCar(), drawEnemy(), eraseCar(), eraseEnemy(), gameover() (+8 more)
 
-### Community 7 - "Community 7"
+### Community 13 - "Vector3"
+Cohesion: 0.25
+Nodes (14): cross(), cube(), dot(), operator+(), Vector3, Vector3<float>::norm(), norm, normsq (+6 more)
+
+### Community 14 - "student"
+Cohesion: 0.23
+Nodes (14): exam, input_exam, total_marks, main(), show, display, input, student (+6 more)
+
+### Community 15 - "jquery-ui.min.js"
+Cohesion: 0.22
+Nodes (8): a(), b(), E(), j(), _renderAxis(), response(), k(), q()
+
+### Community 16 - "exam_inherit"
+Cohesion: 0.24
+Nodes (13): exam_inherit, display_exam, input_exam, sub1, sub2, sub3, total, main() (+5 more)
+
+### Community 17 - "set_jwplayer_options"
 Cohesion: 0.27
 Nodes (12): HFH_video_popup(), initialize_video_wrapper_markup(), load_media_chapter(), load_multiple_media_chapter(), ocw_embed_chapter_media(), ocw_embed_media(), reset_video_wrapper_markup(), scholar_video_popup() (+4 more)
 
-### Community 8 - "Community 8"
-Cohesion: 0.2
-Nodes (2): k(), q()
+### Community 18 - "Parallelogram"
+Cohesion: 0.23
+Nodes (7): main(), Parallelogram, ar, height, width, Rectangle, Triangle
 
-### Community 9 - "Community 9"
-Cohesion: 0.31
-Nodes (9): average(), display(), display_exam(), exam_inherit, grade, input(), input_exam(), main() (+1 more)
+### Community 19 - "abstractinterface"
+Cohesion: 0.27
+Nodes (8): abstractinterface, a, b, input, numbers, add, main(), sub
 
-### Community 10 - "Community 10"
-Cohesion: 0.31
-Nodes (9): average(), display(), display_exam(), exam_inherit, grade, input(), input_exam(), main() (+1 more)
+### Community 20 - "basePoly"
+Cohesion: 0.18
+Nodes (4): basePoly, Derv1, Derv2, Derv3
 
-### Community 11 - "Community 11"
+### Community 21 - "Person"
+Cohesion: 0.25
+Nodes (7): string, PausedExitORContinue(), Person, age, height, name, weight
+
+### Community 22 - "rectangle"
+Cohesion: 0.22
+Nodes (5): cuboid, height, rectangle, breadth, length
+
+### Community 23 - "statex"
+Cohesion: 0.32
+Nodes (4): main(), statex, sum, x
+
+### Community 24 - "UnaryFriend"
+Cohesion: 0.25
+Nodes (6): operator-(), UnaryFriend, a, b, c, operator-
+
+### Community 26 - "Addition"
 Cohesion: 0.33
-Nodes (8): display(), exam, input(), input_exam(), main(), show, student, total_marks()
+Nodes (4): Addition, a, b, main()
 
-### Community 12 - "Community 12"
-Cohesion: 0.39
-Nodes (7): display(), display_exam(), exam_inherit, input(), input_exam(), main(), student
+### Community 27 - "Subtraction"
+Cohesion: 0.33
+Nodes (4): main(), Subtraction, a, b
 
-### Community 13 - "Community 13"
+### Community 28 - "frnd"
+Cohesion: 0.43
+Nodes (5): compute(), frnd, a, b, main()
+
+### Community 29 - "Alphasm"
 Cohesion: 0.29
-Nodes (4): main(), Point, setcursor(), Snake
+Nodes (5): Alphasm, a, b, stat, stat2
 
-### Community 14 - "Community 14"
+### Community 30 - "mobile"
+Cohesion: 0.29
+Nodes (6): mobile, battery, getMobileData, name, processor, RAM
+
+### Community 31 - "personAC"
 Cohesion: 0.33
-Nodes (2): scroll(), selectThumb()
+Nodes (4): boy2, girl2, personAC, give
 
-### Community 15 - "Community 15"
-Cohesion: 0.4
-Nodes (5): abstractinterface, add, input(), main(), sub
+### Community 32 - "class-obj.cpp"
+Cohesion: 0.60
+Nodes (4): main(), square, area, x
 
-### Community 16 - "Community 16"
-Cohesion: 0.33
-Nodes (4): arithmetic, Divide, Multiply, Subtract
+### Community 33 - "browser"
+Cohesion: 0.70
+Nodes (4): browser(), main(), SearchWeb(), string
 
-### Community 17 - "Community 17"
-Cohesion: 0.7
-Nodes (3): browser(), main(), SearchWeb()
+### Community 34 - "Copilot Instructions"
+Cohesion: 0.40
+Nodes (4): Copilot Instructions, Local Tier 0 tools — which one, when, where to read how, Persistent AI Reminder, Shyed AI Tooling Policy
 
-### Community 18 - "Community 18"
-Cohesion: 0.4
-Nodes (3): Parallelogram, Rectangle, Triangle
+### Community 35 - "house"
+Cohesion: 0.40
+Nodes (3): house, breadth, length
 
-### Community 19 - "Community 19"
-Cohesion: 0.83
-Nodes (2): main(), swap()
+### Community 36 - "Agents"
+Cohesion: 0.50
+Nodes (3): Agents, Persistent AI Reminder, Shyed AI Tooling Policy
 
-### Community 20 - "Community 20"
-Cohesion: 0.67
-Nodes (3): area(), main(), square
+### Community 37 - "Universal Agent Core — pointer"
+Cohesion: 0.50
+Nodes (3): The canonical files — read these, The short form — enough to not do damage before you read the canonical files, Universal Agent Core — pointer
 
-### Community 21 - "Community 21"
-Cohesion: 0.67
-Nodes (3): compute(), frnd, main()
+### Community 39 - "Claude"
+Cohesion: 0.50
+Nodes (3): Claude, Persistent AI Reminder, Shyed AI Tooling Policy
 
-### Community 22 - "Community 22"
-Cohesion: 0.5
-Nodes (1): statex
-
-### Community 23 - "Community 23"
+### Community 40 - "ConcurrentParallelMultiHyperThreading/main.cpp"
 Cohesion: 0.83
 Nodes (3): get_logical_cores(), get_physical_cores(), main()
 
-### Community 25 - "Community 25"
-Cohesion: 1.0
-Nodes (2): cube(), main()
-
-### Community 26 - "Community 26"
-Cohesion: 0.67
-Nodes (1): Addition
-
-### Community 27 - "Community 27"
-Cohesion: 0.67
-Nodes (1): Subtraction
-
-### Community 28 - "Community 28"
-Cohesion: 1.0
-Nodes (2): division(), main()
-
-### Community 29 - "Community 29"
-Cohesion: 1.0
-Nodes (2): add(), main()
-
-### Community 30 - "Community 30"
-Cohesion: 0.67
-Nodes (1): main()
-
-### Community 32 - "Community 32"
-Cohesion: 1.0
-Nodes (2): main(), py_len()
-
-### Community 33 - "Community 33"
-Cohesion: 1.0
-Nodes (2): main(), py_len()
-
-### Community 35 - "Community 35"
-Cohesion: 1.0
-Nodes (2): main(), sortedSearch()
-
-### Community 36 - "Community 36"
-Cohesion: 1.0
-Nodes (2): cout(), main()
+### Community 41 - "Gemini"
+Cohesion: 0.50
+Nodes (3): Gemini, Persistent AI Reminder, Shyed AI Tooling Policy
 
 ## Knowledge Gaps
-- **41 isolated node(s):** `abstractinterface`, `add`, `sub`, `square`, `Addition` (+36 more)
-  These have ≤1 connection - possible missing edges or undocumented components.
-- **Thin community `Community 8`** (11 nodes): `jquery-ui.min.js`, `a()`, `b()`, `E()`, `j()`, `k()`, `m()`, `n()`, `q()`, `s()`, `v()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 14`** (7 nodes): `highslide-with-gallery.js`, `add()`, `addRule()`, `fix()`, `scroll()`, `selectThumb()`, `t()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 19`** (4 nodes): `callbyref.c`, `callbyref.cpp`, `main()`, `swap()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 22`** (4 nodes): `static.cpp`, `main()`, `statex`, `.statex()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 25`** (3 nodes): `callbyval.c`, `cube()`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 26`** (3 nodes): `Addition`, `cons-dest.cpp`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 27`** (3 nodes): `default.cpp`, `main()`, `Subtraction`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 28`** (3 nodes): `exception.cpp`, `division()`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 29`** (3 nodes): `add()`, `overload.cpp`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 30`** (3 nodes): `pointers_demo.c`, `pointers_demo.cpp`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 32`** (3 nodes): `main.c`, `main()`, `py_len()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 33`** (3 nodes): `main()`, `py_len()`, `main.c`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 35`** (3 nodes): `CPP_SortedSearch.cpp`, `main()`, `sortedSearch()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
-- **Thin community `Community 36`** (3 nodes): `cout()`, `CPP_IntroductiontoProgrammingin.cpp`, `main()`
-  Too small to be a meaningful cluster - may be noise or needs more connections extracted.
+- **110 isolated node(s):** `norm`, `numbers`, `a`, `b`, `x` (+105 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 301 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **What connects `abstractinterface`, `add`, `sub` to the rest of the system?**
-  _41 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.03 - nodes in this community are weakly interconnected._
-- **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
-- **Should `Community 3` be split into smaller, more focused modules?**
-  _Cohesion score 0.14 - nodes in this community are weakly interconnected._
-- **Should `Community 4` be split into smaller, more focused modules?**
-  _Cohesion score 0.11 - nodes in this community are weakly interconnected._
+- **Why does `c()` connect `ocw-media-utils-offline.js` to `jquery-ui.min.js`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Why does `main()` connect `main` to `CPP_OOP.cpp`, `Betaff`, `Person`, `rectangle`, `UnaryFriend`, `Alphasm`, `mobile`, `personAC`?**
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
+- **Are the 10 inferred relationships involving `c()` (e.g. with `j()` and `b()`) actually correct?**
+  _`c()` has 10 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 19 inferred relationships involving `j()` (e.g. with `d()` and `e()`) actually correct?**
+  _`j()` has 19 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 12 inferred relationships involving `d()` (e.g. with `C()` and `J()`) actually correct?**
+  _`d()` has 12 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 12 inferred relationships involving `b()` (e.g. with `F()` and `N()`) actually correct?**
+  _`b()` has 12 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `norm`, `numbers`, `a` to the rest of the system?**
+  _110 weakly-connected nodes found - possible documentation gaps or missing edges._
